@@ -13,7 +13,9 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
+  letter-spacing: 0.1rem;
   padding:20px;
+  font-weight:500;
 }
 
 html {
@@ -22,7 +24,7 @@ font-size: 65.2% ;
 
 .auth-container{
   width:100%;
-  max-width:1200px;
+  max-width:120rem;
   min-height:700px;
   background:#fff;
   border-radius:18px;
@@ -52,6 +54,7 @@ font-size: 65.2% ;
 
 .shield{
   width:20px;
+  font-weight:700;
   height:20px;
   background:linear-gradient(135deg,#f97316 0%,#f97316 50%,#16a34a 50%,#16a34a 100%);
   border-radius:5px;
@@ -59,27 +62,30 @@ font-size: 65.2% ;
 }
 
 h2{
-  font-size:30px;
+  font-size:2rem;
   color:#111827;
   margin-bottom:10px;
 }
 
 .subtitle{
   color:#6b7280;
-  font-size:14px;
+  font-size:1.5rem;
+  letter-spacing: 0.1rem;
   line-height:1.6;
   margin-bottom:28px;
+  width: 80%
 }
 
 .google-btn{
   width:100%;
-  padding:14px;
+  padding:1rem;
   border:1px solid #86efac;
   border-radius:10px;
   background:#fff;
-  color:#16a34a;
+  color:#6ACA71;
   font-weight:600;
   display:flex;
+  font-size: 1.6rem;
   align-items:center;
   justify-content:center;
   gap:10px;
@@ -87,8 +93,7 @@ h2{
 }
 
 .g{
-  color:#ea4335;
-  font-weight:700;
+width: 4rem;
 }
 
 .divider{
@@ -203,7 +208,7 @@ small{
 
 .hero-panel{
   position:relative;
-  background:url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=1400&auto=format&fit=crop') center/cover;
+ background: url('../images/community-bg.jpeg') center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -212,7 +217,7 @@ small{
 .overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.65);
+  background:rgba(31, 29, 29, 0.244);
 }
 
 .hero-content{
@@ -226,11 +231,12 @@ small{
 .hero-icon{
   width:64px;
   height:64px;
-  border-radius:18px;
-  background:#10b981;
+  border-radius:2.4rem;
+  background:#059669;
   display:flex;
   align-items:center;
   justify-content:center;
+  padding: 1.5rem;
   font-size:28px;
   margin:0 auto 28px;
 }
@@ -282,6 +288,7 @@ small{
   }
 
   .hero-panel{
+    display: none;
     min-height:380px;
     order:-1;
   }
