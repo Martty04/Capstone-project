@@ -76,6 +76,10 @@ h2{
   width: 80%
 }
 
+input{
+  font-family: lato, Arial, sans-serif;
+}
+
 .google-btn{
   width:100%;
   padding:1rem;
