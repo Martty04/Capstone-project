@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>SafeReach - Alerts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/alerts.css">
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="shield"></div>
+        <span>SafeReach</span>
+      </div>
+
+      <nav class="menu">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="report-category.html">Report</a>
+        <a href="#" class="active">Alerts</a>
+        <a href="#">Resources</a>
+        <a href="#">Settings</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="quick-btn">Quick Report</button>
+        <a href="#">Support</a>
+        <a href="#">Logout</a>
+      </div>
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+
+        <div class="search">
+          <span>🔍</span>
+          <input type="text" placeholder="Search alerts, locations, or safety tips...">
+        </div>
+
+        <div class="top-right">
+
+          <span class="bell">🔔</span>
+
+          <div class="profile">
+            <div>
+              <strong>Sarah Mitchell</strong>
+              <small>Verified Resident</small>
+            </div>
+
+            <img src="https://i.pravatar.cc/40?img=32" alt="User">
+          </div>
+
+        </div>
+
+      </header>
+
+      <!-- Content -->
+      <section class="content">
+
+        <!-- Left -->
+        <div class="left-panel">
+
+          <!-- Sort -->
+          <div class="card">
+
+            <h3>Sort By</h3>
+
+            <label class="radio">
+              <input type="radio" checked>
+              <span>Newest First</span>
+            </label>
+
+            <label class="radio">
+              <input type="radio">
+              <span>Highest Severity</span>
+            </label>
+
+            <label class="radio">
+              <input type="radio">
+              <span>Closest Distance</span>
+            </label>
+
+          </div>
+
+          <!-- Stats -->
+          <div class="card">
+
+            <h3>Safety Statistics</h3>
+
+            <div class="chart">
+
+              <div style="height:50%"></div>
+              <div style="height:32%"></div>
+              <div style="height:68%"></div>
+              <div style="height:40%"></div>
+              <div style="height:58%"></div>
+              <div style="height:76%"></div>
+              <div style="height:24%"></div>
+
+            </div>
+
+            <p class="chart-label">Incidents reported this week</p>
+
+            <div class="resolution">
+              <div class="resolution-top">
+                <span>Resolution Rate</span>
+                <strong>92%</strong>
+              </div>
+
+              <div class="progress">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right -->
+        <div class="right-panel">
+
+          <div class="feed-header">
+            <h1>Live Alert Feed</h1>
+
+            <div class="tabs">
+              <button class="tab active">All</button>
+              <button class="tab" ><a href="fire.html" style="color: black; text-decoration: none;">Fire</a></button>
+              <button class="tab">Crime</button>
+              <button class="tab">Medical</button>
+              <button class="tab">Traffic</button>
+            </div>
+          </div>
+
+          <!-- Alert 1 -->
+          <div class="alert-card fire">
+
+            <div class="alert-content">
+
+              <div class="alert-top">
+
+                <div class="alert-icon fire-icon">🔥</div>
+
+                <div>
+                  <h3>Structure Fire</h3>
+                  <small>📍 Pink Market, Odo Eran Bus Stop Ope, Ikeja, Lagos</small>
+                </div>
+
+                <span class="badge verified">VERIFIED</span>
+
+              </div>
+
+              <p>
+                Large structure fire reported at the Old Warehouse district. Emergency services are on scene. Residents are advised to keep windows closed and avoid the area.
+              </p>
+
+              <div class="alert-bottom">
+                <small>🕒 4 mins ago</small>
+
+                <button>View Details ›</button>
+              </div>
+
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=600&auto=format&fit=crop" alt="Fire">
+
+          </div>
+
+          <!-- Alert 2 -->
+          <div class="alert-card medical">
+
+            <div class="alert-content">
+
+              <div class="alert-top">
+
+                <div class="alert-icon medical-icon">➕</div>
+
+                <div>
+                  <h3>Medical Emergency</h3>
+                  <small>📍 49 Alafia Ave, Ejigbo, Lagos</small>
+                </div>
+
+                <span class="badge investigating">INVESTIGATING</span>
+
+              </div>
+
+              <p>
+                Report of a collapsed individual near the North pond. First responders have been dispatched and are approximately 3 minutes away. Bystanders are assisting.
+              </p>
+
+              <div class="alert-bottom">
+                <small>🕒 12 mins ago</small>
+
+                <button>View Details ›</button>
+              </div>
+
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?q=80&w=600&auto=format&fit=crop" alt="Medical">
+
+          </div>
+
+          <!-- Alert 3 -->
+          <div class="alert-card traffic">
+
+            <div class="alert-content">
+
+              <div class="alert-top">
+
+                <div class="alert-icon traffic-icon">🚧</div>
+
+                <div>
+                  <h3>Traffic Obstruction</h3>
+                  <small>📍 Third Mainland Bridge, Exit 24</small>
+                </div>
+
+                <span class="badge resolved">RESOLVED</span>
+
+              </div>
+
+              <p>
+                A disabled vehicle has been successfully cleared from the right lane. Traffic flow returning to normal levels. No injuries reported.
+              </p>
+
+              <div class="alert-bottom">
+                <small>🕒 45 mins ago</small>
+
+                <button class="secondary">View History ↻</button>
+              </div>
+
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=600&auto=format&fit=crop" alt="Traffic">
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

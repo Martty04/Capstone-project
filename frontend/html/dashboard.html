@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>SafeReach Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="shield"></div>
+        <span>SafeReach</span>
+      </div>
+
+      <nav class="menu">
+        <a href="#" class="active">Dashboard</a>
+        <a href="report-category.html">Report</a>
+        <a href="alerts.html">Alerts</a>
+        <a href="#">Resources</a>
+        <a href="#">Settings</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="quick-btn">Quick Report</button>
+        <a href="#">Support</a>
+        <a href="#">Logout</a>
+      </div>
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+
+        <div class="search">
+          <span>🔍</span>
+          <input type="text" placeholder="Search alerts, locations, or safety tips...">
+        </div>
+
+        <div class="top-right">
+
+          <span class="bell">🔔</span>
+
+          <div class="profile">
+            <div>
+              <strong>Sarah Mitchell</strong>
+              <small>Verified Resident</small>
+            </div>
+
+            <img src="https://i.pravatar.cc/40?img=32" alt="User">
+          </div>
+
+        </div>
+
+      </header>
+
+      <!-- Content -->
+      <section class="content">
+
+        <div class="left-content">
+
+          <div class="welcome">
+            <h1>Welcome back, Sarah Mitchell.</h1>
+            <p><span class="dot"></span> Your community is currently Safe.</p>
+          </div>
+
+          <!-- Hero -->
+          <div class="hero-card">
+
+            <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1400&auto=format&fit=crop" alt="Incident">
+
+            <div class="live-badge">🔴 Live Updates</div>
+
+            <button class="hero-btn">Quick Report</button>
+
+          </div>
+
+          <!-- Incidents -->
+          <div class="section-header">
+            <h3>Recent Verified Incident</h3>
+            <a href="#">View All</a>
+          </div>
+
+          <div class="incident danger">
+            <div class="bar"></div>
+            <div class="icon">⚠️</div>
+
+            <div class="incident-body">
+              <div class="incident-top">
+                <span class="tag critical">CRITICAL</span>
+                <small>12 mins ago</small>
+              </div>
+
+              <h4>Structural Fire: 4th & Madison Ave</h4>
+
+              <p>Fire department on scene. Residents within 2 blocks are advised to stay indoors and keep windows closed.</p>
+            </div>
+          </div>
+
+          <div class="incident warning">
+            <div class="bar"></div>
+            <div class="icon">🚧</div>
+
+            <div class="incident-body">
+              <div class="incident-top">
+                <span class="tag moderate">MODERATE</span>
+                <small>45 mins ago</small>
+              </div>
+
+              <h4>Traffic Hazard: Main St Bridge</h4>
+
+              <p>Major accident blocking two lanes. Expected delays of 20+ minutes on your commute.</p>
+            </div>
+          </div>
+
+          <div class="incident info">
+            <div class="bar"></div>
+            <div class="icon">🔧</div>
+
+            <div class="incident-body">
+              <div class="incident-top">
+                <span class="tag minor">MINOR</span>
+                <small>2 hours ago</small>
+              </div>
+
+              <h4>Utility Maintenance: Oak District</h4>
+
+              <p>Scheduled power maintenance completed. All services restored.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right -->
+        <div class="right-content">
+
+          <div class="category-grid">
+
+            <div class="cat-card">
+              <div class="cat-icon">🔥</div>
+              <span>Fire</span>
+            </div>
+
+            <div class="cat-card">
+              <div class="cat-icon">🌊</div>
+              <span>Flood</span>
+            </div>
+
+            <div class="cat-card">
+              <div class="cat-icon">🛡️</div>
+              <span>Crime</span>
+            </div>
+
+            <div class="cat-card">
+              <div class="cat-icon">🚑</div>
+              <span>Accident</span>
+            </div>
+
+          </div>
+
+          <!-- Weather -->
+          <div class="weather-card">
+
+            <div class="weather-top">
+              <div>
+                <small>WEATHER</small>
+                <h2>72°F</h2>
+                <p>Clear Skies</p>
+              </div>
+
+              <div class="sun">☀️</div>
+            </div>
+
+            <div class="weather-stats">
+              <div><small>HUMID</small><strong>12%</strong></div>
+              <div><small>WIND</small><strong>4mph</strong></div>
+              <div><small>AQI</small><strong class="good">Good</strong></div>
+            </div>
+
+          </div>
+
+          <!-- Emergency -->
+         <div class="emergency-card">
+
+  <h3>Emergency Contacts</h3>
+
+  <button class="contact-btn" onclick="openModal('police')">
+    <span>📞 Police Dept</span>
+    <span>›</span>
+  </button>
+
+  <button class="contact-btn" onclick="openModal('fire')">
+    <span>🚒 Fire Rescue</span>
+    <span>›</span>
+  </button>
+
+  <button class="contact-btn" onclick="openModal('ambulance')">
+    <span>🚑 Ambulance</span>
+    <span>›</span>
+  </button>
+
+</div>
+
+          <!-- Tip -->
+          <div class="tip-card">
+
+            <h4>💡 SAFETY TIP</h4>
+
+            <p>Ensure all outdoor motion sensors are set to "Active" before dusk to deter unauthorized access to your perimeter.</p>
+
+            <a href="#">Read Guide</a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <div class="modal" id="emergencyModal">
+
+  <div class="modal-card">
+
+    <button class="close-btn" onclick="closeModal()">×</button>
+
+    <div class="modal-icon" id="modalIcon">🛡️</div>
+
+    <h2 id="modalTitle">Police Dept</h2>
+
+    <p id="modalDesc">
+      Immediate assistance for law enforcement and public safety.
+    </p>
+
+    <a href="tel:990" class="call-btn" id="callBtn">
+      📞 Call 990
+    </a>
+
+    <button class="cancel-btn" onclick="closeModal()">
+      Cancel
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+  const services = {
+    police: {
+      icon: '🛡️',
+      title: 'Police Dept',
+      desc: 'Immediate assistance for law enforcement and public safety.',
+      phone: '990'
+    },
+
+    fire: {
+      icon: '🚒',
+      title: 'Fire Rescue',
+      desc: 'Emergency services for fire suppression, rescue, and hazardous materials.',
+      phone: '112'
+    },
+
+    ambulance: {
+      icon: '🚑',
+      title: 'Ambulance',
+      desc: 'Urgent medical transport and emergency medical services.',
+      phone: '112'
+    }
+  };
+
+  function openModal(type){
+    const service = services[type];
+
+    document.getElementById('modalIcon').textContent = service.icon;
+    document.getElementById('modalTitle').textContent = service.title;
+    document.getElementById('modalDesc').textContent = service.desc;
+
+    const callBtn = document.getElementById('callBtn');
+    callBtn.textContent = `📞 Call ${service.phone}`;
+    callBtn.href = `tel:${service.phone}`;
+
+    document.getElementById('emergencyModal').classList.add('show');
+  }
+
+  function closeModal(){
+    document.getElementById('emergencyModal').classList.remove('show');
+  }
+
+  // close when clicking outside
+  document.getElementById('emergencyModal').addEventListener('click', function(e){
+    if(e.target === this){
+      closeModal();
+    }
+  });
+</script>
+</body>
+</html>

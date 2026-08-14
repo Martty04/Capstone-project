@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>SafeReach - Report</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/report.css">
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="shield"></div>
+        <span>SafeReach</span>
+      </div>
+
+      <nav class="menu">
+        <a href="#">Dashboard</a>
+        <a href="#" class="active">Report</a>
+        <a href="#">Alerts</a>
+        <a href="#">Resources</a>
+        <a href="#">Settings</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="quick-btn">Quick Report</button>
+
+        <a href="#">Support</a>
+        <a href="#">Logout</a>
+      </div>
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <header class="topbar">
+        <div></div>
+
+        <div class="top-icons">
+          <span>🔔</span>
+          <span>👤</span>
+        </div>
+      </header>
+
+      <section class="content">
+
+        <!-- Progress -->
+        <div class="steps">
+
+          <div class="step active">
+            <div class="step-num">1</div>
+            <span>Category</span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <span>Details</span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <span>Evidence</span>
+          </div>
+
+        </div>
+
+        <!-- Card -->
+        <div class="card">
+
+          <h2>What happened?</h2>
+
+          <p class="sub">
+            Select the most accurate category for the incident you are reporting.
+          </p>
+
+          <div class="categories">
+
+            <button class="cat active">
+              <div class="icon">🔥</div>
+              <span>Fire</span>
+            </button>
+
+            <button class="cat">
+              <div class="icon">🛡️</div>
+              <span>Crime</span>
+            </button>
+
+            <button class="cat">
+              <div class="icon">🚑</div>
+              <span>Accident</span>
+            </button>
+
+            <button class="cat">
+              <div class="icon">➕</div>
+              <span>Medical</span>
+            </button>
+
+            <button class="cat">
+              <div class="icon">•••</div>
+              <span>Other</span>
+            </button>
+
+          </div>
+
+          <div class="actions">
+            <a href="report-details.html" class="continue-btn">
+              Continue →
+            </a>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>SafeReach - Incident Location</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/report.css">
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="shield"></div>
+        <span>SafeReach</span>
+      </div>
+
+      <nav class="menu">
+        <a href="#">Dashboard</a>
+        <a href="#" class="active">Report</a>
+        <a href="#">Alerts</a>
+        <a href="#">Resources</a>
+        <a href="#">Settings</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="quick-btn">Quick Report</button>
+
+        <a href="#">Support</a>
+        <a href="#">Logout</a>
+      </div>
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <header class="topbar">
+        <div></div>
+
+        <div class="top-icons">
+          <span>🔔</span>
+          <span>👤</span>
+        </div>
+      </header>
+
+      <section class="content">
+
+        <!-- Progress -->
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">1</div>
+            <span>Category</span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <span>Details</span>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="step active">
+            <div class="step-num">3</div>
+            <span>Location</span>
+          </div>
+
+        </div>
+
+        <!-- Card -->
+        <div class="card location-card">
+
+          <div class="location-header">
+            <h2>Pin Incident Location</h2>
+            <p>Drag the pin to the exact location of the incident for faster response coordination.</p>
+          </div>
+
+          <!-- Map -->
+          <div class="map-container">
+
+            <img
+              src="https://staticmap.openstreetmap.de/staticmap.php?center=6.5244,3.3792&zoom=11&size=640x360&markers=6.5244,3.3792,red-pushpin"
+              alt="Map"
+            >
+
+            <div class="map-pin">📍</div>
+
+          </div>
+
+          <!-- Hint -->
+          <div class="map-hint">
+            Press and hold to move the pin
+          </div>
+
+          <!-- Address -->
+          <div class="field">
+
+            <label>Location Address</label>
+
+            <div class="address-box">
+              <input type="text" value="Saint Kitts and Nevis" readonly>
+              <button type="button">Verify</button>
+            </div>
+
+          </div>
+
+          <!-- GPS Status -->
+          <div class="gps-status">
+            <span>🛰️</span>
+            <span>Current GPS location active within 15 meters.</span>
+          </div>
+
+          <!-- Actions -->
+          <div class="actions">
+
+            <a href="report-details.html" class="back-btn">← Back</a>
+
+            <button class="continue-btn" onclick="openModal()">
+  Submit →
+</button>
+
+          </div>
+
+        </div>
+
+        <!-- Privacy -->
+        <div class="privacy-note">
+          🛡️ Your location data is encrypted and only shared with emergency responders.
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- SUCCESS MODAL -->
+
+  <div class="modal" id="successModal">
+
+    <div class="modal-content">
+
+      <div class="success-icon">✓</div>
+
+      <h2>Report Submitted Successfully</h2>
+
+      <p>
+        Thank you, Sarah. Your incident report has been received and forwarded to the appropriate emergency response team.
+      </p>
+
+      <div class="reference-box">
+        <span>Reference ID</span>
+        <strong>#SR-2026-00458</strong>
+      </div>
+
+      <button class="dashboard-btn" onclick="closeModal()">
+        Go back to Dashboard →
+      </button>
+
+    </div>
+
+  </div>
+
+  <script>
+    function openModal(){
+      document.getElementById("successModal").classList.add("show");
+    }
+
+    function closeModal(){
+      document.getElementById("successModal").classList.remove("show");
+    }
+  </script>
+
+</body>
+</html>
