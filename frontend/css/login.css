@@ -1,0 +1,275 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Inter, Arial, sans-serif;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#b7cdbb 0%,#ffffff 45%,#ffffff 100%);
+  padding:20px;
+}
+
+.login-wrapper{
+  width:100%;
+  max-width:1200px;
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+/* LEFT PANEL */
+
+.left-panel{
+  padding:38px;
+  background:linear-gradient(180deg,#dbe7dc 0%,#eef5ee 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card{
+  width:100%;
+  max-width:420px;
+  background:#0f1b4a;
+  border-radius:12px;
+  padding:22px;
+}
+
+.card-top{
+  height:42px;
+  background:#f3f4f6;
+  border-radius:10px 10px 0 0;
+}
+
+.card-image{
+  position:relative;
+  height:420px;
+  border-radius:0 0 10px 10px;
+  overflow:hidden;
+  background:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop') center/cover;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.55));
+}
+
+.card-content{
+  position:absolute;
+  left:26px;
+  right:26px;
+  bottom:28px;
+  color:#fff;
+}
+
+.card-content h2{
+  font-size:36px;
+  line-height:1.15;
+  margin-bottom:16px;
+}
+
+.card-content p{
+  font-size:14px;
+  line-height:1.7;
+  color:#e5e7eb;
+}
+
+/* RIGHT PANEL */
+
+.right-panel{
+  padding:48px 56px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:42px;
+  font-weight:700;
+  color:#111827;
+}
+
+.shield{
+  width:20px;
+  height:20px;
+  background:linear-gradient(135deg,#f97316 0%,#f97316 50%,#16a34a 50%,#16a34a 100%);
+  border-radius:5px;
+  transform:rotate(45deg);
+}
+
+h1{
+  font-size:42px;
+  color:#111827;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  color:#6b7280;
+  margin-bottom:34px;
+  line-height:1.6;
+}
+
+.login-form{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+label{
+  font-size:13px;
+  font-weight:600;
+  color:#374151;
+}
+
+input{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  font-size:14px;
+  transition:.2s;
+}
+
+input:focus{
+  outline:none;
+  border-color:#22c55e;
+  box-shadow:0 0 0 3px rgba(34,197,94,.15);
+}
+
+.password-box{
+  position:relative;
+}
+
+.password-box input{
+  padding-right:48px;
+}
+
+.eye{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  border:none;
+  background:none;
+  cursor:pointer;
+  color:#9ca3af;
+  font-size:16px;
+}
+
+.forgot{
+  align-self:flex-end;
+  font-size:12px;
+  color:#111827;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.signin-btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  background:#22c55e;
+  color:#fff;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(34,197,94,.25);
+}
+
+.divider{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#9ca3af;
+  font-size:12px;
+  margin:6px 0;
+}
+
+.divider::before,
+.divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:#e5e7eb;
+}
+
+.google-btn{
+  width:100%;
+  padding:14px;
+  border:1px solid #86efac;
+  border-radius:10px;
+  background:#fff;
+  color:#16a34a;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  cursor:pointer;
+}
+
+.g{
+  color:#ea4335;
+  font-weight:700;
+}
+
+.signup-text{
+  text-align:center;
+  margin-top:28px;
+  color:#6b7280;
+}
+
+.signup-text a{
+  color:#111827;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+  .login-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .left-panel{
+    padding:24px;
+  }
+
+  .card-image{
+    height:320px;
+  }
+}
+
+@media (max-width:600px){
+  .right-panel{
+    padding:32px 24px;
+  }
+
+  h1{
+    font-size:32px;
+  }
+
+  .card-content h2{
+    font-size:28px;
+  }
+}
