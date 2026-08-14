@@ -2,16 +2,22 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+  overflow-x: hidden;
+
 }
 
 body{
-  font-family: Inter, Arial, sans-serif;
+  font-family: lato, Arial, sans-serif;
   background:#111;
   min-height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
   padding:20px;
+}
+
+html {
+font-size: 65.2% ;
 }
 
 .auth-container{
