@@ -34,12 +34,9 @@ body{
   margin-bottom:36px;
 }
 
+
 .shield{
-  width:18px;
-  height:18px;
-  background:linear-gradient(135deg,#f97316 0%,#f97316 50%,#16a34a 50%,#16a34a 100%);
-  border-radius:4px;
-  transform:rotate(45deg);
+  width:50%;
 }
 
 .menu{
@@ -418,6 +415,42 @@ body{
   text-decoration:none;
 }
 
+
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+  padding:10px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.menu-toggle span{
+  width:24px;
+  height:3px;
+  background:#222;
+  border-radius:3px;
+  transition:.3s;
+}
+
+/* Overlay */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  z-index:998;
+}
+
+.overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
 /* RESPONSIVE */
 
 @media(max-width:1100px){
@@ -431,8 +464,30 @@ body{
 }
 
 @media(max-width:800px){
+  .menu-toggle{
+    display:flex;
+    width: 100%;
+  }
+
   .sidebar{
-    display:none;
+    display: flex;
+    position:fixed;
+    left:-260px;
+    top:0;
+    width:240px;
+    height:100vh;
+    background:#fff;
+    z-index:999;
+    transition:.3s;
+    box-shadow:2px 0 20px rgba(0,0,0,.12);
+  }
+
+  .sidebar.active{
+    left:0;
+  }
+
+  .main{
+    width:100%;
   }
 
   .topbar{

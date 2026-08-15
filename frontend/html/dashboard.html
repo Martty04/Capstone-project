@@ -9,27 +9,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/flag.png">
 
   <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
 
+  <div class="overlay" id="overlay"></div>
   <div class="dashboard">
 
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
 
-      <div class="logo">
-        <div class="shield"></div>
-        <span>SafeReach</span>
+       <div class="logo">
+        <img src="../images/logo.png" class="shield"/>
       </div>
+ <button class="close-btn" onclick="closeSidebar()">&times;</button>
 
-      <nav class="menu">
-        <a href="#" class="active">Dashboard</a>
-        <a href="report-category.html">Report</a>
-        <a href="alerts.html">Alerts</a>
-        <a href="#">Resources</a>
-        <a href="#">Settings</a>
+    <nav class="menu">
+        <a href="#"><img  class="dash-icon" src="../images/dashboardicon.png"/> Dashboard</a>
+        <a href="#" class="active"><img  class="dash-icon" src="../images/reporticon.png"/> Report</a>
+        <a href="#"><img  class="dash-icon" src="../images/alerticon.png"/> Alerts</a>
+        <a href="#"><img  class="dash-icon" src="../images/resourceicon.png"/> Resources</a>
+        <a href="#"><img  class="dash-icon" src="../images/setting icon.png"/> Settings</a>
       </nav>
 
       <div class="sidebar-bottom">
@@ -45,6 +47,11 @@
 
       <!-- Topbar -->
       <header class="topbar">
+<div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
         <div class="search">
           <span>🔍</span>
@@ -261,54 +268,7 @@
 
 </div>
 
-<script>
-  const services = {
-    police: {
-      icon: '🛡️',
-      title: 'Police Dept',
-      desc: 'Immediate assistance for law enforcement and public safety.',
-      phone: '990'
-    },
-
-    fire: {
-      icon: '🚒',
-      title: 'Fire Rescue',
-      desc: 'Emergency services for fire suppression, rescue, and hazardous materials.',
-      phone: '112'
-    },
-
-    ambulance: {
-      icon: '🚑',
-      title: 'Ambulance',
-      desc: 'Urgent medical transport and emergency medical services.',
-      phone: '112'
-    }
-  };
-
-  function openModal(type){
-    const service = services[type];
-
-    document.getElementById('modalIcon').textContent = service.icon;
-    document.getElementById('modalTitle').textContent = service.title;
-    document.getElementById('modalDesc').textContent = service.desc;
-
-    const callBtn = document.getElementById('callBtn');
-    callBtn.textContent = `📞 Call ${service.phone}`;
-    callBtn.href = `tel:${service.phone}`;
-
-    document.getElementById('emergencyModal').classList.add('show');
-  }
-
-  function closeModal(){
-    document.getElementById('emergencyModal').classList.remove('show');
-  }
-
-  // close when clicking outside
-  document.getElementById('emergencyModal').addEventListener('click', function(e){
-    if(e.target === this){
-      closeModal();
-    }
-  });
+<script src="../js/script.js">
 </script>
 </body>
 </html>

@@ -1,135 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>SafeReach - Report</title>
+<title>SafeReach - Report</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="../css/report.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="../images/flag.png">
+<link rel="stylesheet" href="../css/report.css">
 </head>
 <body>
 
-  <div class="dashboard">
+<div class="overlay" id="overlay"></div>
+<div class="dashboard">
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
 
-      <div class="logo">
-        <div class="shield"></div>
-        <span>SafeReach</span>
-      </div>
+<div class="logo">
+<img src="../images/logo.png" class="shield"/>
+</div>
+ <button class="close-btn" onclick="closeSidebar()">&times;</button>
 
-      <nav class="menu">
-        <a href="#">Dashboard</a>
-        <a href="#" class="active">Report</a>
-        <a href="#">Alerts</a>
-        <a href="#">Resources</a>
-        <a href="#">Settings</a>
-      </nav>
+<nav class="menu">
+<a href="#"><img  class="dash-ic" src="../images/dashboardicon.png"/> Dashboard</a>
+<a href="#" class="active"><img  class="dash-ic" src="../images/reporticon.png"/> Report</a>
+<a href="#"><img  class="dash-ic" src="../images/alerticon.png"/> Alerts</a>
+<a href="#"><img  class="dash-ic" src="../images/resourceicon.png"/> Resources</a>
+<a href="#"><img  class="dash-ic" src="../images/setting icon.png"/> Settings</a>
+</nav>
 
-      <div class="sidebar-bottom">
-        <button class="quick-btn">Quick Report</button>
+<div class="sidebar-bottom">
+<button class="quick-btn">Quick Report</button>
 
-        <a href="#">Support</a>
-        <a href="#">Logout</a>
-      </div>
+<a href="#">Support</a>
+<a href="#">Logout</a>
+</div>
 
-    </aside>
+</aside>
 
-    <!-- Main -->
-    <main class="main">
+<!-- Main -->
+<main class="main">
 
-      <header class="topbar">
-        <div></div>
+<header class="topbar">
+<img src="../images/logo.png" class="shield2"/>
 
-        <div class="top-icons">
-          <span>🔔</span>
-          <span>👤</span>
-        </div>
-      </header>
+<div class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
 
-      <section class="content">
+<div class="top-icons">
+<img class="notify" src="../images/notification.png" alt="notification">
+<div class="profile">
+<div>
+<strong>Sarah Mitchell</strong>
+<small>Verified Resident</small>
+</div>
 
-        <!-- Progress -->
-        <div class="steps">
+<img src="https://i.pravatar.cc/40?img=32" alt="User">
+</div>
+</div>
+</header>
 
-          <div class="step active">
-            <div class="step-num">1</div>
-            <span>Category</span>
-          </div>
+<section class="content">
 
-          <div class="line"></div>
+<!-- Progress -->
+<div class="steps">
 
-          <div class="step">
-            <div class="step-num">2</div>
-            <span>Details</span>
-          </div>
+<div class="step active">
+<div class="step-num">1</div>
+<span>Category</span>
+</div>
 
-          <div class="line"></div>
+<div class="line"></div>
 
-          <div class="step">
-            <div class="step-num">3</div>
-            <span>Evidence</span>
-          </div>
+<div class="step">
+<div class="step-num">2</div>
+<span>Details</span>
+</div>
 
-        </div>
+<div class="line"></div>
 
-        <!-- Card -->
-        <div class="card">
+<div class="step">
+<div class="step-num">3</div>
+<span>Evidence</span>
+</div>
 
-          <h2>What happened?</h2>
+</div>
 
-          <p class="sub">
-            Select the most accurate category for the incident you are reporting.
-          </p>
+<!-- Card -->
+<div class="card">
 
-          <div class="categories">
+<h2>What happened?</h2>
 
-            <button class="cat active">
-              <div class="icon">🔥</div>
-              <span>Fire</span>
-            </button>
+<p class="sub">
+Select the most accurate category for the incident you are reporting.
+</p>
 
-            <button class="cat">
-              <div class="icon">🛡️</div>
-              <span>Crime</span>
-            </button>
+<div class="categories">
 
-            <button class="cat">
-              <div class="icon">🚑</div>
-              <span>Accident</span>
-            </button>
+<button class="cat active">
+<img class="icon" src="../images/fire.png" alt="fire"/>
+<span>Fire</span>
+</button>
 
-            <button class="cat">
-              <div class="icon">➕</div>
-              <span>Medical</span>
-            </button>
+<button class="cat">
+<img class="icon" src="../images/crime.png" alt="fire"/>
+<span>Crime</span>
+</button>
 
-            <button class="cat">
-              <div class="icon">•••</div>
-              <span>Other</span>
-            </button>
+<button class="cat">
+<img class="icon" src="../images/accident.png" alt="fire"/>
+<span>Accident</span>
+</button>
 
-          </div>
+<button class="cat">
+<img class="icon" src="../images/medical.png" alt="fire"/>
+<span>Medical</span>
+</button>
 
-          <div class="actions">
-            <a href="report-details.html" class="continue-btn">
-              Continue →
-            </a>
-          </div>
+<button class="cat">
+<img class="icon" src="../images/other.png" alt="fire"/>
+<span>Other</span>
+</button>
 
-        </div>
+</div>
 
-      </section>
+<div class="actions">
+<a href="report-details.html" class="continue-btn">
+Continue →
+</a>
+</div>
 
-    </main>
+</div>
 
-  </div>
+</section>
 
+</main>
+
+</div>
+<script src="../js/script.js"></script>
 </body>
 </html>
