@@ -11,3 +11,9 @@
 
       function goToDashboard() {
   }
+
+      function moveToDashboard() {
+
+         document.getElementById("btn").classList.remove("show");
+   window.location.href = "../html/dashboard.html";
+  }
