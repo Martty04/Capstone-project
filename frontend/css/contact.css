@@ -1,0 +1,475 @@
+/* ==========================================================================
+   SafeReach — Contact
+   Rebuilt for full responsiveness (mobile-first, flex/grid based)
+   ========================================================================== */
+
+:root{
+  --color-primary: #006557;
+  --color-accent: #5FB666;
+  --color-accent-soft: #D9F2EF;
+
+  --color-page-bg: #FCF8FA;
+  --color-card-tint: #F6F3F5;
+  --color-card-tint-border: #F3F2F5;
+  --color-white: #FFFFFF;
+
+  --color-alert-bg: #F4DEE4;
+  --color-alert-border: #F5E3E8;
+  --color-alert-text: #BA0035;
+
+  --color-text: #000000;
+  --color-text-muted: #45464D;
+  --color-text-soft: #7C839B;
+  --color-border: #E0E7E0;
+
+  --font-display: 'Lato', system-ui, sans-serif;
+  --font-body: 'Lato', system-ui, sans-serif;
+  --font-detail: 'Inter', system-ui, sans-serif;
+
+  --max-width: 1280px;
+  --gutter: clamp(20px, 5vw, 60px);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-page-bg);
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, textarea{
+  font-family: inherit;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn{
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--color-white);
+  white-space: nowrap;
+}
+
+.btn--outline{
+  background-color: transparent;
+}
+
+.btn--solid{
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-soft);
+}
+
+.btn--dark{
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.site-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px var(--gutter);
+  position: relative;
+  background-color: var(--color-page-bg);
+}
+
+.logo img{
+  height: 30px;
+  width: auto;
+}
+
+.navlist{
+  display: flex;
+  gap: clamp(16px, 3vw, 50px);
+  font-size: 16px;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.nav-link{
+  color: black;
+}
+
+.nav-link:hover,
+.nav-link--active{
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.header-actions{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.menu-toggle{
+  display: none;
+  background: none;
+  border: 2px solid var(--color-primary);
+  border-radius: 7px;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-toggle span,
+.menu-toggle::before,
+.menu-toggle::after{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--color-primary);
+  position: relative;
+}
+
+.menu-toggle span{ position: absolute; }
+.menu-toggle::before{ transform: translateY(-6px); }
+.menu-toggle::after{ transform: translateY(6px); }
+
+@media (max-width: 860px){
+  .menu-toggle{ display: flex; }
+
+  .navlist{
+    display: none;
+    width: 100%;
+    order: 3;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border);
+    margin-top: 16px;
+  }
+
+  .site-header.is-open .navlist{ display: flex; }
+  .site-header{ flex-wrap: wrap; }
+}
+
+/* ==========================================================================
+   Page hero
+   ========================================================================== */
+.page-hero{
+  text-align: center;
+  padding: clamp(30px, 6vw, 60px) var(--gutter) clamp(20px, 4vw, 40px);
+}
+
+.page-hero__title{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 6vw, 55px);
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.page-hero__subtitle{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  max-width: 620px;
+  margin: 16px auto 0;
+}
+
+/* ==========================================================================
+   Contact grid
+   ========================================================================== */
+.contact-section{
+  padding: clamp(10px, 3vw, 30px) var(--gutter) clamp(50px, 8vw, 90px);
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (min-width: 860px){
+  .contact-grid{
+    grid-template-columns: minmax(300px, 420px) minmax(320px, 1fr);
+  }
+}
+
+/* ---- Get In Touch card ---- */
+.contact-card{
+  border: 2px solid var(--color-card-tint-border);
+  background-color: var(--color-card-tint);
+  border-radius: 14px;
+  padding: clamp(24px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card__title{
+  font-family: var(--font-detail);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.contact-method{
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-method__icon{
+  flex: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-method__icon img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-method__label{
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.14px;
+  color: var(--color-text-muted);
+}
+
+.contact-method__value{
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.5px;
+  word-break: break-word;
+}
+
+.contact-card hr{
+  border: none;
+  border-top: 1px solid var(--color-text-soft);
+  opacity: 0.35;
+}
+
+.alert-box{
+  border: 2px solid var(--color-alert-border);
+  background-color: var(--color-alert-bg);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.alert-box__title{
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: var(--color-alert-text);
+}
+
+.alert-box__desc{
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+
+.alert-box__link{
+  font-family: var(--font-detail);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.14px;
+  color: var(--color-alert-text);
+}
+
+/* ---- Send a Message card ---- */
+.message-card{
+  background-color: var(--color-white);
+  border-radius: 14px;
+  padding: clamp(24px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.message-card__photo{
+  align-self: flex-start;
+  width: min(220px, 60%);
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.message-card__photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.message-card__title{
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.14px;
+}
+
+.message-card__desc{
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  margin-top: -8px;
+}
+
+.form-row{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 560px){
+  .form-row{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.field label{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.field input,
+.field textarea{
+  border: 2px solid #C7C9CE;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background-color: var(--color-white);
+  font-size: 14px;
+  width: 100%;
+}
+
+.field textarea{
+  resize: vertical;
+  min-height: 130px;
+}
+
+.field input:focus,
+.field textarea:focus{
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.message-card form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.message-card .btn--dark{
+  align-self: flex-start;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer{
+  padding: clamp(30px, 5vw, 50px) var(--gutter) 40px;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-footer .logo img{
+  height: 24px;
+}
+
+.footer-links{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 13px;
+  gap: clamp(16px, 3vw, 30px);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Small phones
+   ========================================================================== */
+@media (max-width: 480px){
+  .header-actions .btn{
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .message-card .btn--dark{
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .footer-links{
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}

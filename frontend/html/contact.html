@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — SafeReach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="logo">
+      <img src="https://i.postimg.cc/tCkdkdQq/logo.png" alt="SafeReach" height="30">
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+      <span></span>
+    </button>
+
+    <nav class="navlist" id="mainNav">
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="#">Features</a>
+      <a class="nav-link" href="#">How it works</a>
+      <a class="nav-link" href="#">About</a>
+      <a class="nav-link nav-link--active" href="#">Contact us</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn--outline" href="#">Log In</a>
+      <a class="btn btn--solid" href="#">Report Incident</a>
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <section class="page-hero">
+    <h1 class="page-hero__title">How can we help?</h1>
+    <p class="page-hero__subtitle">Our dedicated emergency response team and support coordinators are available 24/7 to ensure community safety and platform integrity.</p>
+  </section>
+
+  <!-- Contact grid -->
+  <section class="contact-section">
+    <div class="contact-grid">
+
+      <!-- Get In Touch -->
+      <div class="contact-card">
+        <h2 class="contact-card__title">Get In Touch</h2>
+
+        <div class="contact-method">
+          <span class="contact-method__icon"><img src="https://i.postimg.cc/YqcFfDPC/messg-icon.png" alt=""></span>
+          <div>
+            <p class="contact-method__label">GENERAL SUPPORT</p>
+            <p class="contact-method__value">support@safealert.com</p>
+          </div>
+        </div>
+
+        <div class="contact-method">
+          <span class="contact-method__icon"><img src="https://i.postimg.cc/tgRvR4df/latest-phone-icon.png" alt=""></span>
+          <div>
+            <p class="contact-method__label">VERIFICATION HOTLINE</p>
+            <p class="contact-method__value">+1-800-SAFE-ALERT</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="alert-box">
+          <p class="alert-box__title">* Emergency Coordinator</p>
+          <p class="alert-box__desc">Direct line for verified government agencies and first responders.</p>
+          <a class="alert-box__link" href="#">Access Priority Channel &gt;</a>
+        </div>
+      </div>
+
+      <!-- Send a Message -->
+      <div class="message-card">
+        <h2 class="message-card__title">Send a Message</h2>
+        <p class="message-card__desc">Use this form for non-urgent inquiries, bug reports, or partnership requests. For active incidents, please use the 'Report' button in the dashboard.</p>
+
+        <form>
+          <div class="form-row">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="John Doe">
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Account support">
+          </div>
+
+          <div class="field">
+            <label for="comments">Message</label>
+            <textarea id="comments" name="comments" rows="5" placeholder="Type here..."></textarea>
+          </div>
+
+          <button type="submit" class="btn--dark">Send Message &gt;</button>
+        </form>
+
+        <div class="message-card__photo">
+          <img src="https://i.postimg.cc/8c5d67X7/Whats-App-Image-2026-08-13-at-14-01-23-(6).jpg" alt="SafeReach support team">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="logo">
+    </div>
+    <div class="footer-links">
+      <p>Privacy Policy</p>
+      <p>Terms of Service</p>
+      <p>Contact Support</p>
+      <p>© 2026 SafeReach Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('siteHeader');
+    const toggle = document.getElementById('menuToggle');
+    toggle.addEventListener('click', () => {
+      const isOpen = header.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+
+</body>
+</html>
