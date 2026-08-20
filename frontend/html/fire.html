@@ -1,134 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>SafeReach - Fire Alerts</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="../css/alerts.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeReach Fire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png" href="../images/flag.png">
+<link rel="stylesheet"href="../css/fire.css">
 </head>
 <body>
 
-  <div class="dashboard">
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
+<!-- =========================
+MOBILE / SIDEBAR OVERLAY
+========================== -->
+<div class="overlay"id="overlay"></div>
 
-      <div class="logo">
-        <div class="shield"></div>
-        <span>SafeReach</span>
-      </div>
 
-      <nav class="menu">
-        <a href="dashboard.html">Dashboard</a>
-        <a href="report-category.html">Report</a>
-        <a href="#" class="active">Alerts</a>
-        <a href="#">Resources</a>
-        <a href="#">Settings</a>
-      </nav>
+<!-- =========================
+DASHBOARD
+========================== -->
+<div class="dashboard">
 
-      <div class="sidebar-bottom">
-        <button class="quick-btn">Quick Report</button>
-        <a href="#">Support</a>
-        <a href="#">Logout</a>
-      </div>
 
-    </aside>
+<!-- =========================
+SIDEBAR
+========================== -->
+<aside class="sidebar" id="sidebar">
 
-    <!-- Main -->
-    <main class="main">
+<!-- Logo -->
+<div class="logo">
 
-      <!-- Topbar -->
-      <header class="topbar">
+<img src="../images/logo.png" class="shield" alt="SafeReach Logo">
 
-        <div class="search">
-          <span>🔍</span>
-          <input type="text" placeholder="Search alerts, locations, or safety tips...">
-        </div>
+</div>
 
-        <div class="top-right">
 
-          <span class="bell">🔔</span>
+<!-- Sidebar Close -->
+<button class="close-btn" onclick="closeSidebar()">&times;</button>
 
-          <div class="profile">
-            <div>
-              <strong>Sarah Mitchell</strong>
-              <small>Verified Resident</small>
-            </div>
 
-            <img src="https://i.pravatar.cc/40?img=32" alt="User">
-          </div>
 
-        </div>
+<!-- Navigation -->
+<nav class="menu">
+<a href="#" >
+<img class="dash-ic" src="../images/dashboardicon.png" alt="Dashboard">
+<span>Dashboard</span>
+</a>
 
-      </header>
 
-      <!-- Content -->
-      <section class="content">
+<a href="report.html">
 
-        <!-- Left -->
-        <div class="left-panel">
+<img class="dash-ic" src="../images/reporticon.png" alt="Report">
+<span>Report</span>
+</a>
 
-          <!-- Sort -->
-          <div class="card">
 
-            <h3>Sort By</h3>
+<a href="alerts.html" class="active">
+<img class="dash-ic" src="../images/alerticon.png" alt="Alerts">
+<span>Alerts</span>
+</a>
 
-            <label class="radio">
-              <input type="radio" checked>
-              <span>Newest First</span>
-            </label>
 
-            <label class="radio">
-              <input type="radio">
-              <span>Highest Severity</span>
-            </label>
+<a href="resource.html">
+<img class="dash-ic" src="../images/resourceicon.png" alt="Resources">
+<span>Resources</span>
+</a>
 
-            <label class="radio">
-              <input type="radio">
-              <span>Closest Distance</span>
-            </label>
 
-          </div>
+<a href="settings.html">
+<img class="dash-ic" src="../images/setting icon.png" alt="Settings">
+<span>Settings</span>
+</a>
+</nav>
 
-          <!-- Stats -->
-          <div class="card">
 
-            <h3>Safety Statistics</h3>
+<!-- Sidebar Bottom -->
+<div class="sidebar-bottom">
 
-            <div class="chart">
+<button class="quick-btn">
+Quick Report
+</button>
 
-              <div style="height:50%"></div>
-              <div style="height:32%"></div>
-              <div style="height:68%"></div>
-              <div style="height:40%"></div>
-              <div style="height:58%"></div>
-              <div style="height:76%"></div>
-              <div style="height:24%"></div>
+<a href="#">
+Support
+</a>
 
-            </div>
+<a href="#">
+Logout
+</a>
 
-            <p class="chart-label">Incidents reported this week</p>
+</div>
 
-            <div class="resolution">
-              <div class="resolution-top">
-                <span>Resolution Rate</span>
-                <strong>92%</strong>
-              </div>
+</aside>
 
-              <div class="progress">
-                <div class="progress-fill"></div>
-              </div>
-            </div>
 
-          </div>
 
-        </div>
+<!-- =========================
+MAIN
+========================== -->
+<main class="main">
+
+
+<!-- =========================
+TOPBAR
+========================== -->
+<header class="topbar">
+
+
+<!-- Mobile Header Row -->
+<div class="mobile-header">
+
+<!-- Mobile Logo -->
+<img src="../images/logo.png" class="mobile-logo" alt="SafeReach">
+
+
+<!-- Hamburger -->
+<button class="menu-toggle" id="menuToggle"aria-label="Open menu">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+</div>
+
+
+<!-- Search -->
+<div class="search">
+
+<i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+<input
+type="text"
+placeholder="Search alerts, locations, or safety tips..."
+>
+
+</div>
+
+
+<!-- Desktop Right -->
+<div class="top-right">
+
+<!-- Notification -->
+<button
+class="notification-btn"
+aria-label="Notifications"
+>
+
+<img
+class="notify"
+src="../images/notification.png"
+alt="Notifications"
+>
+
+</button>
+
+
+<!-- Profile -->
+<div class="profile">
+
+<div class="profile-info">
+
+<strong>
+Sarah Mitchell
+</strong>
+
+<small>
+Verified Resident
+</small>
+
+</div>
+
+
+<img
+src="https://i.pravatar.cc/40?img=32"
+alt="Sarah Mitchell"
+>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- Content -->
+<section class="content">
+
+<!-- Left -->
+<div class="left-panel">
+
+<!-- Sort -->
+<div class="card">
+
+<h3>Sort By</h3>
+
+<label class="radio">
+<input type="radio" checked>
+<span>Newest First</span>
+</label>
+
+<label class="radio">
+<input type="radio">
+<span>Highest Severity</span>
+</label>
+
+<label class="radio">
+<input type="radio">
+<span>Closest Distance</span>
+</label>
+
+</div>
+
+<!-- Stats -->
+<div class="card">
+
+<h3>Safety Statistics</h3>
+
+<div class="chart">
+
+<div style="height:50%"></div>
+<div style="height:32%"></div>
+<div style="height:68%"></div>
+<div style="height:40%"></div>
+<div style="height:58%"></div>
+<div style="height:76%"></div>
+<div style="height:24%"></div>
+
+</div>
+
+<p class="chart-label">Incidents reported this week</p>
+
+<div class="resolution">
+<div class="resolution-top">
+<span>Resolution Rate</span>
+<strong>92%</strong>
+</div>
+
+<div class="progress">
+<div class="progress-fill"></div>
+</div>
+</div>
+
+</div>
+
+</div>
 
         <!-- Right -->
         <div class="right-panel">

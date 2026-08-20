@@ -1,274 +1,689 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>SafeReach Dashboard</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SafeReach Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
   <link rel="icon" type="image/png" href="../images/flag.png">
-
-  <link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
 
-  <div class="overlay" id="overlay"></div>
-  <div class="dashboard">
+<!-- =========================
+MOBILE / SIDEBAR OVERLAY
+========================== -->
+<div class="overlay"id="overlay"></div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
 
-       <div class="logo">
-        <img src="../images/logo.png" class="shield"/>
-      </div>
+<!-- =========================
+DASHBOARD
+========================== -->
+<div class="dashboard">
+
+
+<!-- =========================
+SIDEBAR
+========================== -->
+<aside class="sidebar" id="sidebar">
+
+<!-- Logo -->
+<div class="logo">
+
+<img src="../images/logo.png" class="shield" alt="SafeReach Logo">
+
+</div>
+
+
+<!-- Sidebar Close -->
  <button class="close-btn" onclick="closeSidebar()">&times;</button>
 
-    <nav class="menu">
-        <a href="#"><img  class="dash-icon" src="../images/dashboardicon.png"/> Dashboard</a>
-        <a href="#" class="active"><img  class="dash-icon" src="../images/reporticon.png"/> Report</a>
-        <a href="#"><img  class="dash-icon" src="../images/alerticon.png"/> Alerts</a>
-        <a href="#"><img  class="dash-icon" src="../images/resourceicon.png"/> Resources</a>
-        <a href="#"><img  class="dash-icon" src="../images/setting icon.png"/> Settings</a>
-      </nav>
 
-      <div class="sidebar-bottom">
-        <button class="quick-btn">Quick Report</button>
-        <a href="#">Support</a>
-        <a href="#">Logout</a>
-      </div>
 
-    </aside>
+<!-- Navigation -->
+<nav class="menu">
+<a href="#" class="active">
+<img class="dash-ic" src="../images/dashboardicon.png" alt="Dashboard"/>
+<span>Dashboard</span>
+</a>
 
-    <!-- Main -->
-    <main class="main">
 
-      <!-- Topbar -->
-      <header class="topbar">
-<div class="menu-toggle" id="menuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+<a href="report.html">
 
-        <div class="search">
-          <span>🔍</span>
-          <input type="text" placeholder="Search alerts, locations, or safety tips...">
-        </div>
+<img class="dash-ic" src="../images/reporticon.png" alt="Report"/>
+<span>Report</span>
+</a>
 
-        <div class="top-right">
 
-          <span class="bell">🔔</span>
+<a href="alerts.html">
+<img class="dash-ic" src="../images/alerticon.png" alt="Alerts"/>
+<span>Alerts</span>
+</a>
 
-          <div class="profile">
-            <div>
-              <strong>Sarah Mitchell</strong>
-              <small>Verified Resident</small>
-            </div>
 
-            <img src="https://i.pravatar.cc/40?img=32" alt="User">
-          </div>
+<a href="resources.html">
+<img class="dash-ic" src="../images/resourceicon.png" alt="Resources"/>
+<span>Resources</span>
+</a>
 
-        </div>
 
-      </header>
+<a href="settings.html">
+<img class="dash-ic" src="../images/setting icon.png" alt="Settings">
+<span>Settings</span>
+</a>
+</nav>
 
-      <!-- Content -->
-      <section class="content">
 
-        <div class="left-content">
+<!-- Sidebar Bottom -->
+<div class="sidebar-bottom">
 
-          <div class="welcome">
-            <h1>Welcome back, Sarah Mitchell.</h1>
-            <p><span class="dot"></span> Your community is currently Safe.</p>
-          </div>
+  <button class="quick-btn">
+    <i class="fa-solid fa-circle-plus"></i> Quick Report</button>
+  <a href="#">
+    <i class="fa-regular fa-circle-question"></i>
+    Support
+  </a>
 
-          <!-- Hero -->
-          <div class="hero-card">
 
-            <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=1400&auto=format&fit=crop" alt="Incident">
+  <a href="login.html">
+    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    Logout
+  </a>
+</div>
 
-            <div class="live-badge">🔴 Live Updates</div>
+</aside>
 
-            <button class="hero-btn">Quick Report</button>
 
-          </div>
 
-          <!-- Incidents -->
-          <div class="section-header">
-            <h3>Recent Verified Incident</h3>
-            <a href="#">View All</a>
-          </div>
+<!-- =========================
+MAIN
+========================== -->
+<main class="main">
 
-          <div class="incident danger">
-            <div class="bar"></div>
-            <div class="icon">⚠️</div>
 
-            <div class="incident-body">
-              <div class="incident-top">
-                <span class="tag critical">CRITICAL</span>
-                <small>12 mins ago</small>
-              </div>
+<!-- =========================
+TOPBAR
+========================== -->
+<header class="topbar">
 
-              <h4>Structural Fire: 4th & Madison Ave</h4>
 
-              <p>Fire department on scene. Residents within 2 blocks are advised to stay indoors and keep windows closed.</p>
-            </div>
-          </div>
+<!-- Mobile Header Row -->
+<div class="mobile-header">
 
-          <div class="incident warning">
-            <div class="bar"></div>
-            <div class="icon">🚧</div>
+<!-- Mobile Logo -->
+<img src="../images/logo.png" class="mobile-logo" alt="SafeReach">
 
-            <div class="incident-body">
-              <div class="incident-top">
-                <span class="tag moderate">MODERATE</span>
-                <small>45 mins ago</small>
-              </div>
 
-              <h4>Traffic Hazard: Main St Bridge</h4>
+<!-- Hamburger -->
+<button class="menu-toggle" id="menuToggle"aria-label="Open menu">
 
-              <p>Major accident blocking two lanes. Expected delays of 20+ minutes on your commute.</p>
-            </div>
-          </div>
+<span></span>
+<span></span>
+<span></span>
 
-          <div class="incident info">
-            <div class="bar"></div>
-            <div class="icon">🔧</div>
+</button>
+</div>
 
-            <div class="incident-body">
-              <div class="incident-top">
-                <span class="tag minor">MINOR</span>
-                <small>2 hours ago</small>
-              </div>
 
-              <h4>Utility Maintenance: Oak District</h4>
+<!-- Search -->
+<div class="search">
 
-              <p>Scheduled power maintenance completed. All services restored.</p>
-            </div>
-          </div>
+<i class="fa-solid fa-magnifying-glass search-icon"></i>
 
-        </div>
-
-        <!-- Right -->
-        <div class="right-content">
-
-          <div class="category-grid">
-
-            <div class="cat-card">
-              <div class="cat-icon">🔥</div>
-              <span>Fire</span>
-            </div>
-
-            <div class="cat-card">
-              <div class="cat-icon">🌊</div>
-              <span>Flood</span>
-            </div>
-
-            <div class="cat-card">
-              <div class="cat-icon">🛡️</div>
-              <span>Crime</span>
-            </div>
-
-            <div class="cat-card">
-              <div class="cat-icon">🚑</div>
-              <span>Accident</span>
-            </div>
-
-          </div>
-
-          <!-- Weather -->
-          <div class="weather-card">
-
-            <div class="weather-top">
-              <div>
-                <small>WEATHER</small>
-                <h2>72°F</h2>
-                <p>Clear Skies</p>
-              </div>
-
-              <div class="sun">☀️</div>
-            </div>
-
-            <div class="weather-stats">
-              <div><small>HUMID</small><strong>12%</strong></div>
-              <div><small>WIND</small><strong>4mph</strong></div>
-              <div><small>AQI</small><strong class="good">Good</strong></div>
-            </div>
-
-          </div>
-
-          <!-- Emergency -->
-         <div class="emergency-card">
-
-  <h3>Emergency Contacts</h3>
-
-  <button class="contact-btn" onclick="openModal('police')">
-    <span>📞 Police Dept</span>
-    <span>›</span>
-  </button>
-
-  <button class="contact-btn" onclick="openModal('fire')">
-    <span>🚒 Fire Rescue</span>
-    <span>›</span>
-  </button>
-
-  <button class="contact-btn" onclick="openModal('ambulance')">
-    <span>🚑 Ambulance</span>
-    <span>›</span>
-  </button>
+<input
+type="text"
+placeholder="Search alerts, locations, or safety tips..."
+>
 
 </div>
 
-          <!-- Tip -->
-          <div class="tip-card">
 
-            <h4>💡 SAFETY TIP</h4>
+<!-- Desktop Right -->
+<div class="top-right">
 
-            <p>Ensure all outdoor motion sensors are set to "Active" before dusk to deter unauthorized access to your perimeter.</p>
+<!-- Notification -->
+<button
+class="notification-btn"
+aria-label="Notifications"
+>
 
-            <a href="#">Read Guide</a>
+<img
+class="notify"
+src="../images/notification.png"
+alt="Notifications"
+>
 
-          </div>
-
-        </div>
-
-      </section>
-
-    </main>
-
-  </div>
+</button>
 
 
-  <div class="modal" id="emergencyModal">
+<!-- Profile -->
+<div class="profile">
 
-  <div class="modal-card">
+<div class="profile-info">
 
-    <button class="close-btn" onclick="closeModal()">×</button>
+<strong>
+Sarah Mitchell
+</strong>
 
-    <div class="modal-icon" id="modalIcon">🛡️</div>
-
-    <h2 id="modalTitle">Police Dept</h2>
-
-    <p id="modalDesc">
-      Immediate assistance for law enforcement and public safety.
-    </p>
-
-    <a href="tel:990" class="call-btn" id="callBtn">
-      📞 Call 990
-    </a>
-
-    <button class="cancel-btn" onclick="closeModal()">
-      Cancel
-    </button>
-
-  </div>
+<small>
+Verified Resident
+</small>
 
 </div>
 
-<script src="../js/script.js">
-</script>
+
+<img
+src="https://i.pravatar.cc/40?img=32"
+alt="Sarah Mitchell"
+>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+CONTENT
+========================== -->
+<section class="content">
+
+
+<!-- =========================
+LEFT CONTENT
+========================== -->
+<div class="left-content">
+
+
+<!-- Welcome -->
+<div class="welcome">
+
+<h1>
+Welcome back, Sarah Mitchell.
+</h1>
+
+<p style="color: #000; font-weight: 400;">
+<span class="dot" ></span>
+Your community is currently <span style="color:#059669; font-weight: 400;">Safe</span>.
+</p>
+
+</div>
+
+
+
+<!-- =========================
+HERO
+========================== -->
+<div class="hero-card">
+
+<img
+src="../images/Background.png"
+alt="Community incident"/>
+
+
+<div class="live-badge">
+🔴 Live Updates
+</div>
+
+
+<button class="hero-btn">
+<i class="fa-solid fa-bell" style="margin: 0.5rem;"></i> Quick Report
+</button>
+
+</div>
+
+<!-- =========================
+CATEGORY GRID
+========================== -->
+<div class="category-grid" id="piggest" >
+
+
+<div class="cat-card cat-trip">
+<img src="../images/bluefire.png" class="cat-icon"/>
+<span>
+Fire
+</span>
+</div>
+
+
+<div class="cat-card cat-trip">
+<img src="../images/blueflood.png" class="cat-icon"/>
+<span>
+Flood
+</span>
+</div>
+
+
+<div class="cat-card cat-trip">
+<img src="../images/bluecrime.png" class="cat-icon"/>
+<span>
+Crime
+</span>
+
+</div>
+
+
+<div class="cat-card cat-trip">
+<img src="../images/bluecar.png" class="cat-icon"/>
+<span>
+Accident
+</span>
+
+</div>
+
+</div>
+
+<!-- =========================
+INCIDENT HEADER
+========================== -->
+<div class="section-header">
+
+<h3>
+Recent Verified Incident
+</h3>
+
+<a href="#">
+View All
+</a>
+
+</div>
+
+
+
+<!-- =========================
+INCIDENT 1
+========================== -->
+<div class="incident danger">
+
+<div class="bar"></div>
+
+<img src="../images/critical.png" class="icon"/>
+
+
+<div class="incident-body">
+
+<div class="incident-top">
+
+<span class="tag critical">
+CRITICAL
+</span>
+
+<small>
+12 mins ago
+</small>
+
+</div>
+
+
+<h4>
+Structural Fire: 4th & Madison Ave
+</h4>
+
+
+<p>
+Fire department on scene. Residents within
+2 blocks are advised to stay indoors and keep
+windows closed.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+INCIDENT 2
+========================== -->
+<div class="incident warning">
+
+<div class="bar"></div>
+
+<img src="../images/moderate.png" class="icon"/>
+
+<div class="incident-body">
+
+<div class="incident-top">
+
+<span class="tag moderate">
+MODERATE
+</span>
+
+<small>
+45 mins ago
+</small>
+
+</div>
+
+
+<h4>
+Traffic Hazard: Main St Bridge
+</h4>
+
+
+<p>
+Major accident blocking two lanes.
+Expected delays of 20+ minutes on your commute.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+INCIDENT 3
+========================== -->
+<div class="incident info">
+
+<div class="bar"></div>
+
+<img src="../images/hammer.png" class="icon"/>
+
+<div class="incident-body">
+
+<div class="incident-top">
+
+<span class="tag minor">
+MINOR
+</span>
+
+<small>
+2 hours ago
+</small>
+
+</div>
+
+
+<h4>
+Utility Maintenance: Oak District
+</h4>
+
+
+<p>
+Scheduled power maintenance completed.
+All services restored.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+RIGHT CONTENT
+========================== -->
+<div class="right-content">
+
+
+<!-- =========================
+CATEGORY GRID
+========================== -->
+<div class="category-grid" id="piiggest">
+
+
+<div class="cat-card">
+
+<div class="cat-card cat-trip">
+<img src="../images/bluefire.png" class="cat-icon"/>
+<span>
+Fire
+</span>
+</div>
+
+
+<div class="cat-card cat-trip">
+<img src="../images/blueflood.png" class="cat-icon"/>
+<span>
+Flood
+</span>
+</div>
+
+
+<div class="cat-card cat-trip">
+<img src="../images/bluecrime.png" class="cat-icon"/>
+<span>
+Crime
+</span>
+
+</div>
+
+
+<div class="cat-card cat-trip">
+<img src="../images/bluecar.png" class="cat-icon"/>
+<span>
+Accident
+</span>
+
+</div>
+
+</div>
+
+
+<section class="guide">
+<!-- =========================
+WEATHER
+========================== -->
+<div class="weather-card">
+
+<div class="weather-top"><div>
+
+<small>
+WEATHER
+</small>
+
+<h3 style="margin: 0.5rem;">
+72°F
+</h3>
+
+<p>
+Clear Skies
+</p>
+
+</div>
+
+
+<img src="../images/sun.png" class="sun"/>
+
+
+</div>
+
+
+<div class="weather-stats">
+
+<div>
+
+<small>
+HUMID
+</small>
+
+<strong>
+12%
+</strong>
+
+</div>
+
+
+<div>
+
+<small>
+WIND
+</small>
+
+<strong>
+4mph
+</strong>
+
+</div>
+
+
+<div>
+
+<small>
+AQI
+</small>
+
+<strong class="good">
+Good
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+EMERGENCY CONTACTS
+========================== -->
+<div class="emergency-card">
+
+<h3>
+Emergency Contacts
+</h3>
+
+
+<button
+class="contact-btn"
+onclick="openModal('police')"
+>
+
+<img src="../images/police.png" class="eme"/>
+
+<p>Police Dept</p>
+<i class="fa-solid fa-phone"></i>
+
+</button>
+
+
+<button
+class="contact-btn"
+onclick="openModal('fire')"
+>
+<img src="../images/policetruck.png" class="eme"/>
+<p>Fire Rescue</p>
+<i class="fa-solid fa-phone"></i>
+
+</button>
+
+
+<button
+class="contact-btn"
+onclick="openModal('ambulance')"
+>
+
+<img src="../images/firerescue.png" class="eme"/>
+<p>Ambulance</p>
+
+<i class="fa-solid fa-phone"></i>
+
+</button>
+
+</div>
+</section>
+
+
+<!-- =========================
+SAFETY TIP
+========================== -->
+<div class="tip-card">
+
+<h4>
+💡 SAFETY TIP
+</h4>
+
+
+<p>
+Ensure all outdoor motion sensors are set to
+"Active" before dusk to deter unauthorized access
+to your perimeter.
+</p>
+
+
+<a href="#">Read Guide</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+
+
+<!-- =========================
+EMERGENCY MODAL
+========================== -->
+<div class="modal"id="emergencyModal">
+
+<div class="modal-card">
+
+
+<button
+class="modal-close"
+onclick="closeModal()"
+>
+&times;
+</button>
+
+
+<div
+class="modal-icon"
+id="modalIcon"
+>
+🛡️
+</div>
+
+
+<h2 id="modalTitle">
+Police Dept
+</h2>
+
+
+<p id="modalDesc">
+Immediate assistance for law enforcement
+and public safety.
+</p>
+
+
+<a
+href="tel:990"
+class="call-btn"
+id="callBtn"
+>
+<i class="fa fa-phone"></i>Call 990
+</a>
+
+
+<button
+class="cancel-btn"
+onclick="closeModal()"
+>
+Cancel
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- JavaScript -->
+<script src="../js/dashboard.js"></script>
+
 </body>
 </html>

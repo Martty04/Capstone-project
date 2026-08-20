@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>SafeReach - Account Settings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+rel="stylesheet"
+>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<link
+rel="icon"
+type="image/png"
+href="../images/flag.png"
+>
+
+<link
+rel="stylesheet"
+href="../css/settings.css"
+>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+  OVERLAY
+====================================== -->
+
+<div
+class="overlay"
+id="overlay"
+></div>
+
+
+
+<!-- =====================================
+  DASHBOARD
+====================================== -->
+
+<div class="dashboard">
+
+
+<!-- =====================================
+    SIDEBAR
+====================================== -->
+
+<aside
+class="sidebar"
+id="sidebar"
+>
+
+
+<!-- Logo -->
+
+<div class="logo">
+
+  <img
+    src="../images/logo.png"
+    class="shield"
+    alt="SafeReach"
+  >
+
+</div>
+
+
+
+<!-- Close -->
+
+<button
+  class="close-btn"
+  id="closeSidebar"
+>
+  &times;
+</button>
+
+
+
+<!-- Menu -->
+
+<nav class="menu">
+
+
+  <a href="dashboard.html">
+
+    <img
+      src="../images/dashboardicon.png"
+      class="dash-ic"
+      alt=""
+    >
+
+    <span>
+      Dashboard
+    </span>
+
+  </a>
+
+
+
+  <a href="report.html">
+
+    <img
+      src="../images/reporticon.png"
+      class="dash-ic"
+      alt=""
+    >
+
+    <span>
+      Report
+    </span>
+
+  </a>
+
+
+
+  <a href="alerts.html">
+
+    <img
+      src="../images/alerticon.png"
+      class="dash-ic"
+      alt=""
+    >
+
+    <span>
+      Alerts
+    </span>
+
+  </a>
+
+
+
+  <a href="resources.html">
+
+    <img
+      src="../images/resourceicon.png"
+      class="dash-ic"
+      alt=""
+    >
+
+    <span>
+      Resources
+    </span>
+
+  </a>
+
+
+
+  <a
+    href="settings.html"
+    class="active"
+  >
+
+    <img
+      src="../images/setting icon.png"
+      class="dash-ic"
+      alt=""
+    >
+
+    <span>
+      Settings
+    </span>
+
+  </a>
+
+
+</nav>
+
+
+
+<!-- Sidebar Bottom -->
+
+<div class="sidebar-bottom">
+
+
+  <button class="quick-btn">
+
+    <i class="fa-solid fa-circle-plus"></i>
+
+    Quick Report
+
+  </button>
+
+
+
+  <a href="#">
+
+    <i class="fa-regular fa-circle-question"></i>
+
+    Support
+
+  </a>
+
+
+
+  <a href="#">
+
+    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+    Logout
+
+  </a>
+
+
+</div>
+
+
+</aside>
+
+
+
+<!-- =====================================
+    MAIN
+====================================== -->
+
+<main class="main">
+
+
+<!-- =====================================
+      TOPBAR
+====================================== -->
+
+<header class="topbar">
+
+
+  <!-- Mobile -->
+
+  <div class="mobile-header">
+
+
+    <img
+      src="../images/logo.png"
+      class="mobile-logo"
+      alt="SafeReach"
+    >
+
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+  </div>
+
+
+
+  <!-- Search -->
+
+  <div class="search">
+
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+    <input
+      type="text"
+      placeholder="Search alerts, locations, or safety tips..."
+    >
+
+  </div>
+
+
+
+  <!-- Profile -->
+
+  <div class="top-right">
+
+
+    <button class="notification-btn">
+
+      <img
+        src="../images/notification.png"
+        class="notify"
+        alt="Notifications"
+      >
+
+    </button>
+
+
+
+    <div class="profile">
+
+
+      <div class="profile-info">
+
+        <strong>
+          Sarah Mitchell
+        </strong>
+
+        <small>
+          Verified Resident
+        </small>
+
+      </div>
+
+
+      <img
+        src="https://i.pravatar.cc/40?img=32"
+        alt="Sarah Mitchell"
+      >
+
+
+    </div>
+
+
+  </div>
+
+
+</header>
+
+
+
+<!-- =====================================
+      SETTINGS CONTENT
+====================================== -->
+
+<section class="settings-page">
+
+
+  <div class="settings-container">
+
+
+    <!-- Page Heading -->
+
+    <div class="page-heading">
+
+      <h1>
+        Account Settings
+      </h1>
+
+      <p>
+        Manage your profile information,
+        security preferences, and alert notifications.
+      </p>
+
+    </div>
+
+
+
+    <!-- =================================
+          PROFILE INFORMATION
+    ================================== -->
+
+    <section class="settings-card">
+
+
+      <div class="card-heading">
+
+        <div class="heading-icon">
+
+          <i class="fa-regular fa-user"></i>
+
+        </div>
+
+        <h2>
+          Profile Information
+        </h2>
+
+      </div>
+
+
+
+      <!-- Profile -->
+
+      <div class="user-profile">
+
+
+        <img
+          src="https://i.pravatar.cc/80?img=32"
+          alt="Sarah Mitchell"
+        >
+
+
+        <div>
+
+          <strong>
+            Sarah Mitchell
+          </strong>
+
+          <small>
+            Verified Resident
+          </small>
+
+          <a href="#">
+            Change Photo
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- Fields -->
+
+      <div class="form-grid">
+
+
+        <div class="form-group">
+
+          <label>
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            value="Sarah Mitchell"
+          >
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label>
+            Email Address
+          </label>
+
+          <input
+            type="email"
+            value="s.mitchell@gmail.com"
+          >
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label>
+            Phone Number
+          </label>
+
+          <input
+            type="tel"
+            value="+1 (555) 123-4567"
+          >
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label>
+            Account ID
+          </label>
+
+          <input
+            type="text"
+            value="RS-88219"
+            readonly
+          >
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================
+          SECURITY
+    ================================== -->
+
+    <section class="settings-card">
+
+
+      <div class="card-heading">
+
+        <div class="heading-icon">
+
+          <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <h2>
+          Security
+        </h2>
+
+      </div>
+
+
+
+      <div class="security-row">
+
+
+        <div>
+
+          <strong>
+            Password
+          </strong>
+
+          <small>
+            Last updated 3 months ago
+          </small>
+
+        </div>
+
+
+        <button class="outline-btn">
+          Change Password
+        </button>
+
+
+      </div>
+
+
+
+      <div class="security-row">
+
+
+        <div>
+
+          <strong>
+
+            Two-Factor Authentication
+
+            <span class="enabled">
+              ACTIVE
+            </span>
+
+          </strong>
+
+          <small>
+            Add an extra layer of security to your account.
+          </small>
+
+        </div>
+
+
+        <button class="manage-btn">
+          Manage 2FA
+        </button>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================
+          NOTIFICATION PREFERENCES
+    ================================== -->
+
+    <section class="settings-card">
+
+
+      <div class="card-heading">
+
+        <div class="heading-icon">
+
+          <i class="fa-regular fa-bell"></i>
+
+        </div>
+
+        <h2>
+          Notification Preferences
+        </h2>
+
+      </div>
+
+
+
+      <div class="notification-layout">
+
+
+        <!-- Delivery -->
+
+        <div class="delivery">
+
+
+          <span class="column-title">
+            DELIVERY CHANNELS
+          </span>
+
+
+
+          <div class="toggle-row">
+
+            <span>
+              Push Notifications
+            </span>
+
+            <label class="switch">
+
+              <input
+                type="checkbox"
+                checked
+              >
+
+              <span class="slider"></span>
+
+            </label>
+
+          </div>
+
+
+
+          <div class="toggle-row">
+
+            <span>
+              Email Alerts
+            </span>
+
+            <label class="switch">
+
+              <input
+                type="checkbox"
+                checked
+              >
+
+              <span class="slider"></span>
+
+            </label>
+
+          </div>
+
+
+
+          <div class="toggle-row">
+
+            <span>
+              SMS Alerts (Emergency Only)
+            </span>
+
+            <label class="switch">
+
+              <input type="checkbox">
+
+              <span class="slider"></span>
+
+            </label>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- Proximity -->
+
+        <div class="proximity">
+
+
+          <span class="column-title">
+            PROXIMITY SETTINGS
+          </span>
+
+
+          <div class="radius-box">
+
+
+            <div class="radius-top">
+
+              <span>
+                Alert Radius (km)
+              </span>
+
+              <strong id="radiusValue">
+                5km
+              </strong>
+
+            </div>
+
+
+            <input
+              type="range"
+              id="radiusSlider"
+              min="1"
+              max="20"
+              value="5"
+            >
+
+
+            <p>
+              You will receive notifications for
+              all high priority incidents reported
+              within this radius of your current location.
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================
+          PRIVACY
+    ================================== -->
+
+    <section class="settings-card">
+
+
+      <div class="card-heading">
+
+        <div class="heading-icon">
+
+          <i class="fa-solid fa-lock"></i>
+
+        </div>
+
+        <h2>
+          Privacy & Data
+        </h2>
+
+      </div>
+
+
+
+      <label class="checkbox-row">
+
+
+        <input
+          type="checkbox"
+          checked
+        >
+
+
+        <span class="custom-checkbox"></span>
+
+
+        <span class="privacy-text">
+
+          <strong>
+            Share anonymous location data
+          </strong>
+
+          <small>
+            Help improve emergency response times in your area
+            by contributing anonymized movement data.
+          </small>
+
+        </span>
+
+
+      </label>
+
+
+
+      <label class="checkbox-row">
+
+
+        <input type="checkbox">
+
+
+        <span class="custom-checkbox"></span>
+
+
+        <span class="privacy-text">
+
+          <strong>
+            Visible on Community Heatmap
+          </strong>
+
+          <small>
+            Allow your general activity to be visible on the
+            public safety heatmap to indicate active monitoring.
+          </small>
+
+        </span>
+
+
+      </label>
+
+
+    </section>
+
+
+
+    <!-- =================================
+          ACTION BUTTONS
+    ================================== -->
+
+    <div class="settings-actions">
+
+
+      <button
+        class="cancel-btn"
+        id="cancelBtn"
+      >
+        Cancel
+      </button>
+
+
+      <button
+        class="save-btn"
+        id="saveBtn"
+      >
+        Save Changes
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+</main>
+
+
+</div>
+
+
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

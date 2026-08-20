@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>SafeReach - Alerts</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="../images/flag.png"
+  >
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="../css/medical.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================
+       SIDEBAR OVERLAY
+  ====================================== -->
+
+  <div
+    class="overlay"
+    id="overlay"
+  ></div>
+
+
+
+  <!-- =====================================
+       DASHBOARD
+  ====================================== -->
+
+  <div class="dashboard">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside
+      class="sidebar"
+      id="sidebar"
+    >
+
+
+      <!-- Logo -->
+      <div class="logo">
+
+        <img
+          src="../images/logo.png"
+          class="shield"
+          alt="SafeReach"
+        >
+
+      </div>
+
+
+
+      <!-- Close Button -->
+      <button
+        class="close-btn"
+        id="closeSidebar"
+        aria-label="Close sidebar"
+      >
+        &times;
+      </button>
+
+
+
+      <!-- Navigation -->
+      <nav class="menu">
+
+
+        <a href="#">
+
+          <img
+            src="../images/dashboardicon.png"
+            class="dash-ic"
+            alt="Dashboard"
+          >
+
+          <span>
+            Dashboard
+          </span>
+
+        </a>
+
+
+
+        <a href="#">
+
+          <img
+            src="../images/reporticon.png"
+            class="dash-ic"
+            alt="Report"
+          >
+
+          <span>
+            Report
+          </span>
+
+        </a>
+
+
+
+        <a
+          href="#"
+          class="active"
+        >
+
+          <img
+            src="../images/alerticon.png"
+            class="dash-ic"
+            alt="Alerts"
+          >
+
+          <span>
+            Alerts
+          </span>
+
+        </a>
+
+
+
+        <a href="#">
+
+          <img
+            src="../images/resourceicon.png"
+            class="dash-ic"
+            alt="Resources"
+          >
+
+          <span>
+            Resources
+          </span>
+
+        </a>
+
+
+
+        <a href="#">
+
+          <img
+            src="../images/setting icon.png"
+            class="dash-ic"
+            alt="Settings"
+          >
+
+          <span>
+            Settings
+          </span>
+
+        </a>
+
+
+      </nav>
+
+
+
+      <!-- Sidebar Bottom -->
+      <div class="sidebar-bottom">
+
+
+        <button class="quick-btn">
+
+          <i class="fa-solid fa-circle-plus"></i>
+
+          Quick Report
+
+        </button>
+
+
+
+        <a href="#">
+
+          <i class="fa-regular fa-circle-question"></i>
+
+          Support
+
+        </a>
+
+
+
+        <a href="#">
+
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+          Logout
+
+        </a>
+
+
+      </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
+    <main class="main">
+
+
+      <!-- =====================================
+           TOPBAR
+      ====================================== -->
+
+      <header class="topbar">
+
+
+        <!-- Mobile Header -->
+        <div class="mobile-header">
+
+
+          <img
+            src="../images/logo.png"
+            class="mobile-logo"
+            alt="SafeReach"
+          >
+
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+          >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </button>
+
+
+        </div>
+
+
+
+        <!-- Search -->
+        <div class="search">
+
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search alerts, locations, or safety tips..."
+          >
+
+
+        </div>
+
+
+
+        <!-- Profile -->
+        <div class="top-right">
+
+
+          <button
+            class="notification-btn"
+            aria-label="Notifications"
+          >
+
+            <img
+              src="../images/notification.png"
+              class="notify"
+              alt="Notifications"
+            >
+
+          </button>
+
+
+
+          <div class="profile">
+
+
+            <div class="profile-info">
+
+              <strong>
+                Sarah Mitchell
+              </strong>
+
+              <small>
+                Verified Resident
+              </small>
+
+            </div>
+
+
+
+            <img
+              src="https://i.pravatar.cc/40?img=32"
+              alt="Sarah Mitchell"
+            >
+
+
+          </div>
+
+
+        </div>
+
+
+      </header>
+
+
+
+      <!-- =====================================
+           PAGE CONTENT
+      ====================================== -->
+
+      <section class="alerts-content">
+
+
+        <!-- =====================================
+             LEFT COLUMN
+        ====================================== -->
+
+        <aside class="filters-column">
+
+
+          <!-- Sort -->
+          <div class="filter-card">
+
+
+            <h2>
+              Sort By
+            </h2>
+
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="sort"
+                value="newest"
+                checked
+              >
+
+              <span>
+                Newest First
+              </span>
+
+            </label>
+
+
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="sort"
+                value="severity"
+              >
+
+              <span>
+                Highest Severity
+              </span>
+
+            </label>
+
+
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="sort"
+                value="distance"
+              >
+
+              <span>
+                Closest Distance
+              </span>
+
+            </label>
+
+
+          </div>
+
+
+
+          <!-- Safety Statistics -->
+          <div class="statistics-card">
+
+
+            <h2>
+              Safety Statistics
+            </h2>
+
+
+            <div class="chart">
+
+              <div
+                class="bar-chart bar-1"
+              ></div>
+
+              <div
+                class="bar-chart bar-2"
+              ></div>
+
+              <div
+                class="bar-chart bar-3"
+              ></div>
+
+              <div
+                class="bar-chart bar-4"
+              ></div>
+
+              <div
+                class="bar-chart bar-5"
+              ></div>
+
+              <div
+                class="bar-chart bar-6"
+              ></div>
+
+              <div
+                class="bar-chart bar-7"
+              ></div>
+
+            </div>
+
+
+            <p class="chart-label">
+              Incidents reported this week
+            </p>
+
+
+            <div class="resolution">
+
+              <div class="resolution-top">
+
+                <span>
+                  Resolution Rate
+                </span>
+
+                <strong>
+                  92%
+                </strong>
+
+              </div>
+
+
+              <div class="progress">
+
+                <div class="progress-fill"></div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+        </aside>
+
+
+
+        <!-- =====================================
+             ALERT FEED
+        ====================================== -->
+
+        <div class="alerts-feed">
+
+
+          <!-- Feed Header -->
+          <div class="feed-header">
+
+
+            <h1>
+              Live Alert Feed
+            </h1>
+
+
+
+            <!-- Category Filters -->
+            <div class="category-filters">
+
+
+              <button
+                class="filter-btn "
+                data-category="all" id="allBtn"
+              >
+                All
+              </button>
+
+
+              <button
+  class="filter-btn"
+  id="fireBtn"
+>
+  Fire
+</button>
+
+
+              <button
+                class="filter-btn"
+                data-category="crime"
+              >
+                Crime
+              </button>
+
+
+              <button
+                class="filter-btn active"
+                data-category="medical"
+              >
+                Medical
+              </button>
+
+
+              <button
+                class="filter-btn"
+                data-category="traffic"
+              >
+                Traffic
+              </button>
+
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- =================================
+               ALERT CARD 1
+          ================================== -->
+
+          <article
+            class="alert-card"
+            data-category="medical"
+          >
+
+
+            <div class="alert-content">
+
+
+              <div class="alert-heading">
+
+
+                <div class="alert-type">
+
+
+                  <div class="alert-icon medical-icon">
+
+                    <i class="fa-solid fa-kit-medical"></i>
+
+                  </div>
+
+
+                  <div>
+
+                    <h3>
+                      Medical Emergency
+                    </h3>
+
+                    <small>
+                      <i class="fa-regular fa-clock"></i>
+                      26 Apala, Lagos
+                    </small>
+
+                  </div>
+
+
+                </div>
+
+
+
+                <span class="status verified">
+                  VERIFIED
+                </span>
+
+
+              </div>
+
+
+
+              <p class="alert-description">
+
+                Lagos Building collapse Mushin Rescued victim
+                being moved to an Ambulance.
+
+              </p>
+
+
+
+              <div class="alert-footer">
+
+
+                <span class="time">
+
+                  <i class="fa-regular fa-clock"></i>
+
+                  10 mins ago
+
+                </span>
+
+
+
+                <button class="details-btn">
+
+                  View Details
+
+                  <i class="fa-solid fa-angle-right"></i>
+
+                </button>
+
+
+              </div>
+
+
+            </div>
+
+
+
+            <img
+              src="https://images.unsplash.com/photo-1584467735871-7e0f3b8a3b9f?auto=format&fit=crop&w=500&q=80"
+              class="alert-image"
+              alt="Medical emergency"
+            >
+
+
+          </article>
+
+
+
+          <!-- =================================
+               ALERT CARD 2
+          ================================== -->
+
+          <article
+            class="alert-card"
+            data-category="medical"
+          >
+
+
+            <div class="alert-content">
+
+
+              <div class="alert-heading">
+
+
+                <div class="alert-type">
+
+
+                  <div class="alert-icon medical-icon">
+
+                    <i class="fa-solid fa-kit-medical"></i>
+
+                  </div>
+
+
+                  <div>
+
+                    <h3>
+                      Medical Emergency
+                    </h3>
+
+                    <small>
+
+                      <i class="fa-regular fa-clock"></i>
+
+                      26 Apala, Lagos
+
+                    </small>
+
+                  </div>
+
+
+                </div>
+
+
+
+                <span class="status verified">
+                  VERIFIED
+                </span>
+
+
+              </div>
+
+
+
+              <p class="alert-description">
+
+                Lagos Building collapse Mushin Rescued victim
+                being moved to an Ambulance.
+
+              </p>
+
+
+
+              <div class="alert-footer">
+
+
+                <span class="time">
+
+                  <i class="fa-regular fa-clock"></i>
+
+                  10 mins ago
+
+                </span>
+
+
+
+                <button class="details-btn">
+
+                  View Details
+
+                  <i class="fa-solid fa-angle-right"></i>
+
+                </button>
+
+
+              </div>
+
+
+            </div>
+
+
+
+            <img
+              src="https://images.unsplash.com/photo-1584467735871-7e0f3b8a3b9f?auto=format&fit=crop&w=500&q=80"
+              class="alert-image"
+              alt="Medical emergency"
+            >
+
+
+          </article>
+
+
+
+          <!-- =================================
+               ALERT CARD 3
+          ================================== -->
+
+          <article
+            class="alert-card"
+            data-category="medical"
+          >
+
+
+            <div class="alert-content">
+
+
+              <div class="alert-heading">
+
+
+                <div class="alert-type">
+
+
+                  <div class="alert-icon investigating-icon">
+
+                    <i class="fa-solid fa-briefcase-medical"></i>
+
+                  </div>
+
+
+                  <div>
+
+                    <h3>
+                      Medical Emergency
+                    </h3>
+
+                    <small>
+
+                      <i class="fa-regular fa-clock"></i>
+
+                      49 Alaba Ave, Ejigbo, Lagos
+
+                    </small>
+
+                  </div>
+
+
+                </div>
+
+
+
+                <span class="status investigating">
+                  INVESTIGATING
+                </span>
+
+
+              </div>
+
+
+
+              <p class="alert-description">
+
+                Report of a collapsed individual near the
+                North pond. First responders have been
+                dispatched and are approximately 3 minutes
+                away. Bystanders are assisting.
+
+              </p>
+
+
+
+              <div class="alert-footer">
+
+
+                <span class="time">
+
+                  <i class="fa-regular fa-clock"></i>
+
+                  12 mins ago
+
+                </span>
+
+
+
+                <button class="details-btn">
+
+                  View Details
+
+                  <i class="fa-solid fa-angle-right"></i>
+
+                </button>
+
+
+              </div>
+
+
+            </div>
+
+
+
+            <img
+              src="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?auto=format&fit=crop&w=500&q=80"
+              class="alert-image"
+              alt="Emergency vehicle"
+            >
+
+
+          </article>
+
+
+
+        </div>
+
+
+      </section>
+
+
+    </main>
+
+
+  </div>
+
+
+
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
+
+  <script src="../js/dashboard.js"></script>
+
+
+</body>
+</html>

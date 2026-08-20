@@ -27,52 +27,23 @@ function closeSidebar() { sidebar.classList.remove("active"); overlay.classList.
 
 
 
-  // DASHBOARD
-
-  const services = {
-    police: {
-      icon: '🛡️',
-      title: 'Police Dept',
-      desc: 'Immediate assistance for law enforcement and public safety.',
-      phone: '990'
-    },
-
-    fire: {
-      icon: '🚒',
-      title: 'Fire Rescue',
-      desc: 'Emergency services for fire suppression, rescue, and hazardous materials.',
-      phone: '112'
-    },
-
-    ambulance: {
-      icon: '🚑',
-      title: 'Ambulance',
-      desc: 'Urgent medical transport and emergency medical services.',
-      phone: '112'
+  
+function openModal(){
+      document.getElementById("successModal").classList.add("show");
     }
-  };
 
-  function openModal(type){
-    const service = services[type];
+    function closeModal(){
+      document.getElementById("successModal").classList.remove("show");
+   window.location.href = "../html/dashboard.html";
 
-    document.getElementById('modalIcon').textContent = service.icon;
-    document.getElementById('modalTitle').textContent = service.title;
-    document.getElementById('modalDesc').textContent = service.desc;
+    }
 
-    const callBtn = document.getElementById('callBtn');
-    callBtn.textContent = `📞 Call ${service.phone}`;
-    callBtn.href = `tel:${service.phone}`;
-
-    document.getElementById('emergencyModal').classList.add('show');
+      function goToDashboard() {
   }
 
-  function closeModal(){
-    document.getElementById('emergencyModal').classList.remove('show');
-  }
+      function moveToDashboard() {
 
-  // close when clicking outside
-  document.getElementById('emergencyModal').addEventListener('click', function(e){
-    if(e.target === this){
-      closeModal();
-    }
-  });
+         document.getElementById("btn").classList.remove("show");
+   window.location.href = "../html/dashboard.html";
+  }
+  

@@ -9,63 +9,158 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 <link rel="icon" type="image/png" href="../images/flag.png">
 
 <link rel="stylesheet" href="../css/report.css">
 </head>
 <body>
 
+<!-- =========================
+MOBILE / SIDEBAR OVERLAY
+========================== -->
+<div class="overlay"id="overlay"></div>
 
-<div class="overlay" id="overlay"></div>
+
+<!-- =========================
+DASHBOARD
+========================== -->
 <div class="dashboard">
 
-<!-- Sidebar -->
- 
-<aside class="sidebar" id="sidebar">
 
+<!-- =========================
+SIDEBAR
+========================== -->
+<aside
+class="sidebar"id="sidebar">
+
+<!-- Logo -->
 <div class="logo">
-<img src="../images/logo.png" class="shield"/>
-</div>
- <button class="close-btn" onclick="closeSidebar()">&times;</button>
 
+<img
+src="../images/logo.png" class="shield" alt="SafeReach Logo">
+
+</div>
+
+
+<!-- Sidebar Close -->
+<button class="close-btn" onclick="closeSidebar()">&times;</button>
+
+
+
+<!-- Navigation -->
 <nav class="menu">
-<a href="#"><img  class="dash-ic" src="../images/dashboardicon.png"/> Dashboard</a>
-<a href="#" class="active"><img  class="dash-ic" src="../images/reporticon.png"/> Report</a>
-<a href="#"><img  class="dash-ic" src="../images/alerticon.png"/> Alerts</a>
-<a href="#"><img  class="dash-ic" src="../images/resourceicon.png"/> Resources</a>
-<a href="#"><img  class="dash-ic" src="../images/setting icon.png"/> Settings</a>
+
+<a href="#" >
+<img class="dash-ic" src="../images/dashboardicon.png" alt="Dashboard">
+<span>Dashboard</span>
+</a>
+
+
+<a href="#"class="active">
+
+<img class="dash-ic" src="../images/reporticon.png" alt="Report">
+<span>Report</span>
+</a>
+
+
+<a href="#">
+<img class="dash-ic" src="../images/alerticon.png" alt="Alerts">
+<span>Alerts</span>
+</a>
+
+
+<a href="#">
+<img class="dash-ic" src="../images/resourceicon.png" alt="Resources">
+<span>Resources</span>
+</a>
+
+
+<a href="#">
+<img class="dash-ic" src="../images/setting icon.png" alt="Settings">
+<span>Settings</span>
+</a>
 </nav>
 
+
+<!-- Sidebar Bottom -->
 <div class="sidebar-bottom">
-<button class="quick-btn">Quick Report</button>
 
-<a href="#">Support</a>
-<a href="#">Logout</a>
+<button class="quick-btn">
+  <i class="fa-solid fa-circle-plus"></i> Quick Report</button>
+<a href="#">
+  <i class="fa-regular fa-circle-question"></i>
+  Support
+</a>
+
+
+<a href="login.html">
+  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+  Logout
+</a>
 </div>
-
 </aside>
 
-<!-- Main -->
+
+
+<!-- =========================
+MAIN
+========================== -->
 <main class="main">
 
+
+<!-- =========================
+TOPBAR
+========================== -->
 <header class="topbar">
-<img src="../images/logo.png" class="shield2"/>
 
-<div class="menu-toggle" id="menuToggle">
+
+<!-- Mobile Header Row -->
+<div class="mobile-header">
+
+<!-- Mobile Logo -->
+<img src="../images/logo.png" class="mobile-logo" alt="SafeReach">
+
+
+<!-- Hamburger -->
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+
 <span></span>
 <span></span>
 <span></span>
+
+</button>
+
 </div>
 
-<div class="top-icons">
-<img class="notify" src="../images/notification.png" alt="notification">
+
+<!-- Desktop Right -->
+<div class="top-right">
+
+<!-- Notification -->
+<button class="notification-btn" aria-label="Notifications">
+
+<img class="notify" src="../images/notification.png" alt="Notifications">
+
+</button>
+
+
+<!-- Profile -->
 <div class="profile">
-<div>
-  <strong>Sarah Mitchell</strong>
-  <small>Verified Resident</small>
+
+<div class="profile-info">
+
+<strong>
+Sarah Mitchell
+</strong>
+
+<small>
+Verified Resident
+</small>
 </div>
 
-<img src="https://i.pravatar.cc/40?img=32" alt="User">
+
+<img src="https://i.pravatar.cc/40?img=32" alt="Sarah Mitchell">
 </div>
 </div>
 </header>
@@ -104,8 +199,8 @@
 <img src="../images/fire.png" class="header-icon">
 
 <div>
-  <h2>Report Details: Fire</h2>
-  <p>Provide critical information to help responders assess the threat.</p>
+<h2>Report Details: Fire</h2>
+<p>Provide critical information to help responders assess the threat.</p>
 </div>
 
 </div>
@@ -116,12 +211,12 @@
 <label><img class="pic" src="../images/fireico.png"> Fire Type</label>
 
 <select>
-  <option>Select fire type...</option>
-  <option>Residential Fire</option>
-  <option>Vehicle Fire</option>
-  <option>Electrical Fire</option>
-  <option>Bush Fire</option>
-  <option>Industrial Fire</option>
+<option>Select fire type...</option>
+<option>Residential Fire</option>
+<option>Vehicle Fire</option>
+<option>Electrical Fire</option>
+<option>Bush Fire</option>
+<option>Industrial Fire</option>
 </select>
 
 </div>
@@ -133,25 +228,25 @@
 
 <div class="severity">
 
-  <button class="sev low active">
-    <strong>LOW</strong>
-    <small>Controlled</small>
-  </button>
+<button class="sev low active">
+  <strong>LOW</strong>
+  <small>Controlled</small>
+</button>
 
-  <button class="sev medium">
-    <strong>MEDIUM</strong>
-    <small>Spreading</small>
-  </button>
+<button class="sev medium">
+  <strong>MEDIUM</strong>
+  <small>Spreading</small>
+</button>
 
-  <button class="sev high">
-    <strong>HIGH</strong>
-    <small>Threatening</small>
-  </button>
+<button class="sev high">
+  <strong>HIGH</strong>
+  <small>Threatening</small>
+</button>
 
-  <button class="sev critical">
-    <strong>CRITICAL</strong>
-    <small>Immediate Risk</small>
-  </button>
+<button class="sev critical">
+  <strong>CRITICAL</strong>
+  <small>Immediate Risk</small>
+</button>
 
 </div>
 
@@ -173,11 +268,11 @@
 
 <div class="upload-box">
 
-  <div class="upload-icon">📷</div>
+<div class="upload-icon">📷</div>
 
-  <h4>Click or drag photos/videos here</h4>
+<h4>Click or drag photos/videos here</h4>
 
-  <p>Max file size 20MB. Up to 4 items.</p>
+<p>Max file size 20MB. Up to 4 items.</p>
 
 </div>
 
@@ -189,7 +284,7 @@
 <a href="report.html" class="back-btn">← Back</a>
 
 <a href="report-location.html" class="continue-btn">
-  Continue to Location →
+Continue to Location →
 </a>
 
 </div>
