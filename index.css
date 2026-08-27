@@ -1669,7 +1669,7 @@ h3 {
     margin: 16px auto;
     max-width: 150px;
     position: relative;
-    right:170px;
+    right:120px;
   }
 
   .navlist {
@@ -1760,8 +1760,9 @@ h3 {
   .divimgs {
     margin-left: 0;
     justify-content: center;
-    gap: 62px;
+    gap: 47px;
     padding: 0 16px;
+
   }
 
   .partner-nema-label,
@@ -2273,9 +2274,12 @@ h3 {
     margin-left: 10px;
     margin-right: 10px;
   }
-
+ .safereach{
+  position: relative;
+  right:70px;
+ }
   .divh a {
-    font-size: 10.5px;
+    font-size: 7px;
     padding-left: 7px !important;
     padding-right: 7px !important;
     padding-top: 7px !important;
