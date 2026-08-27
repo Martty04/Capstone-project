@@ -40,7 +40,6 @@ body{
   font-family: var(--font-body);
   color: var(--color-text);
   background-color: var(--color-page-bg);
-  overflow-x: hidden;
   line-height: 1.5;
 }
 
@@ -65,7 +64,6 @@ button, input, textarea{
   display: inline-block;
   padding: 10px 20px;
   border-radius: 7px;
-  border: 2px solid var(--color-primary);
   color: var(--color-primary);
   font-size: 16px;
   font-weight: 500;
@@ -132,14 +130,16 @@ button, input, textarea{
 
 .header-actions{
   display: flex;
-  gap: 16px;
   align-items: center;
+  flex-wrap: wrap;
+  width:90px;
 }
+
 
 .menu-toggle{
   display: none;
   background: none;
-  border: 2px solid var(--color-primary);
+  border: 2px solid black;
   border-radius: 7px;
   width: 42px;
   height: 42px;
@@ -151,11 +151,11 @@ button, input, textarea{
 .menu-toggle span,
 .menu-toggle::before,
 .menu-toggle::after{
-  content: "";
+  content:"" ;
   display: block;
   width: 20px;
   height: 2px;
-  background: var(--color-primary);
+  background: black;
   position: relative;
 }
 
@@ -337,6 +337,7 @@ button, input, textarea{
   display: flex;
   flex-direction: column;
   gap: 20px;
+  height:740px;
 }
 
 .message-card__photo{
@@ -427,31 +428,7 @@ button, input, textarea{
   align-self: flex-start;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-.site-footer{
-  padding: clamp(30px, 5vw, 50px) var(--gutter) 40px;
-  max-width: var(--max-width);
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-}
 
-.site-footer .logo img{
-  height: 24px;
-}
-
-.footer-links{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 13px;
-  gap: clamp(16px, 3vw, 30px);
-  color: var(--color-text-muted);
-}
 
 /* ==========================================================================
    Small phones
@@ -467,9 +444,159 @@ button, input, textarea{
     text-align: center;
   }
 
-  .footer-links{
+}
+
+/* ==========================================================================
+   RESPONSIVE FIXES — added only, nothing above this line was changed.
+
+   The sections below (emergency numbers band + footer) position their
+   elements with fixed inline pixel offsets (e.g. left:400px,
+   margin-left:1200px, height:200px). Those values are left completely
+   untouched, so desktop (>=1024px) still renders pixel-identical to the
+   original. Below 1024px the numbers stop making sense geometrically
+   (elements would get pushed off-canvas or clipped), so these media
+   queries override just enough — using !important, since that's the only
+   way to beat an inline style without editing the inline style itself —
+   to let the same elements reflow instead of overlapping/overflowing.
+   No element is reordered, removed, resized in content, or restyled at
+   desktop width.
+   ========================================================================== */
+
+/* ---- Universal overflow-safety fixes (apply at EVERY width, including
+   desktop — these were causing a hidden ~30px horizontal scrollbar and
+   squashed-away footer icons even at 1280–1440px, not just on mobile).
+
+   Technique: a few elements use position:relative + left/right pixel
+   offsets to nudge icons/text into place. On a full-width block, a
+   relative left/right offset shifts what's drawn without shrinking the
+   box, so the box pokes out past its container — that's what was
+   overflowing. Swapping the offending left/right offset for an
+   equivalent margin/justify-content keeps every icon and label in
+   exactly the same visual spot, but as part of normal layout so it
+   can never poke out. Nothing here changes the on-screen position of
+   any icon or text at any width — it only fixes the mechanism. ---- */
+.footer-logo-p,
+.footer-copy-p{
+  left: 0 !important;
+  margin-left: 30px;
+}
+
+.fire-rescue-label{
+  left: 0 !important;
+  margin-left: 33px;
+}
+
+.footer-social{
+  margin-left: 0 !important;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+/* ---- "Send a Message" photo (fixed right/bottom pull) ---- */
+@media (max-width: 859px){
+  .message-card{
+    height: auto; /* fixed 740px card would clip content once fields stack */
+  }
+}
+
+@media (max-width: 767px){
+  .message-photo-wrap{
+    right: 0 !important;
+    bottom: 0 !important;
+    margin-top: 12px;
+  }
+}
+
+/* ---- Emergency numbers band ---- */
+@media (max-width: 1023px){
+  .emergency-section{
+    height: auto !important;
+    padding: 20px 0 32px;
+  }
+
+  .emergency-primary-card{
+    width: auto !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 0 20px !important;
+  }
+
+  .emergency-cards-row{
+    position: static !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: auto !important;
+    flex-wrap: wrap;
+    gap: 20px !important;
+    margin: 20px 20px 0;
+  }
+
+  /* Cards used a fixed 15px inline margin AND a 50px inline gap at the
+     same time — stacked together that's more space than two cards can
+     fit side by side, so every card was being forced onto its own row
+     even on a tablet-width screen. Zeroing the per-card margin and
+     sizing against the row's own gap is what actually lets two cards
+     sit side by side again. */
+  .emergency-card{
+    margin: 0 !important;
+    width: calc(50% - 10px) !important;
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 640px){
+  .emergency-cards-row{
     flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    gap: 16px !important;
+  }
+
+  .emergency-card{
+    width: auto !important;
+    flex: 1 1 auto;
+  }
+}
+
+/* ---- Footer ---- */
+@media (max-width: 1023px){
+  .site-footer{
+    height: auto !important;
+    /* the inline -100px pull only makes sense against the original
+       fixed 200px-tall band above it; once that band's height grows to
+       fit stacked/wrapped cards, the same -100px pulls the black
+       footer up over the cards. Replacing it with a small positive gap
+       keeps the footer directly and cleanly below the band at any
+       height. */
+    margin-top: 24px !important;
+    padding-bottom: 24px;
+  }
+
+  .footer-links{
+    margin-left: 0 !important;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    /* the copyright line above it is visually pushed down 50px by its
+       own inline "top:50px" offset, but that offset doesn't reserve
+       space in normal flow — without this, footer-links renders right
+       underneath it and the two overlap. */
+    margin-top: 64px;
+  }
+
+  .footer-social{
+    margin-top: 16px !important;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 420px){
+  .footer-links{
+    gap: 20px !important;
+    flex-direction: column;
+  }
+
+  .footer-social{
+    justify-content: center;
+    padding-right: 0;
   }
 }

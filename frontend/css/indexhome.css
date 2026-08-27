@@ -13,9 +13,15 @@
   background-color: white;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: 'Lato', sans-serif;
-  overflow-x: auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* ---------- Global link styles ---------- */
@@ -48,7 +54,7 @@ span a {
 .safereach {
   margin: 10px;
   background-color: white;
-  margin-left: 60px;
+  margin-left: 55px;
   margin-top: 20px;
   position: relative;
   top: 10px;
@@ -56,14 +62,15 @@ span a {
 
 .navlist {
   display: flex;
-  margin: 1.5rem;
-  margin-left: 300px;
-  gap: 50px;
-  font-size: 16px;
+  margin: 1.2rem;
+  margin-left: 320px;
+  gap: 40px;
+  font-size: 18px;
   font-weight: 500;
   color: black;
   text-align: center;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .navlist p {
@@ -96,7 +103,8 @@ span a {
 
 .div1 {
   position: relative;
-  left: 320px;
+  left: 360px;
+  bottom: 5px;
 }
 
 /* =========================================================
@@ -167,14 +175,14 @@ span a {
   border-radius: 24px;
   position: relative;
   bottom: 45px;
-  left: 30px;
+  left: 42px;
   padding: 1px;
 }
 
 .divimg1 {
   position: relative;
-  bottom: 350px;
-  left: 650px;
+  bottom: 400px;
+  left: 700px;
 }
 
 .divyimg1 {
@@ -206,19 +214,21 @@ h1 {
 .divimgs {
   display: flex;
   margin-top: 40px;
-  gap: 80px;
-  margin-left: 120px;
+  gap: 85px;
+  margin-left: 150px;
   flex-wrap: wrap;
 }
 
 .partner-nema-label {
   position: relative;
-  left: 35px;
+  left: 25px;
+  font-size: 14px;
 }
 
 .partner-nscdc-label {
   position: relative;
-  left: 20px;
+  left: 9px;
+  font-size: 13px;
 }
 
 .partner-lasema-wrap {
@@ -228,7 +238,9 @@ h1 {
 
 .partner-lasema-label {
   position: relative;
-  left: 55px;
+  left: 44px;
+  font-size: 12px;
+  top:5px;
 }
 
 /* =========================================================
@@ -490,7 +502,7 @@ h2 {
   font-size: 13px;
   letter-spacing: 0.14px;
   position: relative;
-  top: 48px;
+  top: 40px;
   background-color: black;
 }
 
@@ -504,9 +516,9 @@ h3 {
 }
 
 .divk {
-  margin-top: -120px;
+  margin-top: -220px;
   background-color: black;
-  margin-left: 40px;
+  margin-left: 120px;
 }
 
 .para21 {
@@ -514,9 +526,9 @@ h3 {
   color: #FFFFFF;
   font-family: Inter;
   font-weight: 900;
-  font-size: 72px;
-  line-height: 130px;
-  margin-top: -190px;
+  font-size: 70px;
+  line-height: 110px;
+  margin-top:40px;
 }
 
 .para22 {
@@ -718,6 +730,8 @@ h3 {
   border: 2px solid #C6C6CD;
   padding: 35px;
   border-radius: 8px;
+  height: 100px;
+
 }
 
 .category-label {
@@ -725,9 +739,9 @@ h3 {
   position: relative;
 }
 
-.category-label-fire     { right: 32px; top: 30px; }
-.category-label-accident { right: 32px; top: 35px; }
-.category-label-default  { right: 28px; top: 35px; }
+.category-label-fire     { right: 40px; top: 10px; }
+.category-label-accident { right: 32px; top: 10px; }
+.category-label-default  { right: 25px; top: 10px; }
 
 /* =========================================================
    SECTION 5 — "Real-Time Insight" / dashboard preview
@@ -1531,6 +1545,35 @@ h3 {
 }
 
 /* =========================================================
+   HAMBURGER MENU (base / desktop state)
+   The hamburger button is hidden on desktop — the full nav
+   (Home ... Report Incident) already displays inline there.
+   The wrapper around .navlist + .div1 uses display:contents
+   on desktop so it has zero effect on the existing layout.
+   ========================================================= */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #000000;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-nav-menu {
+  display: contents;
+}
+
+/* =========================================================
    RESPONSIVE OVERRIDES
    Everything above this line is the untouched desktop design.
    The original layout is built from fixed pixel offsets
@@ -1544,9 +1587,18 @@ h3 {
    ========================================================= */
 
 /* ---------------------------------------------------------
-   Tablet & mobile (≤ 1024px)
+   Tablet & mobile (≤ 1300px)
+   The original desktop design is built from fixed pixel
+   offsets that add up to roughly ~1250-1300px of total width
+   (e.g. footer columns at left:1000px, testimonial cards at
+   margin-left:800px). Below that true design width the fixed
+   layout would overflow horizontally, so the breakpoint is
+   set to 1300px rather than 1024px — this way any laptop or
+   tablet screen narrower than the design's real width gets
+   the stacked, overflow-free layout instead of a horizontal
+   scrollbar or clipped content.
    --------------------------------------------------------- */
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
 
   html, body {
     overflow-x: hidden;
@@ -1565,11 +1617,59 @@ h3 {
     margin: 0.4rem;
   }
 
+  /* ---------- Hamburger menu ---------- */
+  .hamburger-btn {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 8px;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1001;
+  }
+
+  .hamburger-btn.is-active .hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger-btn.is-active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-btn.is-active .hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .mobile-nav-menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #ffffff;
+    transition: max-height 0.3s ease;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .mobile-nav-menu.is-open {
+    max-height: 600px;
+    border-bottom: 1px solid #C6C6CD;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
   /* ---------- Header / Nav ---------- */
   .safereach {
     margin: 16px auto;
-    text-align: center;
-    max-width: 220px;
+    max-width: 150px;
+    position: relative;
+    right:170px;
   }
 
   .navlist {
@@ -1588,11 +1688,10 @@ h3 {
   }
 
   .div1 {
-    position: static;
-    left: 0;
-    display: flex;
+    position: relative;
+    left: 20px;
     justify-content: center;
-    gap: 12px;
+    gap: 1px;
     flex-wrap: wrap;
     margin: 10px 0 20px;
   }
@@ -1610,12 +1709,19 @@ h3 {
   }
 
   .divh {
-    position: static;
-    right: 0;
+    position: relative;
+    right: 60px;
     margin: 24px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
+  }
+
+  .divh a {
+    white-space: nowrap;
+    flex: 0 1 auto;
   }
 
   .divy1 {
@@ -1654,16 +1760,18 @@ h3 {
   .divimgs {
     margin-left: 0;
     justify-content: center;
-    gap: 30px;
+    gap: 62px;
     padding: 0 16px;
   }
 
   .partner-nema-label,
-  .partner-nscdc-label,
-  .partner-lasema-label {
+  .partner-nscdc-label, {
     position: static;
     left: 0;
   }
+   .partner-lasema-label{
+    position: relative;
+   }
 
   .partner-lasema-wrap {
     position: static;
@@ -1714,6 +1822,10 @@ h3 {
     text-align: center;
     height: auto;
   }
+  .para20{
+    background-color: black;
+    width:500px;
+  }
 
   .para21, .para24, .para27, .para30 {
     font-size: 48px;
@@ -1750,7 +1862,7 @@ h3 {
   }
 
   .category-card {
-    padding: 20px;
+    padding: 30px;
   }
 
   /* ---------- Section 5 — dashboard / live alerts ---------- */
@@ -1828,6 +1940,11 @@ h3 {
     width: 100%;
     height: auto;
   }
+  .step-icon-bg{
+    min-width: 1300px;
+    position: relative;
+    right:490px;
+  }
 
   /* ---------- Section 6 — stats strip ---------- */
   .stats-strip,
@@ -1835,7 +1952,7 @@ h3 {
   .stats-strip + div + div {
     height: auto;
     width: 100%;
-    padding: 24px 16px;
+    padding: 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1849,6 +1966,7 @@ h3 {
     bottom: 0;
     font-size: 32px;
     text-align: center;
+    width:100%;
   }
 
   .stat1-label, .stat2-label, .stat3-label, .stat4-label {
@@ -1972,7 +2090,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 40px;
   }
 
   .lii a {
@@ -2067,11 +2185,16 @@ h3 {
     position: static;
     bottom: 0;
   }
+   .footer-logo-wrap{
+    width:30%;
+    position: relative;
+    left:160px;
+  }
 }
 
 /* ---------------------------------------------------------
    Small phones (≤ 480px) — extra tightening on top of the
-   ≤1024px stacked layout above
+   ≤1300px stacked layout above
    --------------------------------------------------------- */
 @media (max-width: 480px) {
 
@@ -2089,6 +2212,19 @@ h3 {
   .divh, .divy1, .para4 {
     margin-left: 16px;
     margin-right: 16px;
+  }
+
+  .divh {
+    gap: 6px;
+  }
+
+  .divh a {
+    font-size: 12px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    margin: 0 !important;
   }
 
   .para21, .para24, .para27, .para30 {
@@ -2120,5 +2256,32 @@ h3 {
   .li a, .lii a {
     padding: 10px 16px;
     font-size: 13px;
+  }
+   .footer-logo-wrap{
+    width:20%;
+  }
+}
+
+/* ---------------------------------------------------------
+   Very small phones (≤ 360px) — final safety net so the two
+   hero buttons ("Report an Incident" / "View Live Alerts")
+   always fit on one line without wrapping or overflowing.
+   --------------------------------------------------------- */
+@media (max-width: 360px) {
+  .divh {
+    gap: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .divh a {
+    font-size: 10.5px;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+  }
+  .footer-logo-wrap{
+    width:30%;
   }
 }

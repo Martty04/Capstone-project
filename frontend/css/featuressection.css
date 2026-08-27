@@ -30,7 +30,6 @@ a{
   display: inline-block;
   padding: 10px 20px;
   border-radius: 7px;
-  border: 2px solid #006557;
   color: #006557;
   font-size: 16px;
   font-weight: 500;
@@ -50,6 +49,7 @@ a{
   border-color: #FFFFFF1A;
   background-color: transparent;
   color: #FFFFFF;
+  border: 2px solid grey;
 }
 
 .btn--cta{
@@ -70,15 +70,15 @@ a{
   font-size: 17px;
 }
 
+
 .btn--outline-dark{
   background-color: transparent;
   color: #000000;
   border: 2px solid #76777D;
-  padding: 19px 40px;
+  padding: 14px clamp(20px, 4vw, 40px);
   border-radius: 10px;
-  font-size: 17px;
+  font-size: 14px;
 }
-
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -109,9 +109,12 @@ a{
   text-decoration: underline;
 }
 
+
 .header-actions{
   display: flex;
-  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  width:110px;
 }
 
 /* ==========================================================================
@@ -121,6 +124,7 @@ a{
   background-color: #254728;
   padding: 60px 60px 90px;
   text-align: center;
+  margin-top: -25px;
 }
 
 .hero__eyebrow{
