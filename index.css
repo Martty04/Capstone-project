@@ -2202,11 +2202,18 @@ h3 {
     font-size: 30px;
     margin-left: 16px;
   }
+  .safereach{
+    position: relative;
+    right:115px;
+  }
 
   .para3 {
     margin-left: 16px;
     margin-right: 16px;
     font-size: 13px;
+  }
+  .divimgs{
+    gap:25px;
   }
 
   .divh, .divy1, .para4 {
@@ -2270,8 +2277,11 @@ h3 {
 @media (max-width: 360px) {
   .divh {
     gap: 4px;
-    margin-left: 10px;
+    margin-left: 55px;
     margin-right: 10px;
+  }
+  .safereach{
+    margin-left: 185px;
   }
 
   .divh a {
@@ -2282,6 +2292,6 @@ h3 {
     padding-bottom: 7px !important;
   }
   .footer-logo-wrap{
-    width:30%;
+    width:25%;
   }
 }
