@@ -221,9 +221,8 @@ h1 {
 
 .partner-nema-label {
   position: relative;
-  left: 22px;
-  font-size: 13px;
-  top:3px;
+  left: 25px;
+  font-size: 14px;
 }
 
 .partner-nscdc-label {
@@ -1670,7 +1669,7 @@ h3 {
     margin: 16px auto;
     max-width: 150px;
     position: relative;
-    right:165px;
+    right:170px;
   }
 
   .navlist {
@@ -1711,13 +1710,13 @@ h3 {
 
   .divh {
     position: relative;
-    right: 150px;
+    right: 60px;
     margin: 24px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 10px;
   }
 
   .divh a {
@@ -1761,9 +1760,10 @@ h3 {
   .divimgs {
     margin-left: 0;
     justify-content: center;
-    gap: 58px;
-    padding: 22px;
+    gap: 62px;
+    padding: 0 16px;
   }
+
   .partner-nema-label,
   .partner-nscdc-label, {
     position: static;
@@ -1774,12 +1774,8 @@ h3 {
    }
 
   .partner-lasema-wrap {
-    position: relative;
-    right:90px;
-
-  }
-    .partner-Nigerian-wrap {
-      margin-right: 60px;
+    position: static;
+    right: 0;
   }
 
   /* ---------- Section 2 — feature cards ---------- */
@@ -1891,10 +1887,11 @@ h3 {
     position: static;
     bottom: 0;
     left: 0;
-    max-width: 500px;
+    width: 90%;
+    max-width: 340px;
     height: auto;
     margin: 20px auto;
-    padding: 25px;
+    padding: 16px;
   }
 
   .spanya, .alert2-badge-icon,
@@ -1905,9 +1902,6 @@ h3 {
     top: 0;
     display: inline-block;
     margin: 0 4px 8px 0;
-  }
-  .spanya{
-    width:90%;
   }
 
   .alert1-photo, .alert2-photo {
@@ -2279,13 +2273,9 @@ h3 {
     margin-left: 10px;
     margin-right: 10px;
   }
- .safereach{
-  position: relative;
-  right:70px;
- }
- }
+
   .divh a {
-    font-size: 7px;
+    font-size: 10.5px;
     padding-left: 7px !important;
     padding-right: 7px !important;
     padding-top: 7px !important;
