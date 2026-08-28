@@ -1,254 +1,712 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — SafeReach</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/contact.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SafeReach - Contact Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="site-header" id="siteHeader">
-    <div class="logo">
-      <img src="https://i.postimg.cc/tCkdkdQq/logo.png" alt="SafeReach" height="30">
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="nav-container">
+
+       <a href="index.html" class="logo">
+                               <img src="../images/logo.png">
+
+            </a>
+
+
+        <!-- DESKTOP NAV -->
+
+        <nav class="desktop-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="features.html">
+                Features
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact Us
+            </a>
+
+        </nav>
+
+
+        <!-- DESKTOP BUTTONS -->
+
+        <div class="desktop-actions">
+
+            <a href="login.html" class="login-btn">
+                Log In
+            </a>
+
+            <a href="report.html" class="signup-btn">
+                Report Incident
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE BURGER -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
     </div>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
-      <span></span>
-    </button>
+</header>
 
-    <nav class="navlist" id="mainNav">
-      <a class="nav-link" href="indexhome.html">Home</a>
-      <a class="nav-link" href="featuressection.html">Features</a>
-      <a class="nav-link" href="howitworks.html">How it works</a>
-      <a class="nav-link" href="about.html">About</a>
-      <a class="nav-link nav-link--active" href="#">Contact us</a>
+
+<!-- =====================================================
+     MOBILE SIDEBAR
+===================================================== -->
+
+<aside class="mobile-sidebar" id="sidebar">
+
+    <div class="mobile-header">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-shield">
+                <i class="fa-solid fa-shield-halved"></i>
+            </span>
+
+            <span>
+                Safe<span>Reach</span>
+            </span>
+
+        </a>
+
+        <button
+            class="close-menu"
+            id="closeMenu"
+            aria-label="Close menu"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-nav">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="features.html">
+            <i class="fa-solid fa-shield-halved"></i>
+            Features
+        </a>
+
+        <a href="how-it-works.html">
+            <i class="fa-solid fa-list-check"></i>
+            How It Works
+        </a>
+
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            About
+        </a>
+
+        <a href="contact.html">
+            <i class="fa-solid fa-phone"></i>
+            Contact Us
+        </a>
+
     </nav>
 
-    <div class="header-actions">
-        <a class="btn btn--outline" href="dashboard.html"> <img src="https://i.postimg.cc/C1GdQ3YP/phoneicon1.jpg" width="95%"> </a>
-    </div>
-  </header>
 
-  <!-- Page hero -->
-  <section class="page-hero">
-    <h1 class="page-hero__title">How can we help?</h1>
-    <p class="page-hero__subtitle">Our dedicated emergency response team and support coordinators are available 24/7 to ensure community safety and platform integrity.</p>
-  </section>
+    <div class="mobile-actions">
 
-  <!-- Contact grid -->
-  <section class="contact-section">
-    <div class="contact-grid">
+        <a href="login.html" class="mobile-login">
+            Log In
+        </a>
 
-      <!-- Get In Touch -->
-      <div class="contact-card">
-        <h2 class="contact-card__title">Get In Touch</h2>
-
-        <div class="contact-method">
-          <span class="contact-method__icon"><img src="https://i.postimg.cc/YqcFfDPC/messg-icon.png" alt=""></span>
-          <div>
-            <p class="contact-method__label">GENERAL SUPPORT</p>
-            <p class="contact-method__value">support@safealert.com</p>
-          </div>
-        </div>
-
-        <div class="contact-method">
-          <span class="contact-method__icon"><img src="https://i.postimg.cc/tgRvR4df/latest-phone-icon.png" alt=""></span>
-          <div>
-            <p class="contact-method__label">VERIFICATION HOTLINE</p>
-            <p class="contact-method__value">+1-800-SAFE-ALERT</p>
-          </div>
-        </div>
-
-        <hr>
-
-        <div class="alert-box">
-          <p class="alert-box__title">* Emergency Coordinator</p>
-          <p class="alert-box__desc">Direct line for verified government agencies and first responders.</p>
-          <a class="alert-box__link" href="#">Access Priority Channel &gt;</a>
-        </div>
-      </div>
-
-      <!-- Send a Message -->
-      <div class="message-card">
-        <h2 class="message-card__title">Send a Message</h2>
-        <p class="message-card__desc">Use this form for non-urgent inquiries, bug reports, or partnership requests. For active incidents, please use the 'Report' button in the dashboard.</p>
-
-        <form>
-          <div class="form-row">
-            <div class="field">
-              <label for="fullName">Full Name</label>
-              <input type="text" id="fullName" name="fullName" placeholder="John Doe">
-            </div>
-            <div class="field">
-              <label for="email">Email address</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com">
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Account support">
-          </div>
-
-          <div class="field">
-            <label for="comments">Message</label>
-            <textarea id="comments" name="comments" rows="5" placeholder="Type here..."></textarea>
-          </div>
-
-          <button type="submit" class="btn--dark">Send Message &gt;</button>
-        </form>
-
-        <div class="message-card__photo">
-        </div>
-          <p class="message-photo-wrap" style="position: relative;
-          right:490px;
-          bottom: 170px;"> <img src="https://i.postimg.cc/8c5d67X7/Whats-App-Image-2026-08-13-at-14-01-23-(6).jpg" alt="SafeReach support team" width="70%"> </p>
-      </div>
+        <a href="report.html" class="mobile-report">
+            Report Incident
+        </a>
 
     </div>
-  </section>
 
-  <div class="emergency-section" style="background-color: #E9F7EA;
-  width:100%;;
-  height: 200px;">
-  <div class="emergency-primary-card" style="border:2px solid #305B33;
-  background-color: #305B33;
-  width:22%;
-  padding:20px;
-  position: relative;
-  top:20px;
-  left:40px;
-  border-radius: 10px;
-  color: white;">
-  <p>
-    <p style="position: relative;
-    right:12px;"> <img src="https://i.postimg.cc/pdMm03VJ/lorry-main.png" width="10%"> 
-      <p class="fire-rescue-label" style="position: relative;
-      bottom:25px;
-      left:33px;
-      font-size: 15px;"> FIRE & RESCUE </p>
-    <p> <span style="font-size: 42px;"> 112 </span> 
-      Primary Emergency Line
-    </p>
-  </p>
-
-</div>
-<br> <br> <hr style="color:#E7BAC5">  </hr>
-   <div class="emergency-cards-row" style="
-position: relative;
-bottom: 200px;
-gap:50px;
-width:50%;
-display: flex;
-left:400px;
-">
-<div class="emergency-card" style="background-color: white;
-margin:15px;
-padding:40px;
-font-size: 12px;
-width:28%;
-border: 2px solid #DC7C97;
-border-radius: 7px;
-"> 
-  <p style="position: relative;
-  top:20px;
-  right:20px;
-"><img src="https://i.postimg.cc/B6K1ZDZ8/police-icon.png" width="20%"> </p>
-   <span style="color:#DC7C97;
-   font-size: 15px;
-   position: relative;"> POLICE </span><br>  
- <span style="font-size: 15px;"> 767 </span>
-</div>
-<div class="emergency-card" style="background-color: white;
-margin:15px;
-padding:20px;
-width:28%;
-border:2px solid #DC7C97;
-border-radius: 7px;
-">
-<p style="position: relative;
-  top:38px;
-  right:8px;
-"><img src="https://i.postimg.cc/4NLL9kbG/first-aid-icon.jpg" width="18%"> </p>
-<span style="position: relative;
-top:18px;
-font-size: 14px;
-left:16px;
-color:#DC7C97"> AMBULANCE  </span><br>
-  <span style="position: relative;
-  top:20px;
-  left:20px;"> 112 </span>
-</div>
-<div class="emergency-card" style="background-color: white;
-margin:15px;
-padding:20px;
-font-size: 12px;
-width:28%;
-border: 2px solid #DC7C97;
-border-radius: 7px;
-">
-<p style="position: relative;
-  top:30px;
-  right:8px;
-"><img src="https://i.postimg.cc/GpfNWBmY/ss-icon.jpg" width="18%"> </p>
-<span style="position: relative;
-left:20px;
-top:8px;
-font-size: 13px;
-color: #DC7C97;"> SAFETY HOTLINE </span><br>
-  <span style="position: relative;
-  top:12px;
-  left:20px;
-  font-size: 14px;"> 0800-SAFE</span>
-</div>
-</div>
+</aside>
 
 
-<!-- Footer -->
-  <div class="site-footer" style="background-color: black;
-  width:100%;
-  height:200px;
-  margin-top: -100px;">
- <p class="footer-logo-p" style="position: relative;
- top:40px;
- left:30px;"> <img src="https://i.postimg.cc/Vk5Cd2Db/logo.png" width="15%"> </p>
- <p class="footer-copy-p" style="color: #484848;
- position: relative;
- top:50px;
- left:30px;"> © 2026 Emergency Information Systems, Inc.</p>
-  
-<div class="footer-links" style="display:flex;
-color:white;
-gap:40px;
-margin-left:500px;">
-  <p> Privacy Policy </p>
-  <p> Terms of Service </p>
-  <p> Compliance </p>
-</div>
-</div>
+<div class="overlay" id="overlay"></div>
 
- <div class="footer-social" style="display: flex;
- gap:30px;
- margin-top: -120px;
- margin-left: 1200px;
 
- ">
-    <img src="https://i.postimg.cc/vB7z3CJv/twitter-icon.jpg" width="2%"> 
-    <img src="https://i.postimg.cc/KYSBwJDm/linked-in-iconn.png" width="2%">
-  </div>
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
-  <script>
-    const header = document.getElementById('siteHeader');
-    const toggle = document.getElementById('menuToggle');
-    toggle.addEventListener('click', () => {
-      const isOpen = header.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', isOpen);
-    });
-  </script>
+<main>
+
+
+    <!-- =================================================
+         CONTACT SECTION
+    ================================================== -->
+
+    <section class="contact-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h1>
+                    How can we help?
+                </h1>
+
+                <p>
+                    Whether you have a question, need assistance,
+                    or want to learn more about SafeReach,
+                    we're here to help.
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT GRID -->
+
+            <div class="contact-grid">
+
+
+                <!-- =========================================
+                     GET IN TOUCH
+                ========================================== -->
+
+                <div class="contact-info">
+
+                    <h2>
+                        Get in Touch
+                    </h2>
+
+                    <p class="info-intro">
+                        Our support team is available to help
+                        with questions, reports and general
+                        assistance.
+                    </p>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                EMAIL
+                            </span>
+
+                            <a href="mailto:support@safereach.com">
+                                support@safereach.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PHONE
+                            </span>
+
+                            <a href="tel:+2348000000000">
+                                +234 800 000 0000
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                LOCATION
+                            </span>
+
+                            <p>
+                                Port Harcourt, Nigeria
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- IMAGE -->
+
+                    <div class="office-image">
+
+                        <div class="office-overlay">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            <span>
+                                SafeReach Support Center
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     SEND MESSAGE FORM
+                ========================================== -->
+
+                <div class="contact-form-box">
+
+                    <h2>
+                        Send a Message
+                    </h2>
+
+                    <p>
+                        Have a question? Send us a message and
+                        we'll get back to you as soon as possible.
+                    </p>
+
+
+                    <form id="contactForm">
+
+
+                        <!-- NAME -->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="form-group">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <select
+                                id="subject"
+                                name="subject"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a subject
+                                </option>
+
+                                <option value="general">
+                                    General Question
+                                </option>
+
+                                <option value="technical">
+                                    Technical Support
+                                </option>
+
+                                <option value="report">
+                                    Report an Issue
+                                </option>
+
+                                <option value="partnership">
+                                    Partnership
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Tell us how we can help..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="submit-btn"
+                        >
+                            SEND MESSAGE
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+
+                        <!-- SUCCESS -->
+
+                        <div
+                            class="form-message"
+                            id="formMessage"
+                        ></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         EMERGENCY CONTACT
+    ================================================== -->
+
+    <section class="emergency-section">
+
+        <div class="container">
+
+            <div class="emergency-box">
+
+                <div class="emergency-main">
+
+                    <div class="emergency-icon">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            FOR IMMEDIATE EMERGENCY
+                        </span>
+
+                        <strong>
+                            112
+                        </strong>
+
+                        <p>
+                            Call the emergency line for
+                            immediate assistance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="emergency-numbers">
+
+                    <div class="emergency-number">
+
+                        <span>
+                            POLICE
+                        </span>
+
+                        <strong>
+                            112
+                        </strong>
+
+                    </div>
+
+
+                    <div class="emergency-number">
+
+                        <span>
+                            FIRE
+                        </span>
+
+                        <strong>
+                            112
+                        </strong>
+
+                    </div>
+
+
+                    <div class="emergency-number">
+
+                        <span>
+                            MEDICAL
+                        </span>
+
+                        <strong>
+                            112
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+                               <img src="../images/logo.png">
+
+            </a>
+
+            <p>
+                Empowering communities with technology
+                designed to keep people informed,
+                connected and safe.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PLATFORM -->
+
+        <div class="footer-column">
+
+            <h3>
+                PLATFORM
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="features.html">
+                Features
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="report.html">
+                Report Incident
+            </a>
+
+        </div>
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+            <h3>
+                COMPANY
+            </h3>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <a href="#">
+                Careers
+            </a>
+
+            <a href="#">
+                Blog
+            </a>
+
+        </div>
+
+
+        <!-- SUPPORT -->
+
+        <div class="footer-column">
+
+            <h3>
+                SUPPORT
+            </h3>
+
+            <a href="#">
+                Help Center
+            </a>
+
+            <a href="#">
+                Privacy
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © 2026 SafeReach. All rights reserved.
+            </p>
+
+            <div>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms of Service
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/java.js"></script>
 
 </body>
 </html>

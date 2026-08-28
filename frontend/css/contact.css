@@ -1,602 +1,1137 @@
-/* ==========================================================================
-   SafeReach — Contact
-   Rebuilt for full responsiveness (mobile-first, flex/grid based)
-   ========================================================================== */
+/* =====================================================
+   RESET
+===================================================== */
 
-:root{
-  --color-primary: #006557;
-  --color-accent: #5FB666;
-  --color-accent-soft: #D9F2EF;
-
-  --color-page-bg: #FCF8FA;
-  --color-card-tint: #F6F3F5;
-  --color-card-tint-border: #F3F2F5;
-  --color-white: #FFFFFF;
-
-  --color-alert-bg: #F4DEE4;
-  --color-alert-border: #F5E3E8;
-  --color-alert-text: #BA0035;
-
-  --color-text: #000000;
-  --color-text-muted: #45464D;
-  --color-text-soft: #7C839B;
-  --color-border: #E0E7E0;
-
-  --font-display: 'Lato', system-ui, sans-serif;
-  --font-body: 'Lato', system-ui, sans-serif;
-  --font-detail: 'Inter', system-ui, sans-serif;
-
-  --max-width: 1280px;
-  --gutter: clamp(20px, 5vw, 60px);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-  font-family: var(--font-body);
-  color: var(--color-text);
-  background-color: var(--color-page-bg);
-  line-height: 1.5;
+body {
+    font-family: "Lato", sans-serif;
+    color: #172019;
+    background: #ffffff;
+    overflow-x: hidden;
 }
 
-img{
-  display: block;
-  max-width: 100%;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-a{
-  text-decoration: none;
-  color: inherit;
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
 }
 
-button, input, textarea{
-  font-family: inherit;
-}
-
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
-.btn{
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 7px;
-  color: var(--color-primary);
-  font-size: 16px;
-  font-weight: 500;
-  background-color: var(--color-white);
-  white-space: nowrap;
-}
-
-.btn--outline{
-  background-color: transparent;
-}
-
-.btn--solid{
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-accent-soft);
-}
-
-.btn--dark{
-  background-color: #000000;
-  color: #FFFFFF;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-/* ==========================================================================
-   Header
-   ========================================================================== */
-.site-header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 20px var(--gutter);
-  position: relative;
-  background-color: var(--color-page-bg);
-}
-
-.logo img{
-  height: 30px;
-  width: auto;
-}
-
-.navlist{
-  display: flex;
-  gap: clamp(16px, 3vw, 50px);
-  font-size: 16px;
-  font-weight: 500;
-  flex-wrap: wrap;
-}
-
-.nav-link{
-  color: black;
-}
-
-.nav-link:hover,
-.nav-link--active{
-  color: var(--color-primary);
-  text-decoration: underline;
-}
-
-.header-actions{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  width:90px;
+.container {
+    width: min(1080px, 92%);
+    margin: auto;
 }
 
 
-.menu-toggle{
-  display: none;
-  background: none;
-  border: 2px solid black;
-  border-radius: 7px;
-  width: 42px;
-  height: 42px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    height: 58px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e8ece8;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
 }
 
-.menu-toggle span,
-.menu-toggle::before,
-.menu-toggle::after{
-  content:"" ;
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: black;
-  position: relative;
-}
+.nav-container {
+    width: min(1100px, 94%);
+    height: 100%;
 
-.menu-toggle span{ position: absolute; }
-.menu-toggle::before{ transform: translateY(-6px); }
-.menu-toggle::after{ transform: translateY(6px); }
+    margin: auto;
 
-@media (max-width: 860px){
-  .menu-toggle{ display: flex; }
-
-  .navlist{
-    display: none;
-    width: 100%;
-    order: 3;
-    flex-direction: column;
-    gap: 4px;
-    padding-top: 12px;
-    border-top: 1px solid var(--color-border);
-    margin-top: 16px;
-  }
-
-  .site-header.is-open .navlist{ display: flex; }
-  .site-header{ flex-wrap: wrap; }
-}
-
-/* ==========================================================================
-   Page hero
-   ========================================================================== */
-.page-hero{
-  text-align: center;
-  padding: clamp(30px, 6vw, 60px) var(--gutter) clamp(20px, 4vw, 40px);
-}
-
-.page-hero__title{
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(32px, 6vw, 55px);
-  line-height: 1.1;
-  letter-spacing: 0.5px;
-}
-
-.page-hero__subtitle{
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  color: var(--color-text-muted);
-  max-width: 620px;
-  margin: 16px auto 0;
-}
-
-/* ==========================================================================
-   Contact grid
-   ========================================================================== */
-.contact-section{
-  padding: clamp(10px, 3vw, 30px) var(--gutter) clamp(50px, 8vw, 90px);
-  max-width: var(--max-width);
-  margin-inline: auto;
-}
-
-.contact-grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
-  align-items: start;
-}
-
-@media (min-width: 860px){
-  .contact-grid{
-    grid-template-columns: minmax(300px, 420px) minmax(320px, 1fr);
-  }
-}
-
-/* ---- Get In Touch card ---- */
-.contact-card{
-  border: 2px solid var(--color-card-tint-border);
-  background-color: var(--color-card-tint);
-  border-radius: 14px;
-  padding: clamp(24px, 4vw, 40px);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-card__title{
-  font-family: var(--font-detail);
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-}
-
-.contact-method{
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.contact-method__icon{
-  flex: none;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-method__icon img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.contact-method__label{
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.14px;
-  color: var(--color-text-muted);
-}
-
-.contact-method__value{
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 27px;
-  letter-spacing: 0.5px;
-  word-break: break-word;
-}
-
-.contact-card hr{
-  border: none;
-  border-top: 1px solid var(--color-text-soft);
-  opacity: 0.35;
-}
-
-.alert-box{
-  border: 2px solid var(--color-alert-border);
-  background-color: var(--color-alert-bg);
-  border-radius: 10px;
-  padding: 18px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.alert-box__title{
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  color: var(--color-alert-text);
-}
-
-.alert-box__desc{
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.3px;
-}
-
-.alert-box__link{
-  font-family: var(--font-detail);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.14px;
-  color: var(--color-alert-text);
-}
-
-/* ---- Send a Message card ---- */
-.message-card{
-  background-color: var(--color-white);
-  border-radius: 14px;
-  padding: clamp(24px, 4vw, 40px);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  height:740px;
-}
-
-.message-card__photo{
-  align-self: flex-start;
-  width: min(220px, 60%);
-  aspect-ratio: 4 / 3;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 4px;
-}
-
-.message-card__photo img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.message-card__title{
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.2;
-  letter-spacing: 0.14px;
-}
-
-.message-card__desc{
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  color: var(--color-text-muted);
-  margin-top: -8px;
-}
-
-.form-row{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-@media (min-width: 560px){
-  .form-row{
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.field{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-}
-
-.field label{
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.field input,
-.field textarea{
-  border: 2px solid #C7C9CE;
-  padding: 12px 14px;
-  border-radius: 6px;
-  background-color: var(--color-white);
-  font-size: 14px;
-  width: 100%;
-}
-
-.field textarea{
-  resize: vertical;
-  min-height: 130px;
-}
-
-.field input:focus,
-.field textarea:focus{
-  outline: 2px solid var(--color-primary);
-  outline-offset: 1px;
-}
-
-.message-card form{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.message-card .btn--dark{
-  align-self: flex-start;
+    display: flex;
+    align-items: center;
 }
 
 
+/* LOGO */
 
-/* ==========================================================================
-   Small phones
-   ========================================================================== */
-@media (max-width: 480px){
-  .header-actions .btn{
-    padding: 8px 14px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #172019;
+
     font-size: 14px;
-  }
-
-  .message-card .btn--dark{
-    align-self: stretch;
-    text-align: center;
-  }
-
+    font-weight: 900;
 }
 
-/* ==========================================================================
-   RESPONSIVE FIXES — added only, nothing above this line was changed.
-
-   The sections below (emergency numbers band + footer) position their
-   elements with fixed inline pixel offsets (e.g. left:400px,
-   margin-left:1200px, height:200px). Those values are left completely
-   untouched, so desktop (>=1024px) still renders pixel-identical to the
-   original. Below 1024px the numbers stop making sense geometrically
-   (elements would get pushed off-canvas or clipped), so these media
-   queries override just enough — using !important, since that's the only
-   way to beat an inline style without editing the inline style itself —
-   to let the same elements reflow instead of overlapping/overflowing.
-   No element is reordered, removed, resized in content, or restyled at
-   desktop width.
-   ========================================================================== */
-
-/* ---- Universal overflow-safety fixes (apply at EVERY width, including
-   desktop — these were causing a hidden ~30px horizontal scrollbar and
-   squashed-away footer icons even at 1280–1440px, not just on mobile).
-
-   Technique: a few elements use position:relative + left/right pixel
-   offsets to nudge icons/text into place. On a full-width block, a
-   relative left/right offset shifts what's drawn without shrinking the
-   box, so the box pokes out past its container — that's what was
-   overflowing. Swapping the offending left/right offset for an
-   equivalent margin/justify-content keeps every icon and label in
-   exactly the same visual spot, but as part of normal layout so it
-   can never poke out. Nothing here changes the on-screen position of
-   any icon or text at any width — it only fixes the mechanism. ---- */
-.footer-logo-p,
-.footer-copy-p{
-  left: 0 !important;
-  margin-left: 30px;
+.logo > span:last-child span {
+    color: #1e9c42;
 }
 
-.fire-rescue-label{
-  left: 0 !important;
-  margin-left: 33px;
+.logo-shield {
+    width: 23px;
+    height: 26px;
+
+    display: grid;
+    place-items: center;
+
+    color: white;
+    background: #21a548;
+
+    clip-path: polygon(
+        50% 0,
+        93% 14%,
+        88% 66%,
+        50% 100%,
+        12% 66%,
+        7% 14%
+    );
 }
 
-.footer-social{
-  margin-left: 0 !important;
-  width: 100%;
-  justify-content: flex-end;
-  padding-right: 30px;
-  box-sizing: border-box;
+.logo-shield i {
+    font-size: 10px;
 }
 
-/* ---- "Send a Message" photo (fixed right/bottom pull) ---- */
-@media (max-width: 859px){
-  .message-card{
-    height: auto; /* fixed 740px card would clip content once fields stack */
-  }
+
+/* DESKTOP NAV */
+
+.desktop-nav {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
 }
 
-@media (max-width: 767px){
-  .message-photo-wrap{
-    right: 0 !important;
-    bottom: 0 !important;
-    margin-top: 12px;
-  }
+.desktop-nav a {
+    color: #69746c;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    transition: 0.2s;
 }
 
-/* ---- Emergency numbers band ---- */
-@media (max-width: 1023px){
-  .emergency-section{
-    height: auto !important;
-    padding: 20px 0 32px;
-  }
-
-  .emergency-primary-card{
-    width: auto !important;
-    left: 0 !important;
-    top: 0 !important;
-    margin: 0 20px !important;
-  }
-
-  .emergency-cards-row{
-    position: static !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    width: auto !important;
-    flex-wrap: wrap;
-    gap: 20px !important;
-    margin: 20px 20px 0;
-  }
-
-  /* Cards used a fixed 15px inline margin AND a 50px inline gap at the
-     same time — stacked together that's more space than two cards can
-     fit side by side, so every card was being forced onto its own row
-     even on a tablet-width screen. Zeroing the per-card margin and
-     sizing against the row's own gap is what actually lets two cards
-     sit side by side again. */
-  .emergency-card{
-    margin: 0 !important;
-    width: calc(50% - 10px) !important;
-    flex: 1 1 calc(50% - 10px);
-  }
+.desktop-nav a:hover,
+.desktop-nav a.active {
+    color: #1e9c42;
 }
 
-@media (max-width: 640px){
-  .emergency-cards-row{
-    flex-direction: column;
-    gap: 16px !important;
-  }
 
-  .emergency-card{
-    width: auto !important;
-    flex: 1 1 auto;
-  }
+/* DESKTOP ACTIONS */
+
+.desktop-actions {
+    margin-left: 25px;
+
+    display: flex;
+    gap: 7px;
 }
 
-/* ---- Footer ---- */
-@media (max-width: 1023px){
-  .site-footer{
-    height: auto !important;
-    /* the inline -100px pull only makes sense against the original
-       fixed 200px-tall band above it; once that band's height grows to
-       fit stacked/wrapped cards, the same -100px pulls the black
-       footer up over the cards. Replacing it with a small positive gap
-       keeps the footer directly and cleanly below the band at any
-       height. */
-    margin-top: 24px !important;
-    padding-bottom: 24px;
-  }
+.login-btn,
+.signup-btn {
+    padding: 7px 12px;
 
-  .footer-links{
-    margin-left: 0 !important;
-    flex-wrap: wrap;
-    padding: 0 30px;
-    /* the copyright line above it is visually pushed down 50px by its
-       own inline "top:50px" offset, but that offset doesn't reserve
-       space in normal flow — without this, footer-links renders right
-       underneath it and the two overlap. */
-    margin-top: 64px;
-  }
+    border-radius: 3px;
 
-  .footer-social{
-    margin-top: 16px !important;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.login-btn {
+    color: #1d9d42;
+
+    border: 1px solid #1d9d42;
+}
+
+.signup-btn {
+    color: white;
+    background: #1d9d42;
+}
+
+
+/* BURGER */
+
+.menu-toggle {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+    background: transparent;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    color: #182019;
+}
+
+
+/* =====================================================
+   MOBILE SIDEBAR
+===================================================== */
+
+.mobile-sidebar {
+    position: fixed;
+
+    top: 0;
+    right: -310px;
+
+    width: 290px;
+    max-width: 85%;
+
+    height: 100vh;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    z-index: 3000;
+
+    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.15);
+
+    transition: right 0.35s ease;
+}
+
+.mobile-sidebar.active {
+    right: 0;
+}
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     padding-bottom: 20px;
-  }
+
+    border-bottom: 1px solid #edf0ed;
 }
 
-@media (max-width: 420px){
-  .footer-links{
-    gap: 20px !important;
-    flex-direction: column;
-  }
+.close-menu {
+    width: 36px;
+    height: 36px;
 
-  .footer-social{
+    border: none;
+    border-radius: 50%;
+
+    background: #f1f4f1;
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 18px;
+}
+
+.mobile-nav a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 15px 5px;
+
+    border-bottom: 1px solid #edf0ed;
+
+    color: #344139;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.mobile-nav a i {
+    width: 20px;
+
+    color: #1e9c42;
+}
+
+.mobile-actions {
+    position: absolute;
+
+    left: 22px;
+    right: 22px;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.mobile-login,
+.mobile-report {
+    text-align: center;
+
+    padding: 12px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.mobile-login {
+    border: 1px solid #d6ddd7;
+}
+
+.mobile-report {
+    color: white;
+    background: #1d9d42;
+}
+
+
+/* OVERLAY */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(8, 20, 10, 0.55);
+
+    z-index: 2500;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+.contact-section {
+    padding: 48px 0 42px;
+
+    background: #ffffff;
+}
+
+
+/* HEADING */
+
+.section-heading {
+    text-align: center;
+
+    max-width: 570px;
+
+    margin: 0 auto 30px;
+}
+
+.section-heading h1 {
+    font-size: 25px;
+
+    color: #172019;
+
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #7a837d;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CONTACT GRID
+===================================================== */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.25fr;
+
+    gap: 22px;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   CONTACT INFORMATION
+===================================================== */
+
+.contact-info {
+    padding: 20px;
+
+    border-radius: 6px;
+
+    background: #f5f7f5;
+
+    border: 1px solid #e8ece8;
+}
+
+.contact-info h2,
+.contact-form-box h2 {
+    font-size: 14px;
+
+    margin-bottom: 7px;
+}
+
+.info-intro,
+.contact-form-box > p {
+    color: #7b837d;
+
+    font-size: 7px;
+
+    line-height: 1.65;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.info-icon {
+    width: 25px;
+    height: 25px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 4px;
+
+    color: #1e9c42;
+    background: #e2f4e5;
+
+    font-size: 9px;
+}
+
+.info-item span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #929a94;
+
+    font-size: 5px;
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+}
+
+.info-item a,
+.info-item p {
+    color: #263029;
+
+    font-size: 7px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   OFFICE IMAGE
+===================================================== */
+
+.office-image {
+    position: relative;
+
+    height: 115px;
+
+    margin-top: 17px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c5d6ca,
+            #849b8a 45%,
+            #314936
+        );
+}
+
+
+/* Building effect */
+
+.office-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 15px 20px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.65) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            rgba(255,255,255,0.65) 1px,
+            transparent 1px
+        );
+
+    background-size: 27px 20px;
+
+    transform: perspective(150px) rotateX(4deg);
+
+    opacity: 0.75;
+}
+
+.office-overlay {
+    position: absolute;
+
+    left: 12px;
+    bottom: 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 9px;
+
+    border-radius: 3px;
+
+    color: white;
+
+    background: rgba(5, 20, 8, 0.72);
+
+    font-size: 6px;
+    font-weight: 800;
+}
+
+.office-overlay i {
+    color: #4dcc6a;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.contact-form-box {
+    padding: 22px;
+
+    border: 1px solid #e5e9e5;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    box-shadow: 0 8px 25px rgba(20, 40, 25, 0.05);
+}
+
+.form-group {
+    margin-top: 13px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #3b453e;
+
+    font-size: 7px;
+    font-weight: 800;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #dce2dd;
+
+    border-radius: 3px;
+
+    outline: none;
+
+    color: #253028;
+
+    background: #ffffff;
+
+    font-size: 8px;
+
+    transition: 0.2s;
+}
+
+.form-group input,
+.form-group select {
+    height: 30px;
+
+    padding: 0 9px;
+}
+
+.form-group textarea {
+    padding: 9px;
+
+    resize: vertical;
+
+    min-height: 75px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #adb4ae;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #38aa57;
+
+    box-shadow: 0 0 0 2px rgba(56, 170, 87, 0.08);
+}
+
+
+/* SUBMIT */
+
+.submit-btn {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding-right: 0;
-  }
+
+    gap: 8px;
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 3px;
+
+    color: white;
+
+    background: #101511;
+
+    font-size: 7px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    background: #1e9c42;
+}
+
+.submit-btn i {
+    font-size: 6px;
+}
+
+
+/* FORM MESSAGE */
+
+.form-message {
+    display: none;
+
+    margin-top: 10px;
+
+    padding: 8px;
+
+    border-radius: 3px;
+
+    text-align: center;
+
+    font-size: 7px;
+    font-weight: 700;
+}
+
+.form-message.success {
+    display: block;
+
+    color: #147631;
+
+    background: #e5f7e9;
+}
+
+.form-message.error {
+    display: block;
+
+    color: #b3263e;
+
+    background: #fdebed;
+}
+
+
+/* =====================================================
+   EMERGENCY SECTION
+===================================================== */
+
+.emergency-section {
+    padding: 25px 0 35px;
+
+    background: #f1f2f1;
+}
+
+.emergency-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 18px 22px;
+
+    border-radius: 5px;
+
+    color: white;
+
+    background: #112016;
+}
+
+
+/* MAIN */
+
+.emergency-main {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.emergency-icon {
+    width: 37px;
+    height: 37px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 5px;
+
+    background: #dc2e49;
+
+    font-size: 13px;
+}
+
+.emergency-main span {
+    display: block;
+
+    color: #8d9990;
+
+    font-size: 5px;
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+}
+
+.emergency-main strong {
+    display: block;
+
+    margin-top: 1px;
+
+    font-size: 19px;
+}
+
+.emergency-main p {
+    color: #aab3ac;
+
+    font-size: 6px;
+}
+
+
+/* NUMBERS */
+
+.emergency-numbers {
+    display: flex;
+
+    gap: 8px;
+}
+
+.emergency-number {
+    min-width: 75px;
+
+    padding: 9px;
+
+    border: 1px solid #304036;
+
+    border-radius: 4px;
+
+    text-align: center;
+}
+
+.emergency-number span {
+    display: block;
+
+    color: #8d9990;
+
+    font-size: 5px;
+    font-weight: 800;
+}
+
+.emergency-number strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #ffffff;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    padding-top: 35px;
+
+    color: white;
+
+    background: #050706;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+
+    gap: 40px;
+
+    padding-bottom: 28px;
+}
+
+.footer-brand p {
+    max-width: 230px;
+
+    margin-top: 11px;
+
+    color: #7e8781;
+
+    font-size: 7px;
+
+    line-height: 1.7;
+}
+
+
+/* SOCIAL */
+
+.social-links {
+    display: flex;
+
+    gap: 6px;
+
+    margin-top: 13px;
+}
+
+.social-links a {
+    width: 23px;
+    height: 23px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #293029;
+
+    border-radius: 50%;
+
+    color: #7f8881;
+
+    font-size: 8px;
+
+    transition: 0.2s;
+}
+
+.social-links a:hover {
+    color: white;
+
+    background: #1e9c42;
+
+    border-color: #1e9c42;
+}
+
+
+/* COLUMNS */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.footer-column h3 {
+    margin-bottom: 3px;
+
+    font-size: 7px;
+}
+
+.footer-column a {
+    color: #788079;
+
+    font-size: 7px;
+
+    transition: 0.2s;
+}
+
+.footer-column a:hover {
+    color: #4dcc6a;
+}
+
+
+/* BOTTOM */
+
+.footer-bottom {
+    padding: 13px 0;
+
+    border-top: 1px solid #222723;
+}
+
+.footer-bottom .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    color: #626b65;
+
+    font-size: 6px;
+}
+
+.footer-bottom div {
+    display: flex;
+
+    gap: 15px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .desktop-nav {
+        gap: 14px;
+    }
+
+    .desktop-actions {
+        margin-left: 15px;
+    }
+
+    .contact-grid {
+        width: 95%;
+    }
+
+    .emergency-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .emergency-numbers {
+        width: 100%;
+    }
+
+    .emergency-number {
+        flex: 1;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    /* NAV */
+
+    .desktop-nav,
+    .desktop-actions {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        padding: 42px 0 30px;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading h1 {
+        font-size: 25px;
+    }
+
+    .section-heading p {
+        font-size: 8px;
+    }
+
+
+    /* GRID */
+
+    .contact-grid {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    /* INFO */
+
+    .contact-info {
+        padding: 18px;
+    }
+
+    .office-image {
+        height: 145px;
+    }
+
+
+    /* FORM */
+
+    .contact-form-box {
+        padding: 18px;
+    }
+
+    .form-group {
+        margin-top: 12px;
+    }
+
+
+    /* EMERGENCY */
+
+    .emergency-section {
+        padding: 20px 0 30px;
+    }
+
+    .emergency-box {
+        padding: 18px;
+
+        gap: 18px;
+    }
+
+    .emergency-numbers {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 6px;
+    }
+
+    .emergency-number {
+        min-width: 0;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 28px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width: 430px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .section-heading h1 {
+        font-size: 23px;
+    }
+
+    .section-heading p {
+        font-size: 8px;
+    }
+
+    .contact-info h2,
+    .contact-form-box h2 {
+        font-size: 14px;
+    }
+
+    .office-image {
+        height: 125px;
+    }
+
+    .emergency-numbers {
+        grid-template-columns: 1fr;
+    }
+
+    .emergency-number {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 8px 10px;
+    }
+
+    .emergency-number strong {
+        margin-top: 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
 }
