@@ -46,4 +46,11 @@ function openModal(){
          document.getElementById("btn").classList.remove("show");
    window.location.href = "../html/dashboard.html";
   }
+
+
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    window.location.href = "../html/dashboard.html";
+});
   
