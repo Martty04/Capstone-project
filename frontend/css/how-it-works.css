@@ -107,18 +107,18 @@ button {
 /* DESKTOP NAV */
 
 .desktop-nav {
-    margin-left: auto;
+    margin-right: 40px;
 
     display: flex;
     align-items: center;
 
-    gap: 22px;
+    gap: 18px;
 }
 
 .desktop-nav a {
     color: #69746c;
 
-    font-size: 9px;
+    font-size: 16px;
     font-weight: 700;
 
     transition: 0.2s;
@@ -133,7 +133,7 @@ button {
 /* ACTIONS */
 
 .desktop-actions {
-    margin-left: 25px;
+    margin-left: 40px;
 
     display: flex;
     gap: 7px;
@@ -142,16 +142,13 @@ button {
 .login-btn,
 .signup-btn {
     padding: 7px 12px;
-
     border-radius: 3px;
-
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 800;
 }
 
 .login-btn {
     color: #1d9d42;
-
     border: 1px solid #1d9d42;
 }
 
@@ -414,7 +411,7 @@ button {
 
     border-radius: 6px;
 
-    background: rgba(255, 255, 255, 0.95);
+    background: #FDF9FB;
 
     box-shadow: 0 4px 14px rgba(40, 70, 45, 0.06);
 
@@ -480,7 +477,7 @@ button {
 
     color: #7c847d;
 
-    font-size: 6px;
+    font-size: 12px;
     font-weight: 900;
 
     letter-spacing: 0.5px;
@@ -502,7 +499,7 @@ button {
 /* TITLE */
 
 .process-card h2 {
-    font-size: 14px;
+    font-size: 20px;
 
     margin-bottom: 8px;
 }
@@ -513,9 +510,9 @@ button {
 .process-card > p {
     min-height: 64px;
 
-    color: #7b837d;
+    color: #45464D;
 
-    font-size: 7px;
+    font-size: 14px;
     line-height: 1.65;
 }
 
@@ -969,41 +966,31 @@ button {
 
     border-radius: 5px;
 
-    background: rgba(255, 255, 255, 0.94);
+    background: #FCF8FACC;
 }
 
 .small-label {
-    color: #1e9c42;
+    color: #1B1B1D;
 
-    font-size: 7px;
+    font-size: 15px;
     font-weight: 900;
 
     letter-spacing: 0.7px;
 }
 
-.contributor-box h2 {
-    margin-top: 8px;
-
-    font-size: 17px;
-}
 
 .contributor-box p {
     max-width: 650px;
-
     margin-top: 7px;
-
     color: #737d76;
-
-    font-size: 7px;
+    font-size: 10px;
     line-height: 1.7;
 }
 
 .contributor-buttons {
     display: flex;
-
     gap: 8px;
-
-    margin-top: 15px;
+    margin-top: 17px;
 }
 
 .dark-btn,
@@ -1032,42 +1019,31 @@ button {
 
 .trust-box {
     padding: 22px;
-
     border-radius: 5px;
-
     color: white;
-
     background: #101a38;
 }
 
 .trust-icon {
     width: 25px;
     height: 25px;
-
     display: grid;
     place-items: center;
-
     margin-bottom: 12px;
-
     border-radius: 5px;
-
     background: rgba(255,255,255,0.08);
-
     color: #88a3e8;
-
     font-size: 10px;
 }
 
 .trust-box h2 {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .trust-box p {
     margin-top: 8px;
-
-    color: #bbc3d3;
-
-    font-size: 7px;
+    color: #F0F0F0CC;
+    font-size: 12px;
     line-height: 1.7;
 }
 
