@@ -101,7 +101,7 @@ button {
 /* DESKTOP NAV */
 
 .desktop-nav {
-    margin-left: auto;
+    margin-right:40px;
 
     display: flex;
     align-items: center;
@@ -110,7 +110,7 @@ button {
 
 .desktop-nav a {
     color: #68736c;
-    font-size: 9px;
+    font-size: 15px;
     font-weight: 700;
 }
 
@@ -133,19 +133,20 @@ button {
 .signup-btn {
     padding: 7px 12px;
     border-radius: 3px;
-
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 800;
 }
 
 .login-btn {
     color: #1d9d42;
     border: 1px solid #1d9d42;
+  
 }
 
 .signup-btn {
     color: white;
     background: #1d9d42;
+    
 }
 
 
@@ -377,19 +378,15 @@ button {
 .hero-buttons {
     display: flex;
     justify-content: center;
-
     gap: 8px;
-
     margin-top: 18px;
 }
 
 .primary-btn,
 .secondary-btn {
     padding: 10px 16px;
-
     border-radius: 4px;
-
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 800;
 }
 
@@ -410,7 +407,6 @@ button {
 
 .features-section {
     background: #faf8fa;
-
     padding: 48px 0 60px;
 }
 
@@ -418,7 +414,6 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: end;
-
     margin-bottom: 22px;
 }
 
@@ -443,7 +438,7 @@ button {
 
     color: #778078;
 
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .heading-line {
@@ -471,13 +466,9 @@ button {
 
 .feature-card {
     min-height: 125px;
-
     padding: 15px;
-
     background: white;
-
     border: 1px solid #edf0ed;
-
     border-radius: 7px;
 }
 
@@ -488,10 +479,8 @@ button {
 .feature-icon {
     width: 25px;
     height: 25px;
-
     display: grid;
     place-items: center;
-
     border-radius: 5px;
 
     color: #ffffff;
@@ -513,14 +502,13 @@ button {
 }
 
 .feature-card h3 {
-    font-size: 10px;
+    font-size: 13px;
     margin-bottom: 5px;
 }
 
 .feature-card p {
     color: #7a827c;
-
-    font-size: 7px;
+    font-size: 10px;
     line-height: 1.6;
 }
 
@@ -544,17 +532,13 @@ button {
 
 .reliability {
     background: #ffffff;
-
     padding: 55px 0;
 }
 
 .reliability-grid {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 60px;
-
     align-items: center;
 }
 
@@ -735,18 +719,14 @@ button {
 /* RELIABILITY TEXT */
 
 .reliability-content h2 {
-    font-size: 25px;
-
+    font-size: 28px;
     margin: 7px 0 12px;
 }
 
 .reliability-content > p {
     color: #737c75;
-
-    font-size: 9px;
-
+    font-size: 11px;
     line-height: 1.7;
-
     max-width: 430px;
 }
 
@@ -780,16 +760,13 @@ button {
 }
 
 .reliability-point h4 {
-    font-size: 9px;
-
+    font-size: 12px;
     margin-bottom: 3px;
 }
 
 .reliability-point p {
     color: #7d857f;
-
-    font-size: 7px;
-
+    font-size: 9px;
     line-height: 1.5;
 }
 
@@ -800,7 +777,6 @@ button {
 
 .cta-section {
     background: #e9e6e8;
-
     padding: 35px 0;
 }
 
@@ -809,33 +785,27 @@ button {
 }
 
 .cta-box h2 {
-    font-size: 19px;
+    font-size: 25px;
 }
 
 .cta-box p {
     color: #7a817c;
-
-    font-size: 8px;
-
+    font-size: 12px;
     margin-top: 7px;
 }
 
 .cta-buttons {
     display: flex;
     justify-content: center;
-
     gap: 6px;
-
     margin-top: 15px;
 }
 
 .cta-primary,
 .cta-secondary {
     padding: 9px 14px;
-
     border-radius: 3px;
-
-    font-size: 7px;
+    font-size: 11px;
     font-weight: 800;
 }
 
@@ -846,7 +816,6 @@ button {
 
 .cta-secondary {
     color: #424742;
-
     border: 1px solid #bfc2bf;
 }
 
@@ -875,13 +844,9 @@ button {
 
 .footer-brand p {
     max-width: 230px;
-
     color: #7e8781;
-
-    font-size: 7px;
-
+    font-size: 12px;
     line-height: 1.7;
-
     margin-top: 12px;
 }
 
