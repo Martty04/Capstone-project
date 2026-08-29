@@ -59,6 +59,17 @@ input {
   z-index: 999;
 }
 
+.menu .active .dash-ic {
+    filter: brightness(0) invert(1);
+}
+
+.menu .dash-ic {
+    filter: brightness(0) saturate(100%)
+            invert(31%) sepia(10%)
+            saturate(1000%) hue-rotate(180deg)
+            brightness(90%) contrast(85%);
+}
+
 
 .logo {
   display: flex;
