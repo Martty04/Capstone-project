@@ -104,7 +104,7 @@ button {
 /* DESKTOP NAV */
 
 .desktop-nav {
-    margin-left: auto;
+    margin-right:40px;
 
     display: flex;
     align-items: center;
@@ -114,7 +114,7 @@ button {
 .desktop-nav a {
     color: #69746c;
 
-    font-size: 9px;
+    font-size: 15px;
     font-weight: 700;
 
     transition: 0.2s;
@@ -129,8 +129,7 @@ button {
 /* ACTIONS */
 
 .desktop-actions {
-    margin-left: 25px;
-
+    margin-left: 45px;
     display: flex;
     gap: 7px;
 }
@@ -138,10 +137,8 @@ button {
 .login-btn,
 .signup-btn {
     padding: 7px 12px;
-
     border-radius: 3px;
-
-    font-size: 8px;
+    font-size: 15px;
     font-weight: 800;
 }
 
@@ -160,14 +157,10 @@ button {
 
 .menu-toggle {
     display: none;
-
     margin-left: auto;
-
     border: none;
     background: transparent;
-
     font-size: 21px;
-
     cursor: pointer;
 }
 
@@ -314,7 +307,7 @@ button {
 ===================================================== */
 
 .about-hero {
-    background: #faf9fa;
+    background: #FBF7F7;
 
     padding: 50px 0;
 }
@@ -331,30 +324,20 @@ button {
 
 .eyebrow {
     display: inline-block;
-
-    color: #1e9c42;
-
-    background: #e3f5e7;
-
+    color: white;
+    background: #407944;
     padding: 4px 9px;
-
     border-radius: 20px;
-
     font-size: 7px;
     font-weight: 900;
-
     letter-spacing: 1px;
 }
 
 .about-hero h1 {
     margin-top: 12px;
-
     max-width: 520px;
-
     font-size: clamp(29px, 4vw, 44px);
-
     line-height: 1.08;
-
     letter-spacing: -1px;
 }
 
@@ -364,29 +347,23 @@ button {
 
 .about-hero-content > p {
     max-width: 470px;
-
     margin-top: 13px;
-
     color: #777f79;
-
-    font-size: 9px;
+    font-size: 11px;
     line-height: 1.7;
 }
 
 .hero-buttons {
     display: flex;
     gap: 8px;
-
     margin-top: 18px;
 }
 
 .primary-btn,
 .secondary-btn {
     padding: 10px 15px;
-
     border-radius: 4px;
-
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 800;
 }
 
@@ -513,16 +490,13 @@ button {
 
 .map-card {
     position: absolute;
-
-    right: 8%;
-    bottom: 10%;
-
-    padding: 7px;
-
-    background: white;
-
-    border-radius: 4px;
-
+    width:50%;
+    right: 70%;
+    bottom: 60%;
+    padding: 18px;
+    background: #FDFBFA;
+    border: 1px solid #D0C7D4;
+    border-radius: 8px;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -532,14 +506,28 @@ button {
 }
 
 .map-card strong {
-    font-size: 7px;
+    font-size: 11px;
+    line-height: 1.2;
+    margin-left: 30px;
+    margin-top: 5px;
+    letter-spacing: 1.5px;
 }
 
 .map-card small {
-    color: #7c857e;
-    font-size: 5px;
+    color: #45464D;
+    font-size: 12px;
+    margin-top: 10px;
 }
 
+.green-check {
+  color: #ffffff;            /* White check mark */
+  background-color: #28a745; /* Green background */
+  padding: 2px;             /* Space around the icon */
+  border-radius: 8px; 
+  position: relative;
+  top:17px;   
+  left:5px;    /* Optional: rounds the corners */
+}
 .person-placeholder {
     position: absolute;
 
@@ -578,8 +566,7 @@ button {
 ===================================================== */
 
 .vision-section {
-    background: #ffffff;
-
+    background: #F6F3F5;
     padding: 48px 0 55px;
 }
 
@@ -590,32 +577,25 @@ button {
 }
 
 .vision-heading h2 {
-    font-size: 23px;
+    font-size: 35px;
 }
 
 .vision-heading p {
-    color: #7c847e;
-
-    font-size: 8px;
-
+    color: #45464D;
+    font-size: 12px;
     margin-top: 6px;
 }
 
 .vision-grid {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 10px;
 }
 
 .vision-card {
     min-height: 140px;
-
     padding: 17px;
-
-    border-radius: 8px;
-
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -630,20 +610,17 @@ button {
 
 .vision-card.blue {
     background: #f8fafc;
+    height:60%;
 }
 
 .vision-icon {
     width: 24px;
     height: 24px;
-
     display: grid;
     place-items: center;
-
     margin-bottom: 10px;
-
     border-radius: 50%;
-
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .pink .vision-icon {
@@ -662,16 +639,13 @@ button {
 }
 
 .vision-card h3 {
-    font-size: 11px;
-
+    font-size: 15px;
     margin-bottom: 6px;
 }
 
 .vision-card p {
     max-width: 390px;
-
-    font-size: 7px;
-
+    font-size: 12px;
     line-height: 1.6;
 }
 
@@ -745,12 +719,10 @@ button {
 
 .image-card-overlay {
     position: absolute;
-
     left: 18px;
     bottom: 16px;
-
     max-width: 280px;
-
+    
     color: white;
 }
 
@@ -769,9 +741,8 @@ button {
 
 .story-section {
     background: #fafafa;
-
     padding: 55px 0;
-}
+    }
 
 .story-grid {
     display: grid;
@@ -875,8 +846,7 @@ button {
 
 .story-content h2 {
     font-size: 25px;
-
-    margin: 7px 0 13px;
+    margin: 7px 0 10px;
 }
 
 .story-content > p {
@@ -884,7 +854,7 @@ button {
 
     color: #747d77;
 
-    font-size: 8px;
+    font-size: 15px;
 
     line-height: 1.7;
 
@@ -893,9 +863,7 @@ button {
 
 .story-stats {
     display: flex;
-
     gap: 30px;
-
     margin-top: 15px;
 }
 
@@ -906,14 +874,13 @@ button {
 
 .story-stats strong {
     color: #1e9c42;
-
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .story-stats span {
     color: #858d87;
 
-    font-size: 6px;
+    font-size: 10px;
 
     margin-top: 3px;
 }
@@ -939,7 +906,6 @@ button {
 
 .stat {
     text-align: center;
-
     border-right: 1px solid #272b28;
 }
 
@@ -949,8 +915,7 @@ button {
 
 .stat strong {
     display: block;
-
-    font-size: 18px;
+    font-size: 30px;
 }
 
 .stat span {
@@ -960,7 +925,7 @@ button {
 
     color: #8a918b;
 
-    font-size: 6px;
+    font-size: 9px;
     letter-spacing: 0.7px;
 }
 
@@ -980,13 +945,13 @@ button {
 }
 
 .movement-box h2 {
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .movement-box p {
     color: #7b827d;
 
-    font-size: 8px;
+    font-size: 11px;
 
     margin-top: 7px;
 }
@@ -994,25 +959,21 @@ button {
 .movement-buttons {
     display: flex;
     justify-content: center;
-
     gap: 7px;
-
     margin-top: 15px;
 }
 
 .movement-primary,
 .movement-secondary {
     padding: 9px 14px;
-
-    border-radius: 3px;
-
-    font-size: 7px;
+    border-radius: 6px;
+    font-size: 9px;
     font-weight: 800;
 }
 
 .movement-primary {
     color: white;
-    background: #d52e51;
+    background: #BA0035;
 }
 
 .movement-secondary {
@@ -1028,9 +989,7 @@ button {
 
 .footer {
     padding-top: 40px;
-
     color: white;
-
     background: #050706;
 }
 
@@ -1040,63 +999,48 @@ button {
     grid-template-columns: 1.5fr repeat(3, 1fr);
 
     gap: 40px;
-
     padding-bottom: 35px;
 }
 
 .footer-brand p {
     max-width: 230px;
-
     color: #7e8781;
-
-    font-size: 7px;
-
+    font-size: 12px;
     line-height: 1.7;
-
     margin-top: 12px;
 }
 
 .socials {
     display: flex;
-
     gap: 7px;
-
     margin-top: 12px;
 }
 
 .socials a {
     width: 22px;
     height: 22px;
-
     display: grid;
     place-items: center;
-
     border: 1px solid #333833;
-
     border-radius: 50%;
-
     color: #8b938d;
-
-    font-size: 8px;
+    font-size: 14px;
 }
 
 .footer-column {
     display: flex;
     flex-direction: column;
-
     gap: 8px;
 }
 
 .footer-column h3 {
-    font-size: 7px;
-
+    font-size: 10px;
     margin-bottom: 3px;
 }
 
 .footer-column a {
     color: #788079;
-
-    font-size: 7px;
+    font-size: 12px;
 }
 
 .footer-column a:hover {
@@ -1224,6 +1168,10 @@ button {
     .image-card {
         min-height: 200px;
     }
+     .map-card{
+        position:absolute;
+        left:1px;
+     }
 
 
     /* STORY */
