@@ -100,7 +100,7 @@ img {
 /* DESKTOP NAV */
 
 .desktop-nav {
-    margin-left: auto;
+    margin-right:60px;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -108,7 +108,7 @@ img {
 
 .desktop-nav a {
     color: #647067;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     transition: 0.25s;
 }
@@ -132,6 +132,12 @@ img {
     color: #26352b;
     font-size: 13px;
     font-weight: 700;
+    border:1px solid #C0D9D5;
+    padding:10px;
+    border-radius: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
+    color: #80B2AB;
 }
 
 .header-btn {
@@ -346,8 +352,9 @@ img {
 }
 
 .primary-btn {
-    background: #20a447;
-    color: white;
+    background:white;
+    color: #64A198;
+    border:1px solid #64A198
 }
 
 .primary-btn:hover {
@@ -357,8 +364,8 @@ img {
 
 .outline-btn {
     border: 1px solid #ccd8ce;
-    background: white;
-    color: #39453d;
+    background: #20a447;
+    color: white;
 }
 
 .outline-btn:hover {
@@ -558,18 +565,19 @@ img {
 
 .partners-title {
     text-align: center;
-    font-size: 9px;
-    color: #89928b;
-    font-weight: 800;
+    font-size: 15px;
+    color: black;
+    font-weight: 700;
     letter-spacing: 1.2px;
     margin-bottom: 25px;
 }
 
 .partner-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 70px;
     align-items: center;
+    width:100%;
 }
 
 .partner {
@@ -582,9 +590,9 @@ img {
     font-weight: 700;
 }
 
-.partner i {
+.partner img {
     color: #20a447;
-    font-size: 22px;
+    font-size: 22px; 
 }
 
 
@@ -682,12 +690,15 @@ img {
 }
 
 .green-card {
-    background: #dff7e3;
+    background: #8DFDA3;
+    border: 2px solid #8DFDA3;
+    border-radius: 12px;
+
 }
 
 .green-card .feature-icon {
-    background: #b8edc1;
-    color: #159139;
+    background: #78E99A;
+    color: green;
 }
 
 .green-card a {
@@ -695,25 +706,25 @@ img {
 }
 
 .blue-card {
-    background: #e9effa;
+    background: #FCF8FA;
 }
 
 .blue-card .feature-icon {
-    background: #d2def3;
-    color: #5578b7;
+    background: #F5DFE6;
+    color:#DA7A96;
 }
 
 .blue-card a {
-    color: #5578b7;
+    color: black;
 }
 
 .black-card {
-    background: #111a13;
-    color: white;
+    background: #E6ECF9;
+    color: black;
 }
 
 .black-card p {
-    color: #9ba79e;
+    color: grey;
 }
 
 .black-card .feature-icon {
@@ -722,23 +733,36 @@ img {
 }
 
 .black-card a {
-    color: #65cf7c;
+    color: black;
 }
 
 .orange-card {
-    background: #fff0e8;
+    background: black;
+    height:250px;
+}
+.orange-card p{
+    color: white;
+}
+.orange-card h3{
+    color: white;
 }
 
 .orange-card .feature-icon {
-    background: #ffe0ce;
-    color: #e77632;
+    background: black;
+    color: white;
 }
 
 .orange-card a {
-    color: #e77632;
+    color:white ;
+}
+.purple-card{
+    background-color: #F6F3F5;
+    height: 250px;
 }
 
-
+.purple-card.feature-icon{
+    background-color: #F3E7DD;
+}
 /* =====================================================
    HOW IT WORKS
 ===================================================== */
@@ -763,13 +787,14 @@ img {
 }
 
 .how-heading h2 {
-    font-size: clamp(31px, 4vw, 45px);
+    font-size: clamp(20px, 4vw, 35px);
     margin: 10px 0;
 }
 
 .how-heading p {
     color: #9ca79f;
-    font-size: 13px;
+    font-size: 14px;
+    letter-spacing: 1.3px;
 }
 
 .steps {
@@ -785,8 +810,8 @@ img {
 }
 
 .step-number {
-    color: #5bc875;
-    font-size: 10px;
+    color: grey;
+    font-size: 35px;
     font-weight: 900;
     margin-bottom: 12px;
 }
@@ -804,14 +829,15 @@ img {
 }
 
 .step h3 {
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 17px;
 }
 
 .step p {
-    color: #8e9a91;
-    font-size: 11px;
-    line-height: 1.6;
+    color: white;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 1.6px;
     margin-top: 7px;
 }
 
@@ -873,6 +899,13 @@ img {
     font-size: 10px;
     font-weight: 800;
 }
+.categories p{
+    color:grey;
+    font-size: 14px;
+}
+.categories h2{
+    font-size: 25px;
+}
 
 
 /* =====================================================
@@ -899,6 +932,9 @@ img {
 .realtime-text h2 span {
     color: #20a447;
 }
+.section-label{
+    color: black;
+}
 
 .realtime-text > p {
     color: #6e7871;
@@ -921,6 +957,7 @@ img {
     color: #20a447;
     margin-right: 8px;
 }
+
 
 
 /* DASHBOARD PREVIEW */
@@ -1363,6 +1400,8 @@ img {
         grid-template-columns: repeat(3, 1fr);
     }
 
+     
+
     .realtime-grid {
         gap: 40px;
     }
@@ -1499,6 +1538,16 @@ img {
         right: 10px;
     }
 
+    /* FAQ QUESTION */
+    .faq-arrow{
+        position: relative;
+        right:180px;
+    }
+    .faqdiv{
+        position: relative;
+        right:60px;
+    }
+
 
     /* PARTNERS */
 
@@ -1526,14 +1575,30 @@ img {
         margin-top: 15px;
     }
 
+    .section-heading h2{
+        position: relative;
+        right:100px;
+        
+    }
 
     /* FEATURES */
 
     .feature-cards {
         grid-template-columns: 1fr;
     }
+   .featureimg{
+    margin-right: 600px;
+    width:60%;
+    height: 700px;
+   }
 
-
+    .featureimg1{
+    margin-right: 100px;
+    width:60%;
+    height: 50px;
+   }
+ 
+ 
     /* HOW */
 
     .steps {
@@ -1617,7 +1682,7 @@ img {
     .container {
         width: 90%;
     }
-
+  
     .hero h1 {
         font-size: 40px;
     }
@@ -1629,6 +1694,7 @@ img {
     .steps {
         grid-template-columns: 1fr;
     }
+  
 
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1651,3 +1717,5 @@ img {
     }
 
 }
+
+
