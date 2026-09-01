@@ -33,7 +33,8 @@ SIDEBAR
 <!-- Logo -->
 <div class="logo">
 
-<img src="../images/logo.png" class="shield" alt="SafeReach Logo">
+<a href="index.html"> <img src="../images/logo.png" class="shield" alt="SafeReach Logo"></a>
+<a href="index.html"><img src="../images/logo1.png" class="shield1" alt="SafeReach Logo"></a>
 
 </div>
 
@@ -47,32 +48,32 @@ SIDEBAR
 <nav class="menu">
 <a href="dashboard.html" class="active">
 <img class="dash-ic" src="../images/dashboardicon.png" alt="Dashboard"/>
-<span>Dashboard</span>
+<span class="vanish" id="van"> Dashboard</span>
 </a>
 
 
 <a href="report.html">
 
 <img class="dash-ic" src="../images/reporticon.png" alt="Report"/>
-<span>Report</span>
+<span class="vanish" id="van"> Report</span>
 </a>
 
 
 <a href="alerts.html">
 <img class="dash-ic" src="../images/alerticon.png" alt="Alerts"/>
-<span>Alerts</span>
+<span class="vanish" id="van"> Alerts</span>
 </a>
 
 
 <a href="resources.html">
 <img class="dash-ic" src="../images/resourceicon.png" alt="Resources"/>
-<span>Resources</span>
+<span class="vanish" id="van"> Resources</span>
 </a>
 
 
 <a href="settings.html">
 <img class="dash-ic" src="../images/setting icon.png" alt="Settings">
-<span>Settings</span>
+<span class="vanish" id="van"> Settings</span>
 </a>
 </nav>
 
@@ -82,15 +83,15 @@ SIDEBAR
 
   <button class="quick-btn">
     <i class="fa-solid fa-circle-plus"></i> Quick Report</button>
-  <a href="#">
+  <a href="#" class="tin" id="tinz">
     <i class="fa-regular fa-circle-question"></i>
-    Support
+    <span class="offf ou">Support</span>
   </a>
 
 
-  <a href="login.html">
+  <a href="login.html" class="tin tina" id="tinz">
     <i class="fa-solid fa-arrow-right-from-bracket"></i>
-    Logout
+   <span class="offf">Log Out</span>
   </a>
 </div>
 
@@ -243,7 +244,7 @@ CATEGORY GRID
 <div class="category-grid" id="piggest" >
 
 
-<div class="cat-card cat-trip">
+<div class="cat-card cat-trip" id="card-tripp">
 <img src="../images/bluefire.png" class="cat-icon"/>
 <span>
 Fire
@@ -251,7 +252,7 @@ Fire
 </div>
 
 
-<div class="cat-card cat-trip">
+<div class="cat-card cat-trip" id="card-tripp">
 <img src="../images/blueflood.png" class="cat-icon"/>
 <span>
 Flood
@@ -259,7 +260,7 @@ Flood
 </div>
 
 
-<div class="cat-card cat-trip">
+<div class="cat-card cat-trip " id="card-tripp">
 <img src="../images/bluecrime.png" class="cat-icon"/>
 <span>
 Crime
@@ -268,7 +269,7 @@ Crime
 </div>
 
 
-<div class="cat-card cat-trip">
+<div class="cat-card cat-trip" id="card-tripp">
 <img src="../images/bluecar.png" class="cat-icon"/>
 <span>
 Accident
@@ -417,17 +418,6 @@ All services restored.
 
 </div>
 
-
-
-<!-- =========================
-RIGHT CONTENT
-========================== -->
-<div class="right-content">
-
-
-<!-- =========================
-CATEGORY GRID
-========================== -->
 <div class="category-grid" id="piiggest">
 
 
@@ -468,6 +458,10 @@ Accident
 
 </div>
 
+<!-- =========================
+RIGHT CONTENT
+========================== -->
+<div class="right-content" id="wead">
 
 <section class="guide">
 <!-- =========================

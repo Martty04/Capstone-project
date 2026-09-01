@@ -47,272 +47,155 @@ href="../css/resources.css"
 <body>
 
 
-<!-- =========================================
-OVERLAY
-========================================== -->
-
-<div
-class="overlay"
-id="overlay"
-></div>
+<!-- =========================
+MOBILE / SIDEBAR OVERLAY
+========================== -->
+<div class="overlay"id="overlay"></div>
 
 
-
-<!-- =========================================
+<!-- =========================
 DASHBOARD
-========================================== -->
-
+========================== -->
 <div class="dashboard">
 
 
-<!-- =========================================
+<!-- =========================
 SIDEBAR
-========================================== -->
-
-<aside
-class="sidebar"
-id="sidebar"
->
-
+========================== -->
+<aside class="sidebar" id="sidebar">
 
 <!-- Logo -->
-
 <div class="logo">
 
-<img
-src="../images/logo.png"
-class="shield"
-alt="SafeReach"
->
+<img src="../images/logo.png" class="shield" alt="SafeReach Logo">
+<img src="../images/logo1.png" class="shield1" alt="SafeReach Logo">
 
 </div>
 
 
-
-<!-- Close button -->
-
-<button
-class="close-btn"
-id="closeSidebar"
->
-&times;
-</button>
+<!-- Sidebar Close -->
+ <button class="close-btn" onclick="closeSidebar()">&times;</button>
 
 
 
 <!-- Navigation -->
-
 <nav class="menu">
-
-
 <a href="dashboard.html">
-
-<img
-src="../images/dashboardicon.png"
-class="dash-ic"
-alt=""
->
-
-<span>
-Dashboard
-</span>
-
+<img class="dash-ic" src="../images/dashboardicon.png" alt="Dashboard"/>
+<span class="vanish" id="van"> Dashboard</span>
 </a>
-
 
 
 <a href="report.html">
 
-<img
-src="../images/reporticon.png"
-class="dash-ic"
-alt=""
->
-
-<span>
-Report
-</span>
-
+<img class="dash-ic" src="../images/reporticon.png" alt="Report"/>
+<span class="vanish" id="van"> Report</span>
 </a>
-
 
 
 <a href="alerts.html">
-
-<img
-src="../images/alerticon.png"
-class="dash-ic"
-alt=""
->
-
-<span>
-Alerts
-</span>
-
+<img class="dash-ic" src="../images/alerticon.png" alt="Alerts"/>
+<span class="vanish" id="van"> Alerts</span>
 </a>
 
 
-
-<a
-href="resources.html"
-class="active"
->
-
-<img
-src="../images/resourceicon.png"
-class="dash-ic"
-alt=""
->
-
-<span>
-Resources
-</span>
-
+<a href="resources.html"  class="active">
+<img class="dash-ic" src="../images/resourceicon.png" alt="Resources"/>
+<span class="vanish" id="van"> Resources</span>
 </a>
-
 
 
 <a href="settings.html">
-
-<img
-src="../images/setting icon.png"
-class="dash-ic"
-alt=""
->
-
-<span>
-Settings
-</span>
-
+<img class="dash-ic" src="../images/setting icon.png" alt="Settings">
+<span class="vanish" id="van"> Settings</span>
 </a>
-
-
 </nav>
 
 
-
-<!-- Sidebar bottom -->
-
+<!-- Sidebar Bottom -->
 <div class="sidebar-bottom">
 
-
-<button class="quick-btn">
-
-<i class="fa-solid fa-circle-plus"></i>
-
-Quick Report
-
-</button>
+  <button class="quick-btn">
+    <i class="fa-solid fa-circle-plus"></i> Quick Report</button>
+  <a href="#" class="tin" id="tinz">
+    <i class="fa-regular fa-circle-question"></i>
+    <span class="offf ou">Support</span>
+  </a>
 
 
-
-<a href="#">
-
-<i class="fa-regular fa-circle-question"></i>
-
-Support
-
-</a>
-
-
-
-<a href="#">
-
-<i class="fa-solid fa-arrow-right-from-bracket"></i>
-
-Logout
-
-</a>
-
-
+  <a href="login.html" class="tin tina" id="tinz">
+    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+   <span class="offf">Log Out</span>
+  </a>
 </div>
-
 
 </aside>
 
 
 
-<!-- =========================================
+<!-- =========================
 MAIN
-========================================== -->
-
+========================== -->
 <main class="main">
 
 
-<!-- =========================================
+<!-- =========================
 TOPBAR
-========================================== -->
-
+========================== -->
 <header class="topbar">
 
 
-<!-- Mobile header -->
-
+<!-- Mobile Header Row -->
 <div class="mobile-header">
 
-
-<img
-src="../images/logo.png"
-class="mobile-logo"
-alt="SafeReach"
->
+<!-- Mobile Logo -->
+<img src="../images/logo.png" class="mobile-logo" alt="SafeReach">
 
 
-<button
-class="menu-toggle"
-id="menuToggle"
-aria-label="Open menu"
->
+<!-- Hamburger -->
+<button class="menu-toggle" id="menuToggle"aria-label="Open menu">
 
 <span></span>
 <span></span>
 <span></span>
 
 </button>
-
-
 </div>
 
 
-
 <!-- Search -->
-
 <div class="search">
 
-<i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-solid fa-magnifying-glass search-icon"></i>
 
 <input
 type="text"
-id="resourceSearch"
-placeholder="Search articles..."
+placeholder="Search alerts, locations, or safety tips..."
 >
 
 </div>
 
 
-
-<!-- User -->
-
+<!-- Desktop Right -->
 <div class="top-right">
 
-
+<!-- Notification -->
 <button
 class="notification-btn"
 aria-label="Notifications"
 >
 
 <img
-src="../images/notification.png"
 class="notify"
+src="../images/notification.png"
 alt="Notifications"
 >
 
 </button>
 
 
-
+<!-- Profile -->
 <div class="profile">
-
 
 <div class="profile-info">
 
@@ -332,12 +215,9 @@ src="https://i.pravatar.cc/40?img=32"
 alt="Sarah Mitchell"
 >
 
-
 </div>
 
-
 </div>
-
 
 </header>
 
@@ -419,7 +299,7 @@ Read Full Guide
 <div class="featured-image">
 
 <img
-src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80"
+src="../images/Fire Extinguisher.png"
 alt="Fire safety equipment"
 >
 
@@ -470,7 +350,8 @@ data-title="Emergency Preparedness"
 
 <div class="category-icon">
 
-<i class="fa-solid fa-triangle-exclamation"></i>
+<img src="../images/emergency.png"/>
+
 
 </div>
 
@@ -500,7 +381,8 @@ data-title="First Aid Basics"
 
 <div class="category-icon">
 
-<i class="fa-solid fa-kit-medical"></i>
+<img src="../images/health.png"/>
+
 
 </div>
 
@@ -529,7 +411,8 @@ data-title="Local Authority Contacts"
 
 <div class="category-icon">
 
-<i class="fa-solid fa-phone"></i>
+<img src="../images/aid.png"/>
+
 
 </div>
 
@@ -559,7 +442,7 @@ data-title="Community Programs"
 
 <div class="category-icon">
 
-<i class="fa-solid fa-people-group"></i>
+<img src="../images/group.png"/>
 
 </div>
 
@@ -632,7 +515,8 @@ Download All (3)
 
 <div class="file-icon">
 
-<i class="fa-regular fa-file-pdf"></i>
+<img src="../images/pdf.png"/>
+
 
 </div>
 
@@ -672,7 +556,8 @@ aria-label="Download 72-Hour Survival Kit"
 
 <div class="file-icon">
 
-<i class="fa-regular fa-file-pdf"></i>
+<img src="../images/pdf.png"/>
+
 
 </div>
 
@@ -712,7 +597,7 @@ aria-label="Download Home Fire Drill Plan"
 
 <div class="file-icon">
 
-<i class="fa-regular fa-file-pdf"></i>
+<img src="../images/pdf.png"/>
 
 </div>
 

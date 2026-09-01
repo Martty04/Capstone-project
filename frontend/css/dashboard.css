@@ -86,11 +86,15 @@ gap: 10px;
 transition: 0.2s ease;
 }
 
+.dash-ic{
+color: #374151;
+}
+
 .menu a:hover {
 background: #dff2df;
 }
 
-.menu a.active{
+.menu .active{
 background: #407944;
 color: #ffffff;
 }
@@ -147,10 +151,19 @@ background: #222222;
 
 .sidebar-bottom a {
 text-decoration: none;
-
 color: #4b5563;
-
 font-size: 14px;
+}
+
+.menu .active .dash-ic {
+    filter: brightness(0) invert(1);
+}
+
+.menu .dash-ic {
+    filter: brightness(0) saturate(100%)
+            invert(31%) sepia(10%)
+            saturate(1000%) hue-rotate(180deg)
+            brightness(90%) contrast(85%);
 }
 
 
@@ -1042,6 +1055,10 @@ font-weight: 700;
 cursor: pointer;
 }
 
+.shield1{
+display: none;
+}
+
 
 /* =========================================
 TABLET
@@ -1057,10 +1074,139 @@ font-size: 50%;
 grid-template-columns: 1fr;
 }
 
+.vanish{
+display: none;
+}
+
+.shield, .offf, .quick-btn, #piiggest{
+display: none;
+}
+
+.shield1{
+display: flex;
+width: 50%;
+}
+
+.sidebar{
+width:10vw;
+background:#407944;
+color: #FFFFFF;
+}
+
+#piggest{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.menu  .dash-ic, .tin {
+    filter: brightness(0) invert(1);
+}
+
+.menu .active {
+border-left: 3px solid #6ACA71;
+border-radius: 0px;
+}
+
+#wead{
+display: flex;
+}
+
+
+.cat-trip {
+background: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 16px;
+font-size: 2rem;
+width: 20%;
+text-align: center;
+cursor: pointer;
+transition: 0.2s ease;
+}
+}
+
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+body {
+background: #ffffff;
+}
+
+
+/* =========================
+SIDEBAR
+========================== */
+
+
+
 #piggest{
 display: flex;
 grid-template-columns: repeat(4, 1fr);
 
+}
+
+.content {
+grid-template-columns: 1fr;
+}
+
+.menu .dash-ic {
+   display: none;
+}
+
+#van, .offf{
+display: flex;
+}
+
+.menu .tinz .fa{
+color: #000000;
+}
+
+.sidebar-bottom a{
+display: flex;
+} 
+
+.sidebar .active{
+border-radius: 10px;
+border: none;
+}
+
+.sidebar-bottom .tina {
+ width: 100%;
+ border: 2px solid #9A9F9E;
+ border-radius: 9px;
+ padding: 1rem 0;
+ padding: 1rem;
+}
+
+
+.sidebar-bottom{
+filter: brightness(0) saturate(100%)
+            invert(31%) sepia(10%)
+            saturate(1000%) hue-rotate(180deg)
+            brightness(90%) contrast(85%);
+}
+
+.shield1, .fa-arrow-right-from-bracket, .fa-circle-question, .ou{
+display: none;
+}
+
+.shield{
+display: flex;
+}
+
+#card-tripp {
+background: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 16px;
+width: 70%;
+height: 10rem;
+text-align: center;
+cursor: pointer;
+transition: 0.2s ease;
 }
 
 .sidebar{
@@ -1088,26 +1234,6 @@ margin: 0;
 width: 3.5%;
 margin:0 1rem ;
 }
-
-}
-
-
-/* =========================================
-MOBILE
-========================================= */
-
-@media (max-width: 800px) {
-
-body {
-background: #ffffff;
-}
-
-
-/* =========================
-SIDEBAR
-========================== */
-
-
 
 .sidebar.active {
 left: 0;
@@ -1260,6 +1386,10 @@ width: 5px;
 height: 5px;
 
 margin-right: 3px;
+}
+
+.vanish{
+display: none;
 }
 
 
