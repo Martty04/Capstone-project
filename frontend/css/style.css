@@ -1390,6 +1390,12 @@ img {
     .hero-grid {
         grid-template-columns: 1fr 1fr;
     }
+    .section-heading h2{
+        margin-left: 110px;
+    }
+    .section-headingcentered h2{
+        margin-left: 100px;
+    }
 
     .steps {
         grid-template-columns: repeat(2, 1fr);
