@@ -945,6 +945,7 @@ select {
     .emergency-box {
         flex-direction: column;
         align-items: stretch;
+        height: 250px;
     }
 
     .emergency-numbers {
@@ -953,6 +954,10 @@ select {
 
     .emergency-number {
         flex: 1;
+        position: relative;
+        right:35px;
+        bottom:30px;
+        
     }
 
 }
@@ -1104,7 +1109,8 @@ select {
         height: 125px;
     }
     .emergency-box{
-      min-width: 42%;
+      min-width: 50%;
+      height: 280px;
     }
 
     .emergency-numbers {
@@ -1114,10 +1120,12 @@ select {
     .emergency-number {
         display: grid;
         align-items: center;
-        justify-content: space-between;
-        width:80%;
-        margin-right: 50px;
-        padding: 8px 10px;
+        justify-content:space-around;
+        width:90%;
+       position: relative;
+       left:50px;
+       bottom: 140px;
+        padding: 2px;
     }
 
     .emergency-number strong {
