@@ -109,27 +109,27 @@
 
         <nav class="mobile-nav">
 
-            <a href="#home">
+            <a href="./frontend/html/index.html">
                 <i class="fa-solid fa-house"></i>
                 <span>Home</span>
             </a>
 
-            <a href="#about">
+            <a href="./frontend/html/about.html">
                 <i class="fa-solid fa-circle-info"></i>
                 <span>About</span>
             </a>
 
-            <a href="#features">
+            <a href="./frontend/html/feature.html">
                 <i class="fa-solid fa-shield-halved"></i>
                 <span>Features</span>
             </a>
 
-            <a href="#resources">
+            <a href="./frontend/html/resources.html">
                 <i class="fa-solid fa-book-open"></i>
                 <span>Resources</span>
             </a>
 
-            <a href="#contact">
+            <a href="./frontend/html/contact.html">
                 <i class="fa-solid fa-phone"></i>
                 <span>Contact</span>
             </a>
@@ -139,11 +139,11 @@
 
         <div class="mobile-menu-bottom">
 
-            <a href="login.html" class="mobile-login">
+            <a href="./frontend/html/login.html" class="mobile-login">
                 Login
             </a>
 
-            <a href="register.html" class="mobile-get-started">
+            <a href="./frontend/html/dashboard.html" class="mobile-get-started">
                 Get Started
             </a>
 
@@ -254,6 +254,29 @@
                 </p>
 
 
-       
+        <script>
+            const tabs = document.querySelectorAll('.tab');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+  });
+});
+
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+
+menuToggle.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+});
+        </script>
 
 </html>
