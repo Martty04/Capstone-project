@@ -378,6 +378,7 @@ img {
     align-items: center;
     gap: 12px;
     margin-top: 25px;
+    flex-wrap: wrap;
 }
 
 .avatars {
@@ -400,6 +401,13 @@ img {
 
 .avatars span:first-child {
     margin-left: 0;
+}
+
+.avatars img {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .hero-users strong,
@@ -640,6 +648,22 @@ img {
     max-width: 370px;
     color: #737d76;
     font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* Features main heading (was inline-styled; moved here so it can
+   respond to the breakpoints below instead of being locked by an
+   inline style attribute) */
+#featuresHeading {
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-left: 250px;
+}
+
+#featuresHeading p {
+    font-size: 12px;
+    color: #45464D;
 }
 
 
@@ -656,7 +680,9 @@ img {
 .feature-card {
     min-height: 210px;
     padding: 28px;
-    border-radius: 10px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
 }
 
 .feature-icon {
@@ -693,6 +719,9 @@ img {
     background: #8DFDA3;
     border: 2px solid #8DFDA3;
     border-radius: 12px;
+    width:85%;
+    
+
 
 }
 
@@ -707,6 +736,8 @@ img {
 
 .blue-card {
     background: #FCF8FA;
+    width:85%;
+  
 }
 
 .blue-card .feature-icon {
@@ -721,6 +752,7 @@ img {
 .black-card {
     background: #E6ECF9;
     color: black;
+    width:85%;
 }
 
 .black-card p {
@@ -739,6 +771,8 @@ img {
 .orange-card {
     background: black;
     height:250px;
+    width:85%;
+    
 }
 .orange-card p{
     color: white;
@@ -758,19 +792,44 @@ img {
 .purple-card{
     background-color: #F6F3F5;
     height: 250px;
+    width:85%;
+   
+
 }
 
 .purple-card.feature-icon{
     background-color: #F3E7DD;
 }
+
+
+/* Decorative images on the orange/purple cards (were inline-positioned) */
+.featureimg,
+.featureimg1 {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 35%;
+    max-width: 130px;
+}
+
+.featureimg1 {
+    max-width: 200px;
+    width:60%;
+}
+.featureimg{
+    width:60%;
+    max-width: 170px;
+}
+
 /* =====================================================
    HOW IT WORKS
 ===================================================== */
 
 .how-section {
     padding: 85px 0;
-    background: #111812;
+    background: black;
     color: white;
+   
 }
 
 .how-heading {
@@ -802,11 +861,13 @@ img {
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     margin-top: 55px;
+    
 }
 
 .step {
     text-align: center;
     position: relative;
+   
 }
 
 .step-number {
@@ -814,6 +875,7 @@ img {
     font-size: 35px;
     font-weight: 900;
     margin-bottom: 12px;
+    text-align: justify;
 }
 
 .step-icon {
@@ -823,22 +885,29 @@ img {
     border-radius: 12px;
     display: grid;
     place-items: center;
-    background: #203024;
+    background: #191919;
     color: #5bc875;
     font-size: 19px;
+    position: relative;
+    right:110px;
+   
 }
+
 
 .step h3 {
     font-size: 20px;
     margin-top: 17px;
+    text-align: justify;
+    
 }
 
 .step p {
     color: white;
     font-size: 14px;
     line-height: 1.8;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.8px;
     margin-top: 7px;
+    text-align: justify;
 }
 
 
@@ -851,6 +920,8 @@ img {
     align-items: end;
     justify-content: space-between;
     margin-bottom: 35px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .category-heading > a {
@@ -868,12 +939,14 @@ img {
 }
 
 .category {
-    border: 1px solid #e5ebe6;
+    border: 1px solid #EFECEF;
     border-radius: 8px;
     padding: 20px 10px;
     text-align: center;
     transition: 0.25s;
+    background-color: #FCF8FA;
 }
+
 
 .category:hover {
     border-color: #20a447;
@@ -958,6 +1031,106 @@ img {
     margin-right: 8px;
 }
 
+/* Incident report cards (replaces the old absolutely-positioned
+   inline markup so the cards reflow on any screen size) */
+
+
+.incident-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    border: 2px solid white;
+    border-left: 4px solid #BA0135;
+    padding: 15px;
+    background: #ffffff;
+    height: auto;
+}
+
+.incident-card + .incident-card {
+    margin-top: 20px;
+}
+
+.incident-icon {
+    width: 45px;
+    flex-shrink: 0;
+}
+
+.incident-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.incident-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.incident-badge {
+    border: 2px solid #F8E5EB;
+    background-color: #F8E5EB;
+    color: #F97E82;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    display: inline-block;
+}
+
+.incident-badge.moderate {
+    color: orange;
+}
+
+.incident-time {
+    font-size: 10px;
+    color: grey;
+}
+
+.incident-photo {
+    float: right;
+    width: 50%;
+    max-width: 130px;
+    height: 85px;
+    object-fit: cover;
+    margin: 0 0 4px 12px;
+    border-radius: 4px;
+}
+
+.incident-title {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.incident-location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.incident-location img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.incident-location span {
+    color: grey;
+    font-size: 10px;
+}
+
+
+
+.incident-desc {
+    font-size: 9px;
+    color: grey;
+    line-height: 1.4;
+    clear: both;
+    
+    
+}
 
 
 /* DASHBOARD PREVIEW */
@@ -1136,7 +1309,7 @@ img {
 ===================================================== */
 
 .testimonials {
-    background: #ffffff;
+    background: #FCF8FA;
 }
 
 .centered {
@@ -1146,6 +1319,7 @@ img {
 
 .centered h2 {
     margin-top: 8px;
+    font-size: 35px;
 }
 
 .centered > p {
@@ -1156,26 +1330,31 @@ img {
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 25px;
+    width:80%;
+    margin-left: 150px;
+
 }
 
 .testimonial {
     border: 1px solid #e7ece8;
-    border-radius: 8px;
-    padding: 25px;
+    border-radius: 25px;
+    padding: 35px;
+    background-color: #FCF8FA;
 }
 
 .stars {
     color: #f3af36;
-    font-size: 11px;
+    font-size: 25px;
     letter-spacing: 2px;
 }
 
 .testimonial > p {
-    color: #5e6961;
-    font-size: 12px;
+    color: black;
+    font-size: 16px;
     line-height: 1.8;
     margin: 15px 0 20px;
+    letter-spacing: 1px;
 }
 
 .testimonial-user {
@@ -1194,6 +1373,13 @@ img {
     place-items: center;
     font-size: 12px;
     font-weight: 900;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .testimonial-user strong,
@@ -1216,7 +1402,7 @@ img {
 ===================================================== */
 
 .faq {
-    background: #f7f9f7;
+    background: #F6F3F5;
 }
 
 .faq-list {
@@ -1262,6 +1448,41 @@ img {
     padding: 0 20px 18px;
 }
 
+/* Individual FAQ cards below the accordion (were inline-positioned
+   with a fixed 150px margin + fixed height, which broke on
+   narrow/tablet screens) */
+
+.faqdiv {
+    border: 2px solid #EFEEF0;
+    background-color: white;
+    border-radius: 12px;
+    width: 65%;
+    margin: 0 auto 16px;
+    padding: 22px 20px;
+}
+
+.faq-question {
+    font-size: 18px;
+    color: black;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.faq-arrow img {
+    width: 18px;
+    display: block;
+}
+
+.faq-answer {
+    font-size: 13px;
+    color: #45464D;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
 
 /* =====================================================
    JOIN CTA
@@ -1297,6 +1518,7 @@ img {
 .join-buttons {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 
@@ -1305,7 +1527,7 @@ img {
 ===================================================== */
 
 .footer {
-    background: #101711;
+    background: black;
     color: white;
     padding-top: 60px;
 }
@@ -1327,7 +1549,7 @@ img {
 
 .socials {
     display: flex;
-    gap: 7px;
+    gap: 10px;
     margin-top: 18px;
 }
 
@@ -1336,8 +1558,8 @@ img {
     height: 29px;
     display: grid;
     place-items: center;
-    border-radius: 50%;
-    background: #1c291f;
+    border-radius: 20%;
+    border:2px solid #323233;
     color: #8f9b92;
     font-size: 10px;
 }
@@ -1346,16 +1568,17 @@ img {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 }
 
 .footer-column h3 {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 5px;
 }
 
 .footer-column a {
     color: #8d9890;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .footer-column a:hover {
@@ -1369,7 +1592,11 @@ img {
 
 .footer-bottom p {
     color: #69746c;
-    font-size: 9px;
+    font-size: 11px;
+
+}
+.footerp{
+    display: flex;
 }
 
 
@@ -1390,14 +1617,23 @@ img {
     .hero-grid {
         grid-template-columns: 1fr 1fr;
     }
+    .testimonial-grid{
+        position: relative;
+        right:100px;
+    }
     .section-heading h2{
         margin-left: 110px;
+    }
+
+    #featuresHeading{
+        margin-left: 0;
     }
 
     .steps {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
     }
+  
 
     .category-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1412,6 +1648,10 @@ img {
     .partner-grid {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 25px;
+    }
+
+    .faqdiv{
+        width: 85%;
     }
 
 }
@@ -1505,6 +1745,12 @@ img {
         left: 200px;
     }
 
+      .step-icon{
+    position: relative;
+    right:120px; 
+  }
+
+
     .person {
         font-size: 31px;
         bottom: 28px;
@@ -1530,7 +1776,7 @@ img {
         top: 55px;
         font-size: 23px;
     }
-
+    
     .pin-one {
         top: 80px;
         left: 35px;
@@ -1542,14 +1788,11 @@ img {
     }
 
     /* FAQ QUESTION */
-    .faq-arrow{
-        position: relative;
-        right:180px;
-    }
+
     .faqdiv{
-        position: relative;
-        right:60px;
+        width: 100%;
     }
+   
 
 
     /* PARTNERS */
@@ -1580,8 +1823,14 @@ img {
 
     .section-heading h2{
         position: relative;
-        right:100px;
+       right:50px;
+
         
+    }
+
+    #featuresHeading{
+        position: static;
+        right: 0;
     }
 
     /* FEATURES */
@@ -1589,17 +1838,14 @@ img {
     .feature-cards {
         grid-template-columns: 1fr;
     }
-   .featureimg{
-    margin-right: 600px;
-    width:60%;
-    height: 700px;
-   }
 
+    .featureimg,
     .featureimg1{
-    margin-right: 100px;
-    width:60%;
-    height: 50px;
-   }
+        width: 22%;
+        max-width: 90px;
+        right: 15px;
+        bottom: 15px;
+    }
  
  
     /* HOW */
@@ -1608,7 +1854,12 @@ img {
         grid-template-columns: 1fr 1fr;
         gap: 30px 12px;
     }
-
+  .step-icon{
+    margin-right:60px; 
+  }
+  .step-number{
+    margin-right: 30px;
+  }
 
     /* CATEGORIES */
 
@@ -1626,6 +1877,10 @@ img {
     .realtime-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .incident-photo{
+        width: 45%;
     }
 
 
@@ -1697,7 +1952,14 @@ img {
     .steps {
         grid-template-columns: 1fr;
     }
-  
+    .step-icon{
+    margin-right:120px; 
+  }
+  .incident-desc{
+    position: relative;
+    top:10px;
+  }
+
 
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1710,7 +1972,11 @@ img {
     .stats strong {
         font-size: 22px;
     }
-
+    .section-heading h2{
+        position: relative;
+        right:80px;
+    }
+  
     .footer-grid {
         grid-template-columns: 1fr;
     }
@@ -1719,6 +1985,19 @@ img {
         grid-column: auto;
     }
 
+    .incident-card{
+        flex-direction: column;
+    }
+
+    .incident-photo{
+        float: none;
+        width: 100%;
+        max-width: none;
+        margin: 10px 0;
+    }
+
+    .join-card{
+        padding: 24px;
+    }
+
 }
-
-

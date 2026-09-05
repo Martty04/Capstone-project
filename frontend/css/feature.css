@@ -73,29 +73,8 @@ button {
     color: #1e9c42;
 }
 
-.logo-shield {
-    width: 23px;
-    height: 26px;
 
-    background: #22a547;
-    color: white;
 
-    display: grid;
-    place-items: center;
-
-    clip-path: polygon(
-        50% 0,
-        93% 14%,
-        88% 66%,
-        50% 100%,
-        12% 66%,
-        7% 14%
-    );
-}
-
-.logo-shield i {
-    font-size: 10px;
-}
 
 
 /* DESKTOP NAV */
@@ -224,7 +203,6 @@ button {
 .mobile-nav {
     display: flex;
     flex-direction: column;
-
     padding-top: 20px;
 }
 

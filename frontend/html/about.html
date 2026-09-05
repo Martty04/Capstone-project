@@ -99,13 +99,13 @@
 
         <a href="index.html" class="logo">
 
-            <span class="logo-shield">
-                <i class="fa-solid fa-shield-halved"></i>
+            <span>
+              <span>
+                    <img src="../images/logo.png" width="60%">
+                </span>
             </span>
 
-            <span>
-                
-            </span>
+           
 
         </a>
 
@@ -196,7 +196,9 @@
                 </h1>
 
                 <p>
-                    We believe that safety shouldn't be a privilege. By harnessing the <br> power of community intelligence, we provide real-time, verified <br> information to keep every neighborhood secure.
+                    We believe that safety shouldn't be a privilege. By harnessing the
+                    power of community intelligence, we provide real-time, verified
+                    information to keep every neighborhood secure.
                 </p>
 
 
@@ -217,31 +219,30 @@
 
 
             <!-- HERO IMAGE -->
+            <!--
+                NOTE: this markup was previously malformed (unclosed <div> tags),
+                which is what was breaking the hero layout on smaller screens.
+                It has been corrected below into a proper, closed structure so the
+                responsive CSS can target it reliably.
+            -->
 
             <div class="hero-image">
 
-                <div> <img src="../images/Container.png" width="90%"> <div>
+                <div class="hero-photo-wrap">
 
-                        <div>
-                           
-                        </div>
+                    <img src="../images/Container.png" class="hero-photo-img" width="90%">
 
-                        <div class="screen-map">
-                            <div class="map-card">
-                                <i class="fa-solid fa-check green-check" aria-hidden="true"></i>
-                                <strong>Live Verification</strong>
-                                <small>Our proprietary algorithm cross-<br> references incident reports with <br> municipal data in milliseconds.</small>
-                            </div>
+                    <div class="screen-map">
 
+                        <div class="map-card">
+                            <i class="fa-solid fa-check green-check" aria-hidden="true"></i>
+                            <strong>Live Verification</strong>
+                            <small>Our proprietary algorithm cross-references incident reports with municipal data in milliseconds.</small>
                         </div>
 
                     </div>
 
-                    <div>
-                     </div>
-
                 </div>
-
 
             </div>
 
@@ -298,7 +299,7 @@
                 <article class="vision-card green">
 
                     <div class="vision-icon">
-                        <i class="fa-solid fa-people-group"></i>
+                        <img src="../images/group.png" width="100%">
                     </div>
 
                     <h3>
@@ -394,24 +395,15 @@
                 </h2>
 
                 <p>
-                    SafeReach didn't start in a boardroom; it started in a basement <br>
-following a city-wide blackout. When official channels went silent, <br>
-the community relied on fragmented, unverified social media <br>
-posts. The chaos that followed proved that people don't just need <br>
-information—they need truth.
+                    SafeReach didn't start in a boardroom; it started in a basement  following a city-wide blackout. When official channels went silent, the community relied on fragmented, unverified social media  posts. The chaos that followed proved that people don't just need  information—they need truth.
                 </p>
 
                 <p>
-                    Our founders, a team of emergency response coordinators and <br>
-software architects, envisioned a civic safety tool that combined <br>
-the speed of social media with the authority of emergency <br>
-services.
+                    Our founders, a team of emergency response coordinators and  software architects, envisioned a civic safety tool that combined the speed of social media with the authority of emergency  services.
                 </p>
 
                 <p>
-                    Today, SafetyAlert serves as the bridge between public concern <br>
-and official action, providing a stable, reliable platform for real- <br>
-time reporting and community support.
+                    Today, SafetyAlert serves as the bridge between public concern and official action, providing a stable, reliable platform for real- time reporting and community support.
                 </p>
 
 
