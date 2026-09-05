@@ -511,13 +511,14 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-
     color: #1e9c42;
-
     margin-top: 10px;
 
     font-size: 7px;
     font-weight: 800;
+}
+.feature-card{
+    background-color: ;
 }
 
 
