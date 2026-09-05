@@ -470,6 +470,23 @@ button {
     font-size: 10px;
 }
 
+.feature-icon1 {
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+
+    color: #ffffff;
+
+    background: #131B2E;
+
+    margin-bottom: 10px;
+
+    font-size: 10px;
+}
+
+
 .large-card .feature-icon {
     background: #182a8b;
 }
@@ -509,7 +526,7 @@ button {
 ===================================================== */
 
 .reliability {
-    background: #ffffff;
+    background: #FCF8FA;
     padding: 55px 0;
 }
 
