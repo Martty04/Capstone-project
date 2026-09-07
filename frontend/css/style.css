@@ -1770,10 +1770,7 @@ img {
         left: 200px;
     }
 
-      .step-icon{
-    position: relative;
-    right:120px; 
-  }
+
 
 
     .person {
@@ -1880,10 +1877,11 @@ img {
         gap: 30px 12px;
     }
   .step-icon{
-    margin-right:60px; 
+position: relative;
+right:125px;
   }
   .step-number{
-    margin-right: 30px;
+    margin-right: 200px;
   }
 
     /* CATEGORIES */
@@ -1978,8 +1976,8 @@ img {
         grid-template-columns: 1fr;
     }
     .step-icon{
-    margin-right:120px; 
-  }
+     margin-right: 200px;
+    }
   .incident-desc{
     position: relative;
     top:10px;
@@ -2026,3 +2024,21 @@ img {
     }
 
 }
+
+
+/* iPhone 5 / SE (1st gen) */
+@media only screen and (max-width: 320px) {
+ .step-icon{
+    margin-right: 120px;
+ }   
+}
+}
+
+
+
+
+
+
+
+
+
