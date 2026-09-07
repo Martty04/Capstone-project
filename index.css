@@ -588,6 +588,22 @@ img {
     width:100%;
 }
 
+.partner-grid {
+    animation: slideLeftRight 6s ease-in-out infinite;
+}
+
+@keyframes slideLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px); /* how far right it moves */
+    }
+    100% {
+        transform: translateX(0); /* back to original position */
+    }
+}
+
 .partner {
     display: flex;
     flex-direction: column;
@@ -602,6 +618,8 @@ img {
     color: #20a447;
     font-size: 22px; 
 }
+
+
 
 
 /* =====================================================
