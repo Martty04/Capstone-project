@@ -1,8 +1,4 @@
-
- 
-
-
-  const menuToggle = document.getElementById("menuToggle");
+const menuToggle = document.getElementById("menuToggle");
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("overlay");
 
@@ -30,7 +26,7 @@ if (fireBtn) {
 
   fireBtn.addEventListener("click", () => {
 
-    window.location.href = "fire.html";
+    window.location.href = "../html/fire.html";
 
   });
 }
@@ -39,7 +35,7 @@ if (allBtn) {
 
    allBtn.addEventListener("click", () => {
 
-    window.location.href = "alert.html";
+    window.location.href = "../html/alert.html";
 
   });
   
@@ -95,3 +91,114 @@ if (allBtn) {
       closeModal();
     }
   });
+
+
+  const token = localStorage.getItem("token");
+
+
+// ========================================
+// CHECK IF USER IS LOGGED IN
+// ========================================
+if (!token) {
+    window.location.href = "login.html";
+}
+
+
+// ========================================
+// GET LOGGED-IN USER
+// ========================================
+const getCurrentUser = async () => {
+    try {
+        const response = await fetch(
+            "http://localhost:5000/api/auth/me",
+            {
+                method: "GET",
+
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            console.error(data.message);
+
+            // Token is invalid/expired
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+
+            window.location.href = "login.html";
+            return;
+        }
+
+        // Display user
+        displayUser(data.user);
+
+    } catch (error) {
+        console.error("Error retrieving user:", error);
+    }
+};
+
+
+// ========================================
+// DISPLAY USER
+// ========================================
+const displayUser = (user) => {
+
+    const userName = document.getElementById("userName");
+    const userEmail = document.getElementById("userEmail");
+    const userPhone = document.getElementById("userPhone");
+    const userLocation = document.getElementById("userLocation");
+
+    if (userName) {
+        userName.textContent = user.name;
+    }
+
+    if (userEmail) {
+        userEmail.textContent = user.email;
+    }
+
+    if (userPhone) {
+        userPhone.textContent = user.phone;
+    }
+
+    if (userLocation) {
+        userLocation.textContent = user.location;
+    }
+};
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (user) {
+    const profileImage =
+        user.gender === "male"
+            ? "../images/male-profile.png"
+            : "../images/female-profile.png";
+
+    document.getElementById("profileImage").src = profileImage;
+}
+
+if (user) {
+    document.getElementById("userName").textContent = user.name;
+}
+
+
+// ========================================
+// RUN
+// ========================================
+getCurrentUser();
+
+
+const userName = document.getElementById("userName");
+
+const savedUser = localStorage.getItem("user");
+
+if (savedUser) {
+    const user = JSON.parse(savedUser);
+
+    userName.textContent = user.name;
+} else {
+    userName.textContent = "User";
+}

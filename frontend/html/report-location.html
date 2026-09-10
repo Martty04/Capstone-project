@@ -147,18 +147,26 @@ TOPBAR
 <div class="profile">
 
 <div class="profile-info">
+<div class="user">
 
-<strong>
-Sarah Mitchell
-</strong>
+   
 
-<small>
-Verified Resident
-</small>
+    <div>
+        <h4 id="userName">Loading...</h4>
+        <p id="userEmail">Loading...</p>
+         <strong id="userLocation">Loading...</strong>
+    </div>
+
+</div>
+
 </div>
 
 
-<img src="https://i.pravatar.cc/40?img=32" alt="Sarah Mitchell">
+<img
+        src="../images/male-profile.png"
+        id="profileImage"
+        alt="Profile"
+    >
 </div>
 </div>
 </header>
@@ -283,6 +291,11 @@ Go back to Dashboard →
 <script src="../js/script.js">
 
 </script>
-
+<script src="../js/dashboard.js"></script>
+<script src="../js/dashboard-auth.js"></script>
+<script src="./js/auth.js"></script>
+<script>
+    loadUserInformation();
+</script>
 </body>
 </html>

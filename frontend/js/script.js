@@ -16,10 +16,10 @@ menuToggle.addEventListener("click", () => {
   overlay.classList.toggle("active");
 });
 
-overlay.addEventListener("click", () => {
-  sidebar.classList.remove("active");
-  overlay.classList.remove("active");
-});
+// overlay.addEventListener("click", () => {
+//   sidebar.classList.remove("active");
+//   overlay.classList.remove("active");
+// });
 
 function closeSidebar() { sidebar.classList.remove("active"); overlay.classList.remove("active"); }
 

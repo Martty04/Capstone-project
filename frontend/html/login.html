@@ -1,91 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SafeReach - Login</title>
-  <link rel="stylesheet" href="/frontend/css/login.css"/>
-  <link rel="icon" type="image/png" href="../images/flag.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SafeReach - Login</title>
+<link rel="stylesheet" href="/frontend/css/login.css"/>
+<link rel="icon" type="image/png" href="../images/flag.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="login-wrapper">
+<div class="login-wrapper">
 
-    <!-- Left Panel -->
-    <div class="left-panel">
-      <div class="card">
-        <div class="card-top"></div>
+<!-- Left Panel -->
+<div class="left-panel">
+<div class="card">
+<div class="card-top"></div>
 
-        <div class="card-image">
-          <div class="overlay"></div>
+<div class="card-image">
+<div class="overlay"></div>
 
-          <div class="card-content">
-            <h2>Empowering Communities,<br>Ensuring Safety.</h2>
+<div class="card-content">
+<h2>Empowering Communities,<br>Ensuring Safety.</h2>
 
-            <p>
-              Join thousands of residents in building a more resilient and
-              responsive civic environment through real-time alerts and collaboration.
-            </p>
-          </div>
-        </div>
-      </div>
+<p>
+Join thousands of residents in building a more resilient and
+responsive civic environment through real-time alerts and collaboration.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Right Panel -->
+<div class="right-panel">
+
+<div class="logo">
+<img class="shield" src="../images/logo.png"/>
+</div>
+
+<h1>Welcome Back</h1>
+<p class="subtitle">
+Please enter your details to access your dashboard
+</p>
+
+<form class="login-form" id="loginForm">
+
+    <div class="field">
+        <label for="email">Email Address</label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="john@example.com"
+            required
+        >
     </div>
 
-    <!-- Right Panel -->
-    <div class="right-panel">
 
-      <div class="logo">
-        <img class="shield" src="../images/logo.png"/>
-      </div>
+    <div class="field">
 
-      <h1>Welcome Back</h1>
-      <p class="subtitle">
-        Please enter your details to access your dashboard
-      </p>
+        <label for="password">Password</label>
 
-      <form class="login-form">
+        <div class="password-box">
 
-        <div class="field">
-          <label>Email Address</label>
-          <input type="email" placeholder="name@example.com">
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="••••••••"
+                required
+            >
+
+            <button type="button" class="eye" id="togglePassword">
+                👁
+            </button>
+
         </div>
 
-        <div class="field">
-          <label>Password</label>
-
-          <div class="password-box">
-            <input type="password" placeholder="••••••••">
-            <button type="button" class="eye">👁</button>
-          </div>
-
-          <a href="#" class="forgot">Forget Password?</a>
-        </div>
-
-        <button type="button" class="signin-btn" onclick="window.location.href='dashboard.html'">
-    Login
-</button>
-
-        <div class="divider">
-          <span>OR CONTINUE WITH</span>
-        </div>
-
-        <button type="button" class="google-btn">
-          <img class="g" src="../images/google.png"/>
-          <span>Sign up with Google</span>
-        </button>
-
-      </form>
-
-      <p class="signup-text">
-        Don’t have an account? <a href="create.html">Sign Up</a>
-      </p>
+        <a href="#" class="forgot">
+            Forgot Password?
+        </a>
 
     </div>
 
-  </div>
-<script src="../js/script.js"></script>
+
+    <!-- IMPORTANT: type="submit" -->
+    <button type="submit" class="signin-btn">
+        Login
+    </button>
+
+
+    <div class="divider">
+        <span>OR CONTINUE WITH</span>
+    </div>
+
+
+    <button type="button" class="google-btn">
+
+        <img
+            class="g"
+            src="../images/google.png"
+            alt="Google"
+        />
+
+        <span>Sign up with Google</span>
+
+    </button>
+
+</form>
+
+<p class="signup-text">
+Don’t have an account? <a href="create.html">Sign Up</a>
+</p>
+
+</div>
+
+</div>
+<script src="../js/login.js"></script>
 </body>
 </html>

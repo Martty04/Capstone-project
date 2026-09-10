@@ -165,21 +165,26 @@ alt="Notifications"
 
 <div class="profile-info">
 
-<strong>
-Sarah Mitchell
-</strong>
+<div class="user">
 
-<small>
-Verified Resident
-</small>
+   
+
+    <div>
+        <h4 id="userName">Loading...</h4>
+        <p id="userEmail">Loading...</p>
+         <strong id="userLocation">Loading...</strong>
+    </div>
+
+</div>
 
 </div>
 
 
 <img
-src="https://i.pravatar.cc/40?img=32"
-alt="Sarah Mitchell"
->
+        src="../images/male-profile.png"
+        id="profileImage"
+        alt="Profile"
+    >
 
 </div>
 
@@ -204,9 +209,9 @@ LEFT CONTENT
 <!-- Welcome -->
 <div class="welcome">
 
-<h1>
-Welcome back, Sarah Mitchell.
-</h1>
+<h2>
+    Welcome back, <span data-user-first-name></span>
+</h2>
 
 <p style="color: #000; font-weight: 400;">
 <span class="dot" ></span>
@@ -678,6 +683,10 @@ Cancel
 
 <!-- JavaScript -->
 <script src="../js/dashboard.js"></script>
-
+<script src="../js/dashboard-auth.js"></script>
+<script src="./js/auth.js"></script>
+<script>
+    loadUserInformation();
+</script>
 </body>
 </html>

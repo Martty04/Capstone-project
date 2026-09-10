@@ -34,50 +34,118 @@
         <span>OR WITH EMAIL</span>
       </div>
 
-      <form class="signup-form">
+      <form class="signup-form" id="signupForm">
 
-        <div class="row">
-          <div class="field">
-            <label>Full Name</label>
-            <input type="text" placeholder="John Emmanuel">
-          </div>
-
-          <div class="field">
-            <label>Residential Location</label>
-            <input type="text" placeholder="City, Neighborhood">
-          </div>
-        </div>
+    <div class="row">
 
         <div class="field">
-          <label>Email Address</label>
-          <input type="email" placeholder="john@example.com">
+            <label for="name">Full Name</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="John Emmanuel"
+                required
+            >
         </div>
+
 
         <div class="field">
-          <label>Phone Number</label>
-          <input type="tel" placeholder="+234 803 392 2319">
+            <label for="location">Residential Location</label>
+
+            <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="City, Neighborhood"
+                required
+            >
         </div>
 
-        <div class="row">
-          <div class="field">
-            <label>Password</label>
-            <input type="password" placeholder="••••••••">
+    </div>
+<div class="field">
+    <label for="gender">Gender</label>
+
+    <select id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+</div>
+
+    <div class="field">
+
+        <label for="email">Email Address</label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="john@example.com"
+            required
+        >
+
+    </div>
+
+
+    <div class="field">
+
+        <label for="phone">Phone Number</label>
+
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+234 803 392 2319"
+            required
+        >
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="field">
+
+            <label for="password">Password</label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="••••••••"
+                required
+            >
+
             <small>Must be a strong password</small>
-          </div>
 
-          <div class="field">
-            <label>Confirm Password</label>
-            <input type="password" placeholder="••••••••">
-          </div>
         </div>
 
-        <label class="checkbox">
-          <input type="checkbox">
-          <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</span>
-        </label>
 
-        <button type="submit" class="submit-btn">Create Account</button>
-      </form>
+        <div class="field">
+
+            <label for="confirmPassword">Confirm Password</label>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="••••••••"
+                required
+            >
+
+        </div>
+
+    </div>
+
+
+    <button type="submit" class="submit-btn">
+        Create Account
+    </button>
+
+</form>
+
 
       <p class="login-text">
         Already have an account? <a href="login.html">Log In</a>
@@ -114,6 +182,6 @@
     </div>
 
   </div>
-
+<script src="../js/create.js"></script>
 </body>
 </html>
