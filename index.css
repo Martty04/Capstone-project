@@ -1651,7 +1651,9 @@ img {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
     }
-  
+  .step-icon{
+    margin-right: 190px;
+  }
 
     .category-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1765,7 +1767,7 @@ img {
 
       .step-icon{
     position: relative;
-    right:120px; 
+    right:220px; 
   }
 
 
@@ -1804,6 +1806,7 @@ img {
         bottom: 85px;
         right: 10px;
     }
+   
 
     /* FAQ QUESTION */
 
@@ -1873,7 +1876,7 @@ img {
         gap: 30px 12px;
     }
   .step-icon{
-    margin-right:60px; 
+    margin-right:-20px; 
   }
   .step-number{
     margin-right: 30px;
@@ -1971,13 +1974,14 @@ img {
         grid-template-columns: 1fr;
     }
     .step-icon{
-    margin-right:120px; 
+    margin-right:98px; 
   }
   .incident-desc{
     position: relative;
     top:10px;
   }
 
+  
 
     .category-grid {
         grid-template-columns: repeat(2, 1fr);
