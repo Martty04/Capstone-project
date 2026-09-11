@@ -221,29 +221,45 @@ TOPBAR
 <div class="field">
 
 <label>Location Address</label>
+<!-- Location Address -->
+<div class="location-box">
+    <i class="fa-solid fa-location-dot"></i>
 
-<div class="address-box">
-  <img src="../images/locationnot.png"/>
-  <input type="text" value="Saint Kitts and Nevis" readonly>
-  <button type="button">Verify</button>
+    <div>
+        <h4 id="locationStatus">Getting your location...</h4>
+        <p id="locationAddress">Please wait while we detect your location.</p>
+    </div>
 </div>
 
+<!-- Coordinates -->
+<div class="coordinates">
+    <div>
+        <span>Latitude</span>
+        <strong id="latitude">--</strong>
+    </div>
+
+    <div>
+        <span>Longitude</span>
+        <strong id="longitude">--</strong>
+    </div>
 </div>
 
-<!-- GPS Status -->
-<div class="gps-status">
-<img src="../images/watch.png"/>
-<span>Current GPS location active within 15 meters.</span>
-</div>
-
-<!-- Actions -->
+<!-- Submit -->
 <div class="actions">
 
-<a href="report-details.html" class="back-btn">← Back</a>
+    <a href="report-details.html" class="back-btn">
+        ← Back
+    </a>
 
-<button class="continue-btn" onclick="openModal()">
-Submit →
-</button>
+    <button style="border: none;"  type="button"  class="continue-btn"  id="submitReport">
+        Submit Report →
+    </button>
+
+</div>
+
+<p id="locationError" class="location-error"></p>
+
+
 
 </div>
 
@@ -272,12 +288,13 @@ Submit →
 <h2>Report Submitted Successfully</h2>
 
 <p>
-Thank you, Sarah. Your incident report has been received and forwarded to the appropriate emergency response team.
+Thank you, <span id="successUserName">User</span>. 
+Your incident report has been received and forwarded to the appropriate emergency response team.
 </p>
 
 <div class="reference-box">
-<span>Reference ID</span>
-<strong>#SR-2026-00458</strong>
+    <span>Reference ID</span>
+    <strong id="referenceId">Generating...</strong>
 </div>
 
 <button class="dashboard-btn" onclick="closeModal()">
@@ -288,12 +305,11 @@ Go back to Dashboard →
 
 </div>
 
-<script src="../js/script.js">
-
-</script>
+<script src="../js/script.js"></script>
 <script src="../js/dashboard.js"></script>
 <script src="../js/dashboard-auth.js"></script>
-<script src="./js/auth.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/report-location.js"></script>
 <script>
     loadUserInformation();
 </script>

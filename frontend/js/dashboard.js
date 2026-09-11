@@ -202,3 +202,79 @@ if (savedUser) {
 } else {
     userName.textContent = "User";
 }
+
+async function loadMyReports() {
+
+    const token = localStorage.getItem("token");
+
+    if (!token) return;
+
+    try {
+
+        const response = await fetch(
+            `${API_URL}/reports`,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.message);
+        }
+
+        displayMyReports(data.reports);
+
+    } catch (error) {
+
+        console.error("Could not load reports:", error);
+
+    }
+}
+
+function displayMyReports(reports) {
+
+    const container =
+        document.getElementById("myReports");
+
+    if (!container) return;
+
+    if (reports.length === 0) {
+
+        container.innerHTML = `
+            <div class="empty-reports">
+                <p>You haven't submitted any reports yet.</p>
+            </div>
+        `;
+
+        return;
+    }
+
+    container.innerHTML = reports
+        .slice(0, 3)
+        .map(report => {
+
+            return `
+                <div class="my-report">
+
+                    <div>
+                        <strong>${report.category}</strong>
+
+                        <p>
+                            ${report.description}
+                        </p>
+                    </div>
+
+                    <span class="report-status">
+                        ${report.status}
+                    </span>
+
+                </div>
+            `;
+
+        })
+        .join("");
+}
