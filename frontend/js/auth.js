@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://capstone-project-55lc.onrender.com/api";
 
 
 async function getCurrentUser() {
