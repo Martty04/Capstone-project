@@ -1623,37 +1623,79 @@ img {
 ===================================================== */
 
 @media (max-width: 900px) {
-    
+
+    /* Header: shrink nav sizing/spacing so logo + links + buttons
+       actually fit the tablet-width container instead of getting
+       clipped by body's overflow-x:hidden */
+
+    .logo img {
+        width: 90px;
+    }
+
     .desktop-nav {
-        gap: 18px;
+        gap: 12px;
+        margin-right: 20px;
+    }
+
+    .desktop-nav a {
+        font-size: 12px;
+        margin-left: 20px;
     }
 
     .desktop-actions {
-        margin-left: 18px;
+        margin-left: 10px;
+        gap: 10px;
+    }
+
+    .login-link {
+        padding: 8px 14px;
+    }
+
+    .header-btn {
+        padding: 8px 14px;
     }
 
     .hero-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    /* Testimonial grid: the old position:relative;right:100px hack
+       stacked on the desktop margin-left:150px caused misalignment
+       on tablet widths — replaced with proper centering */
     .testimonial-grid{
-        position: relative;
-        right:100px;
+        width: 92%;
+        margin: 0 auto;
+        position: static;
+        right: auto;
     }
+
+    /* Was margin-left:110px, which knocked headings like
+       "Voice of the Community" off-center on tablet */
     .section-heading h2{
-        margin-left: 110px;
+        margin-left: 0;
     }
 
     #featuresHeading{
         margin-left: 0;
+    }
+    .featureimg{
+        width:25%;
+    }
+    .featureimg1{
+        width:25%;
     }
 
     .steps {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
     }
-  .step-icon{
-    margin-right: 190px;
-  }
+
+    /* Was margin-right:190px stacked on the base right:110px offset,
+       which pushed the step icons off-center in their column */
+    .step-icon{
+        margin: auto;
+        right: 150px;
+    }
 
     .category-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1676,6 +1718,37 @@ img {
 
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+    .desktop-nav a {
+        font-size: 11px;
+
+    }
+    .featureimg{
+        width:35%;
+    }
+     .featureimg1{
+        width:35%;
+    }
+    .step-icon{
+        margin-right: 60px;
+    }
+    .incident-desc{
+        position: relative;
+        right:26px;
+        top:-15px;
+    }
+    .incident-title{
+       
+         position: relative;
+        right:22px;
+        top:10px;
+    }
+    .incident-location{
+         position: relative;
+        right:27px;
+        top:10px;
+    }
+}
 
 /* =====================================================
    MOBILE
