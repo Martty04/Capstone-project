@@ -1,3 +1,5 @@
+const API_URL = "https://capstone-project-55lc.onrender.com/api";
+
 const loginForm = document.getElementById("loginForm");
 
 
@@ -8,7 +10,6 @@ const loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", async (event) => {
 
     event.preventDefault();
-
 
     const email = document
         .getElementById("email")
@@ -30,7 +31,7 @@ loginForm.addEventListener("submit", async (event) => {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/auth/login",
+            `${API_URL}/auth/login`,
             {
                 method: "POST",
 
@@ -84,21 +85,26 @@ loginForm.addEventListener("submit", async (event) => {
         alert("Login successful!");
 
 
-        // Redirect to dashboard
+        // Redirect to home
         window.location.href = "home.html";
+
 
     } catch (error) {
 
         console.error("Login error:", error);
 
         alert(
-            "Unable to connect to SafeReach server. " +
-            "Make sure the backend is running."
+            "Unable to connect to SafeReach server."
         );
+
     }
 
 });
 
+
+// ===============================
+// TOGGLE PASSWORD
+// ===============================
 
 const togglePassword =
     document.getElementById("togglePassword");
@@ -120,6 +126,7 @@ togglePassword.addEventListener("click", () => {
         passwordInput.type = "password";
 
         togglePassword.textContent = "👁";
+
     }
 
 });
