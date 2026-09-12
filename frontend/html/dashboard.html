@@ -33,9 +33,13 @@ SIDEBAR
 <!-- Logo -->
 <div class="logo">
 
-<a href="index.html"> <img src="../images/logo.png" class="shield" alt="SafeReach Logo"></a>
-<a href="index.html"><img src="../images/logo1.png" class="shield1" alt="SafeReach Logo"></a>
+<a href="#" onclick="goToHome(); return false;">
+    <img src="../images/logo.png" class="shield" alt="SafeReach Logo">
+</a>
 
+<a href="#" onclick="goToHome(); return false;">
+    <img src="../images/logo1.png" class="shield1" alt="SafeReach Logo">
+</a>
 </div>
 
 
@@ -696,6 +700,9 @@ Cancel
 <script src="../js/auth.js"></script>
 <script>
     loadUserInformation();
+    function goToHome() {
+    window.location.href = "../html/home.html";
+}
 </script>
 </body>
 </html>
