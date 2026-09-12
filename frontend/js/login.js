@@ -85,7 +85,7 @@ loginForm.addEventListener("submit", async (event) => {
 
 
         // Redirect to dashboard
-        window.location.href = "dashboard.html";
+        window.location.href = "home.html";
 
     } catch (error) {
 

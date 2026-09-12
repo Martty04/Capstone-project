@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://capstone-project-55lc.onrender.com/api";
 
 
 async function getCurrentUser() {
@@ -6,7 +6,7 @@ async function getCurrentUser() {
     const token = localStorage.getItem("token");
 
     if (!token) {
-        window.location.href = "login.html";
+        window.location.href = "../html/login.html";
         return null;
     }
 
@@ -32,7 +32,7 @@ async function getCurrentUser() {
             localStorage.removeItem("token");
             localStorage.removeItem("user");
 
-            window.location.href = "login.html";
+            window.location.href = "../html/login.html";
 
             return null;
         }
@@ -131,5 +131,5 @@ function logout() {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
 
-    window.location.href = "login.html";
+    window.location.href = "../html/login.html";
 }

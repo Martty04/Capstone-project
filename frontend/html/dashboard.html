@@ -33,9 +33,13 @@ SIDEBAR
 <!-- Logo -->
 <div class="logo">
 
-<a href="index.html"> <img src="../images/logo.png" class="shield" alt="SafeReach Logo"></a>
-<a href="index.html"><img src="../images/logo1.png" class="shield1" alt="SafeReach Logo"></a>
+<a href="#" onclick="goToHome(); return false;">
+    <img src="../images/logo.png" class="shield" alt="SafeReach Logo">
+</a>
 
+<a href="#" onclick="goToHome(); return false;">
+    <img src="../images/logo1.png" class="shield1" alt="SafeReach Logo">
+</a>
 </div>
 
 
@@ -289,13 +293,21 @@ INCIDENT HEADER
 ========================== -->
 <div class="section-header">
 
-<h3>
-Recent Verified Incident
-</h3>
+    <h3>
+        My Recent Reports
+    </h3>
 
-<a href="#">
-View All
-</a>
+    <a href="pages/my-reports.html">
+        View All
+    </a>
+
+</div>
+
+<div id="recentReports">
+
+    <div class="reports-loading">
+        Loading your reports...
+    </div>
 
 </div>
 
@@ -303,7 +315,7 @@ View All
 
 <!-- =========================
 INCIDENT 1
-========================== -->
+========================== s
 <div class="incident danger">
 
 <div class="bar"></div>
@@ -339,13 +351,13 @@ windows closed.
 
 </div>
 
-</div>
+</div>-->
 
 
 
 <!-- =========================
 INCIDENT 2
-========================== -->
+==========================
 <div class="incident warning">
 
 <div class="bar"></div>
@@ -379,13 +391,13 @@ Expected delays of 20+ minutes on your commute.
 
 </div>
 
-</div>
+</div>-->
 
 
 
 <!-- =========================
 INCIDENT 3
-========================== -->
+========================== 
 <div class="incident info">
 
 <div class="bar"></div>
@@ -459,7 +471,7 @@ Crime
 Accident
 </span>
 
-</div>
+</div> -->
 
 </div>
 
@@ -683,10 +695,14 @@ Cancel
 
 <!-- JavaScript -->
 <script src="../js/dashboard.js"></script>
+<script src="../js/dashboard-reports.js"></script>
 <script src="../js/dashboard-auth.js"></script>
-<script src="./js/auth.js"></script>
+<script src="../js/auth.js"></script>
 <script>
     loadUserInformation();
+    function goToHome() {
+    window.location.href = "../html/home.html";
+}
 </script>
 </body>
 </html>

@@ -217,71 +217,108 @@ TOPBAR
 
 <label><img class="pic" src="../images/fireico.png"> Fire Type</label>
 
-<select>
-<option>Select fire type...</option>
-<option>Residential Fire</option>
-<option>Vehicle Fire</option>
-<option>Electrical Fire</option>
-<option>Bush Fire</option>
-<option>Industrial Fire</option>
+<select id="fireType">
+    <option value="">Select fire type...</option>
+    <option value="Residential Fire">Residential Fire</option>
+    <option value="Vehicle Fire">Vehicle Fire</option>
+    <option value="Electrical Fire">Electrical Fire</option>
+    <option value="Bush Fire">Bush Fire</option>
+    <option value="Industrial Fire">Industrial Fire</option>
 </select>
 
 </div>
 
-<!-- Severity -->
-<div class="field">
-
-<label><img class="pic" src="../images/serverity.png"> Severity Level</label>
-
 <div class="severity">
 
-<button class="sev low active">
-  <strong>LOW</strong>
-  <small>Controlled</small>
-</button>
+    <button type="button" class="sev low active">
+        <strong>LOW</strong>
+        <small>Controlled</small>
+    </button>
 
-<button class="sev medium">
-  <strong>MEDIUM</strong>
-  <small>Spreading</small>
-</button>
+    <button type="button" class="sev medium">
+        <strong>MEDIUM</strong>
+        <small>Spreading</small>
+    </button>
 
-<button class="sev high">
-  <strong>HIGH</strong>
-  <small>Threatening</small>
-</button>
+    <button type="button" class="sev high">
+        <strong>HIGH</strong>
+        <small>Threatening</small>
+    </button>
 
-<button class="sev critical">
-  <strong>CRITICAL</strong>
-  <small>Immediate Risk</small>
-</button>
-
-</div>
+    <button type="button" class="sev critical">
+        <strong>CRITICAL</strong>
+        <small>Immediate Risk</small>
+    </button>
 
 </div>
 
-<!-- Description -->
+<!-- =========================
+DESCRIPTION
+========================== -->
 <div class="field">
 
-<label><img class="pic" src="../images/situation.png"> Situation Description</label>
+    <label>
+        <img class="pic" src="../images/situation.png">
+        Situation Description
+    </label>
 
-<textarea placeholder="Describe the situation (e.g., Smoke visible from 2nd floor window)"></textarea>
+    <textarea
+        id="description"
+        placeholder="Describe the situation (e.g., Smoke visible from 2nd floor window)"
+    ></textarea>
 
 </div>
 
-<!-- Upload -->
+
+<!-- =========================
+VISUAL EVIDENCE
+========================== -->
 <div class="field">
 
-<label><img class="pic" src="../images/visual.png"> Visual Evidence</label>
+    <label>
+        <img class="pic" src="../images/visual.png">
+        Visual Evidence
+    </label>
 
-<div class="upload-box">
+    <div class="upload-box" id="uploadBox">
 
-<div class="upload-icon">📷</div>
+        <input
+            type="file"
+            id="evidenceInput"
+            accept="image/*,video/*"
+            multiple
+            hidden
+        >
 
-<h4>Click or drag photos/videos here</h4>
+        <div class="upload-icon">
+            📷
+        </div>
 
-<p>Max file size 20MB. Up to 4 items.</p>
+        <h4>Click or drag photos/videos here</h4>
 
-</div>
+        <p>
+            Max file size 20MB. Up to 4 items.
+        </p>
+
+        <button
+            type="button"
+            class="upload-btn"
+            id="uploadBtn"
+        >
+            Choose Files
+        </button>
+
+    </div>
+
+    <div
+        class="evidence-preview"
+        id="evidencePreview"
+    ></div>
+
+    <p
+        class="upload-error"
+        id="uploadError"
+    ></p>
 
 </div>
 
@@ -290,8 +327,7 @@ TOPBAR
 
 <a href="report.html" class="back-btn">← Back</a>
 
-<a href="report-location.html" class="continue-btn">
-Continue to Location →
+<a href="report-location.html" class="continue-btn" id="continueToLocation"> Continue to Location →
 </a>
 
 </div>
@@ -313,7 +349,8 @@ Continue to Location →
 <script src="../js/script.js"></script>
 <script src="../js/dashboard.js"></script>
 <script src="../js/dashboard-auth.js"></script>
-<script src="./js/auth.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/report-details.js"></script>
 <script>
     loadUserInformation();
 </script>
