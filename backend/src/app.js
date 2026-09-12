@@ -6,7 +6,10 @@ const reportRoutes = require("./routes/reportRoutes");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: "https://capstone-project-yg3e.vercel.app",
+    credentials: true
+}));
 app.use(express.json());
 
 
