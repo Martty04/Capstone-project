@@ -1917,7 +1917,8 @@ img {
 
     .section-heading h2{
         position: relative;
-       right:50px;
+      left:8px;
+      font-size: 26px;
 
         
     }
